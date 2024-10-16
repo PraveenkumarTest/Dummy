@@ -1,2 +1,0 @@
-Verifying the element with selector: .right-icon
-Element visibled successfully

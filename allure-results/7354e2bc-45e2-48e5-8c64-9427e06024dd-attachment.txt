@@ -1,4 +1,0 @@
-Clicking element with selector: error-container[error-type='table']
-Element clicked successfully
-Clicking element with selector: button-component[value='verified']
-Element clicked successfully

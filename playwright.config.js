@@ -2,6 +2,7 @@
 const { defineConfig, devices } = require('@playwright/test');
 const { defineBddConfig } = require('playwright-bdd');
 import dotenv from 'dotenv';
+const fs = require('fs');
 
 const testDir = defineBddConfig({  
   importTestFrom: 'tests/fixtures/fixtures.js',
@@ -41,9 +42,15 @@ module.exports = defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
             ['list'],
-            ['html'],
-            ['allure-playwright',{outputFolder:'my-allure-results'}]
-            ],
+            ['html',{ outputFolder:'D-XML-report'}],
+            ['allure-playwright', {outputFolder:'my-allure-results'}]       
+],
+ 
+// reporter: [
+//   ['list'],
+//   ['html', { filename: 'my-report-{{timestamp}}.html', outdir: './Reports/html-reports' }],
+//   ['allure-playwright', { outputFolder: 'my-allure-results' }]
+// ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -104,5 +111,6 @@ module.exports = defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+  
 });
 

@@ -1,381 +1,447 @@
-import { createBdd } from 'playwright-bdd';
-import { test } from '../fixtures/fixtures';
-import { BeforeAll } from '@cucumber/cucumber';
+//import { Given, When, Then } from 'cucumber'; // Ensure you import these from cucumber
+import { test } from '../fixtures/fixtures'; // Import your test and fixtures
+// import { test } from '@playwright/test'; // Import the test object if needed
+import { createBdd } from 'playwright-bdd'; // Import createBdd for BDD support
+import { editorPage } from '../pages/editorPage';  // Import your page object
+import { actionAndAssertion } from '../utils/actionsAndAssertion';  // Import the window utility
+import { sharedPage } from '../fixtures/fixtures';
 
-const { Given, When, Then , And } = createBdd(test);
+require('dotenv').config({ path: 'D:/XML-Reg2/XML_BDD_UI/env/.env.qa' });
 
-Given('I want to open the application url page', async () => {
-    //await editorsPage.openUrl();
+let parentPage;
+let childPage; // Variable to hold the child page
+let pageObject;
+
+// If you're using createBdd, you might want to wrap your definitions
+
+const { Given, When, Then } = createBdd(test);
+
+
+Then('I open the parent page', async function ({ editorsPage }) {
+    // Create a new browser context and open the parent window
+    //console.log('Parent page opened:', editorsPage.url());
 });
+///// Link Generation
+When('User can add JID', async ({ editorsPage }) => {
+    await editorsPage.TypeJid();
+});
+Then('User can add AID', async ({ editorsPage }) => {
+    await editorsPage.TypeAid();
+});
+Then('upload tud xml input', async ({ editorsPage }) => {
+    await editorsPage.Uploadtud();
+});
+Then('upload json file', async ({ editorsPage }) => {
+    await editorsPage.UPloadJson();
+});
+When('click submit button for Link Generation', async ({ editorsPage }) => {
+    await editorsPage.Submitclick();
+});
+Then('Verify on href tag into XML Central Link', async ({ editorsPage }) => {
+    await editorsPage.NavigatetoXMLlink();
+});
+Then('close the xml generate link', async ({ editorsPage }) => {
+    await editorsPage.CloseLinkgenerator();
+});
+
+
+
 ////// Step 1
+// Step to switch to the child tab and close the parent tab
+When('I switch to the child page and close the parent', async function () {
+    const action = new actionAndAssertion(sharedPage); // Initialize WindowUtils with the parent page
+    childPage = await action.closeParentAndContinueActions(process.env.URL2); // Open the child page and close parent
+     pageObject = new editorPage(childPage);
+    
+});
+
 When('Click on Continue option', async ({ editorsPage }) => {
-    await editorsPage.clicknocon();
+    // Initialize the page object for the child page
+    
+    await pageObject.clicknocon();
 });
 Then('the Review parastyle label be visible', async ({ editorsPage }) => {
-    await editorsPage.reviewIsVisible();
+   
+    await pageObject.reviewIsVisible();
 });
 
  Then('Click on Review the parastyle Articletitle option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk(); 
+    
+    await pageObject.clickreviewclk(); 
 });
 
 Then('verify whether the parastyle Artice is present', async ({ editorsPage }) => {
-    await editorsPage.verifyarticletitleIsVisible();    
+    await pageObject.verifyarticletitleIsVisible();    
 });
 Then('Click on verified1 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify();
+    await pageObject.clickverify();
 });
 Then('Click on Review the parastyle authors option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk2();
+    await pageObject.clickreviewclk2();
 });
 Then('verify whether the parastyle Author is present', async ({ editorsPage }) => {
-    await editorsPage.verifyAuthoursIsVisible();
+    await pageObject.verifyAuthoursIsVisible();
 });
 Then('Click on verified2 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify2(); 
+    await pageObject.clickverify2(); 
 });
 Then('Click on Review the parastyle correspondingauthor option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk3();
+    await pageObject.clickreviewclk3();
 });
 Then('verify whether the parastyle correspondingauthor is present', async ({ editorsPage }) => {
-    await editorsPage.verifycorrespondingauthorsIsVisible();
+    await pageObject.verifycorrespondingauthorsIsVisible();
 });
 Then('Click on verified3 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify3();  
+    await pageObject.clickverify3();  
 });
 Then('Click on Review the parastyle e-mail option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk4();
+    await pageObject.clickreviewclk4();
 });
 Then('verify whether the parastyle e-mail is present', async ({ editorsPage }) => {
-    await editorsPage.verifycorrespondingauthorsIsVisible();
+    await pageObject.verifycorrespondingauthorsIsVisible();
 });
 Then('Click on verified4 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify4(); 
+    await pageObject.clickverify4(); 
 });
 Then('Click on Review the parastyle dummy1 option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk5();
+    await pageObject.clickreviewclk5();
 });
 Then('verify whether the parastyle dummy1 is present', async ({ editorsPage }) => {
-    await editorsPage.verifydummy1sIsVisible();
+    await pageObject.verifydummy1sIsVisible();
 });
 Then('Click on verified5 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify5(); 
+    await pageObject.clickverify5(); 
 });
 Then('Click on Review the parastyle abstract option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk6();
+    await pageObject.clickreviewclk6();
 });
 Then('verify whether the parastyle abstract is present', async ({ editorsPage }) => {
-    await editorsPage.verifyabstract1sIsVisible();
+    await pageObject.verifyabstract1sIsVisible();
 });
 Then('Click on verified6 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify6(); 
+    await pageObject.clickverify6(); 
 });
 Then('Click on Review the parastyle dummy2 option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk7();
+    await pageObject.clickreviewclk7();
 });
 Then('verify whether the parastyle dummy2 is present', async ({ editorsPage }) => {
-    await editorsPage.verifydummy21sIsVisible();
+    await pageObject.verifydummy21sIsVisible();
 });
 Then('Click on verified7 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify7(); 
+    await pageObject.clickverify7(); 
 });
 Then('Click on Review the parastyle paragraph1 option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk8();
+    await pageObject.clickreviewclk8();
 });
 Then('verify whether the parastyle paragraph1 is present', async ({ editorsPage }) => {
-    await editorsPage.verifyparagraph1sIsVisible();
+    await pageObject.verifyparagraph1sIsVisible();
 });
 Then('Click on verified8 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify8(); 
+    await pageObject.clickverify8(); 
 });
 Then('Click on Review the parastyle paragraph2 option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk9();
+    await pageObject.clickreviewclk9();
 });
 Then('verify whether the parastyle paragraph2 is present', async ({ editorsPage }) => {
-    await editorsPage.verifyparagraph2sIsVisible();
+    await pageObject.verifyparagraph2sIsVisible();
 });
 Then('Click on verified9 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify9(); 
+    await pageObject.clickverify9(); 
 });
 Then('Click on Review the parastyle dummy3 option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk10();
+    await pageObject.clickreviewclk10();
 });
 Then('verify whether the parastyle dummy3 is present', async ({ editorsPage }) => {
-    await editorsPage.verifydummy3sIsVisible();
+    await pageObject.verifydummy3sIsVisible();
 });
 
 Then('Click on verified10 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify10(); 
+    await pageObject.clickverify10(); 
 });
 Then('Click on Review the parastyle sectiona option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk11();
+    await pageObject.clickreviewclk11();
 });
 Then('verify whether the parastyle sectiona is present', async ({ editorsPage }) => {
-    await editorsPage.verifysectionaIsVisible();
+    await pageObject.verifysectionaIsVisible();
 });
 Then('Click on verified11 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify11(); 
+    await pageObject.clickverify11(); 
 });
 Then('Click on Review the parastyle paragraph3 option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk12();
+    await pageObject.clickreviewclk12();
 });
 Then('verify whether the parastyle paragraph3 is present', async ({ editorsPage }) => {
-    await editorsPage.verifyparagraph3IsVisible();
+    await pageObject.verifyparagraph3IsVisible();
 });
 Then('Click on verified12 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify12(); 
+    await pageObject.clickverify12(); 
 });
 Then('Click on Review the parastyle dummy4 option', async ({ editorsPage }) => {
-    await editorsPage.clickreviewclk13();
+    await pageObject.clickreviewclk13();
 });
 Then('verify whether the parastyle dummy4 is present', async ({ editorsPage }) => {
-    await editorsPage.verifydummy4IsVisible();
+    await pageObject.verifydummy4IsVisible();
 });
 Then('Click on verified13 button', async ({ editorsPage }) => {
-    await editorsPage.clickverify13();
+    await pageObject.clickverify13();
 });
 Then('the Next button is visible', async ({ editorsPage }) => {
-    await editorsPage.NextIsVisible();
+    await pageObject.NextIsVisible();
 });
 Then('Click on Step1 next button', async ({ editorsPage }) => {
-    await editorsPage.clickNext();
+    await pageObject.clickNext();
 });
 
 /////// Step 2 ---------
-Then('verify step2 acknowledged are displayed', async ({ editorsPage }) => {
-    await editorsPage.verifiedack1rsIsVisible();
+When('verify step2 acknowledged are displayed', async ({ editorsPage }) => {
+    await pageObject.verifiedack1rsIsVisible();
+});
+Then('Click on Review the front matter content', async ({ editorsPage }) => {
+    await pageObject.clickerrorfm();
+});
+Then('verify front matter content is visible', async ({ editorsPage }) => {
+    await pageObject.Frontcontent();
 });
 
-Then('Click on Review the front matter content', async ({ editorsPage }) => {
-    await editorsPage.clickerrorfm();
-});
 Then('Click on verified14 button', async ({ editorsPage }) => {
-    await editorsPage.clickverified1();
+    await pageObject.clickverified1();
 });
-Then('Click on Review the content in Table 1', async ({ editorsPage }) => {
-    await editorsPage.clickerrortb();
+When('Click on Review the content in Table 1', async ({ editorsPage }) => {
+    await pageObject.clickerrortb();
+});
+Then('verify teblecontent are visible', async ({ editorsPage }) => {
+    await pageObject.tablecontent();
 });
 Then('Click on verified15 button', async ({ editorsPage }) => {
-    await editorsPage.clickverified2();
+    await pageObject.clickverified2();
 });
 Then('the Next step2 button is visible', async ({ editorsPage }) => {
-    await editorsPage.Next2IsVisible();
+    await pageObject.Next2IsVisible();
 });
 Then('Click on Next step2 button', async ({ editorsPage }) => {
-    await editorsPage.clickNextstep2();
+    await pageObject.clickNextstep2();
 });
 
 ///// Step 3 
 Then('verify step3 acknowledged are displayed', async ({ editorsPage }) => {
-    await editorsPage.verifiedack2sIsVisible();
+    await pageObject.verifiedack2sIsVisible();
 });
 
 Then('move and delete text', async ({ editorsPage }) => {
-    await editorsPage.ArrowandDelaction();
+    await pageObject.ArrowandDelaction();
 });
 When('click on partial text in step3', async ({ editorsPage }) => {
-    await editorsPage.clickclickpxt();
+    await pageObject.clickclickpxt();
 });
 Then('click on equation', async ({ editorsPage }) => {
-    await editorsPage.eqaIsVisible();
+    await pageObject.eqaIsVisible();
 });
 Then('click on inputtext', async ({ editorsPage }) => {
-    await editorsPage.cursoroneqn();
+    await pageObject.cursoroneqn();
 });
 Then('perform an keyboardact', async ({ editorsPage }) => {
-    await editorsPage.BackspaceKey();
-    await editorsPage.Copytxt();
+    await pageObject.BackspaceKey();
+    await pageObject.Copytxt();
 });
 Then('Add text as input', async ({ editorsPage }) => {
-    await editorsPage.Filltext();
-    await editorsPage.Pastetxt();
+    await pageObject.Filltext();
+    await pageObject.Pastetxt();
 });
 Then('Add Math update button', async ({ editorsPage }) => {
-    await editorsPage.clickUpdate();
+    await pageObject.clickUpdate();
 });
 Then('click text on Math', async ({ editorsPage }) => {
-    await editorsPage.cursrmath();
+    await pageObject.cursrmath();
+});
+Then('Delete an Extra Symbol add in Math', async ({ editorsPage }) => {
+    await pageObject.cancelsymbol();
 });
 Then('click Corrected1 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected();
+    await pageObject.clickCorrected();
 });
-Then('Click on Displaymath has inlinegraphics', async ({ editorsPage }) => {
-    await editorsPage.clickDisplaymath();
+Then('verify Displaymath has inlinegraphics', async ({ editorsPage }) => {
+    await pageObject.clickDisplaymath();
 });
 Then('Click on Corrected2 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected2();
+    await pageObject.clickCorrected2();
 });
-Then('Click on Full text', async ({ editorsPage }) => {
-    await editorsPage.clickFulltext();
+Then('verify Full text are correctly in UI', async ({ editorsPage }) => {
+    await pageObject.clickFulltext();
 });
 Then('Click on Corrected3 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected3();
+    await pageObject.clickCorrected3();
 });
 // -------------------------------------
 
 When('click on fnm element error', async ({ editorsPage }) => {
-    await editorsPage.clickerrorfnm();
+    await pageObject.clickerrorfnm();
 });
 Then('select an firstname text', async ({ editorsPage }) => {
-    await editorsPage.Selectionfn();
+    await pageObject.Selectionfn();
 });
 Then('verify editcontainer are visible', async ({ editorsPage }) => {
-    await editorsPage.Dropcon();
+    await pageObject.Dropcon();
 });
 When('click editor search', async ({ editorsPage }) => {
-    await editorsPage.clicksearch();
+    await pageObject.clicksearch();
 });
 Then('select an fnm', async ({ editorsPage }) => {
-    await editorsPage.selectsnm();
+    await pageObject.selectsnm();
 });
 Then('click and change into snm', async ({ editorsPage }) => {
-    await editorsPage.changesnm();   
+    await pageObject.changesnm();   
 });
 When ('select an particular text as comma', async ({ editorsPage }) => {
-    await editorsPage.Selectionsnm();
+    await pageObject.Selectionsnm();
 });
 Then('Dropdown to change the text', async ({ editorsPage }) => {
-    await editorsPage.commaasx();
+    await pageObject.commaasx();
 });
 Then('verfiy edit form are visible', async ({ editorsPage }) => {
-    await editorsPage.EditformVisible();
+    await pageObject.EditformVisible();
 });
 Then('Fill and change as X', async ({ editorsPage }) => {
-    await editorsPage.FillandclickX();
+    await pageObject.FillandclickX();
 });
 Then('select the space and dropdown to change', async ({ editorsPage }) => {
-    await editorsPage.Selectionspacex();
+    await pageObject.Selectionspacex();
 });
 Then('verify and click on editor and editor form are visible', async ({ editorsPage }) => {
-    await editorsPage.ClickandEditformVisible();
+    await pageObject.ClickandEditformVisible();
 });
 Then('Fill and Update space content', async ({ editorsPage }) => {
-    await editorsPage.Filltextandupdate();
+    await pageObject.Filltextandupdate();
 });
 Then('the correction change as corrected', async ({ editorsPage }) => {
-    await editorsPage.MarkCorrected();
+    await pageObject.MarkCorrected();
 });
 
 
 Then('Click AuthorEditor surname is missing. Check and correct.', async ({ editorsPage }) => {
-    await editorsPage.clickAuthorEditorsurname1();
+    await pageObject.clickAuthorEditorsurname1();
 });
 Then('Click on Corrected5 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected5();
+    await pageObject.clickCorrected5();
 });
-Then('Graphical abstract missing in file', async ({ editorsPage }) => {
-    await editorsPage.clickGraphicalabstract();
+Then('Verify Graphical abstract missing in file', async ({ editorsPage }) => {
+    await pageObject.clickGraphicalabstract();
 });
 Then('Click on Corrected6 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected6();
+    await pageObject.clickCorrected6();
 });
 
 When('place cursor on Keywords text and press Enter', async ({ editorsPage }) => {
-    await editorsPage.keywordsdefault();
+    await pageObject.keywordsdefault();
 });
 Then('Select keywords letter and deselect', async ({ editorsPage }) => {
-    await editorsPage.Selectkeywordstext();
+    await pageObject.Selectkeywordstext();
 }); 
 Then('Use keyboard action Ctrl+Space to Change text as destyle', async ({ editorsPage }) => {
-    await editorsPage.UseKeyboardaction();
+    await pageObject.UseKeyboardaction();
 });
 Then('change keywords as xpara', async ({ editorsPage }) => {
-  await editorsPage.ChangeXpara();
+  await pageObject.ChangeXpara();
 });
 Then('Insert Xpara', async ({ editorsPage }) => {
-    await editorsPage.clickxparatochange();
+    await pageObject.clickxparatochange();
 });
 Then('click and Mark as corrected', async ({ editorsPage }) => {
-    await editorsPage.Markascorrected();
+    await pageObject.Markascorrected();
 });
-Then('Please check Unlisted cross-ref link tblS1.', async ({ editorsPage }) => {
-    await editorsPage.clickUnlistedcrossref();
+Then('Verify Please check Unlisted cross-ref link tblS1.', async ({ editorsPage }) => {
+    await pageObject.clickUnlistedcrossref();
 });
 Then('Click on Corrected9 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected9();
+    await pageObject.clickCorrected9();
 });
-Then('Supporting link is missing or incorrect. Please check.', async ({ editorsPage }) => {
-    await editorsPage.clickSupportinglink();
+Then('Verify Supporting link is missing or incorrect. Please check.', async ({ editorsPage }) => {
+    await pageObject.clickSupportinglink();
 });
 Then('Click on Corrected10 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected10();
+    await pageObject.clickCorrected10();
 });
-Then('Please check author without surname', async ({ editorsPage }) => {
-    await editorsPage.clickauthorwithoutsurname();
+Then('Verify Please check author without surname', async ({ editorsPage }) => {
+    await pageObject.clickauthorwithoutsurname();
 });
 Then('Click on Corrected11 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected11();
+    await pageObject.clickCorrected11();
 });
-Then('Inconsistent1 author name pattern, please check.', async ({ editorsPage }) => {
-    await editorsPage.clickInconsistentauthorname1();
+Then('Verify Inconsistent1 author name pattern, please check.', async ({ editorsPage }) => {
+    await pageObject.clickInconsistentauthorname1();
 });
 Then('Click on Corrected12 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected12();
+    await pageObject.clickCorrected12();
 });
 Then('AuthorEditor surname is missing. Check and correct.', async ({ editorsPage }) => {
-    await editorsPage.clickAuthorEditorsurname2();
+    await pageObject.clickAuthorEditorsurname2();
 });
 Then('Click on Corrected13 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected13();
+    await pageObject.clickCorrected13();
 });
-Then('Inconsistent2 author name pattern, please check.', async ({ editorsPage }) => {
-    await editorsPage.clickInconsistentauthorname2();
+Then('Verify Inconsistent2 author name pattern, please check.', async ({ editorsPage }) => {
+    await pageObject.clickInconsistentauthorname2();
 });
 Then('Click on Corrected14 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected14();
+    await pageObject.clickCorrected14();
 });
-Then('Check the uncited reference, bibreference id bib24.', async ({ editorsPage }) => {
-    await editorsPage.clickbibreferenceidbib24();
+Then('Verify Check the uncited reference, bibreference id bib24.', async ({ editorsPage }) => {
+    await pageObject.clickbibreferenceidbib24();
 });
 Then('Click on Corrected15 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected15();
+    await pageObject.clickCorrected15();
 });
-Then('Check the uncited reference, bibreference id bib25.', async ({ editorsPage }) => {
-    await editorsPage.clickbibreferenceidbib25();
+Then('Verify Check the uncited reference, bibreference id bib25.', async ({ editorsPage }) => {
+    await pageObject.clickbibreferenceidbib25();
 });
 Then('Click on Corrected16 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected16();
+    await pageObject.clickCorrected16();
 });
-Then('Check the uncited reference, bibreference id bib26.', async ({ editorsPage }) => {
-    await editorsPage.clickbibreferenceidbib26();
+Then('Verify Check the uncited reference, bibreference id bib26.', async ({ editorsPage }) => {
+    await pageObject.clickbibreferenceidbib26();
 });
 Then('Click on Corrected17 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected17();
+    await pageObject.clickCorrected17();
 });
-Then('Check the uncited reference, bibreference id bib27.', async ({ editorsPage }) => {
-    await editorsPage.clickbibreferenceidbib27();
+Then('Verify Check the uncited reference, bibreference id bib27.', async ({ editorsPage }) => {
+    await pageObject.clickbibreferenceidbib27();
 });
 Then('Click on Corrected18 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected18();
+    await pageObject.clickCorrected18();
 });
-Then('Check the uncited reference, bibreference id bib28.', async ({ editorsPage }) => {
-    await editorsPage.clickbibreferenceidbib28();
+Then('Verify Check the uncited reference, bibreference id bib28.', async ({ editorsPage }) => {
+    await pageObject.clickbibreferenceidbib28();
 });
 Then('Click on Corrected19 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected19();
+    await pageObject.clickCorrected19();
 });
-Then('Click the uncited reference, bib-reference id bib29.', async ({ editorsPage }) => {
-    await editorsPage.clickbibreferenceidbib29();
+Then('Verify Click the uncited reference, bib-reference id bib29.', async ({ editorsPage }) => {
+    await pageObject.clickbibreferenceidbib29();
 });
 Then('Click on Corrected20 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected20();
+    await pageObject.clickCorrected20();
 });
-Then('Click the uncited reference, bibreference id bib34.', async ({ editorsPage }) => {
-    await editorsPage.clickbibreferenceidbib34();
+Then('Verify Click the uncited reference, bibreference id bib34.', async ({ editorsPage }) => {
+    await pageObject.clickbibreferenceidbib34();
 });
 Then('Click on Corrected21 button', async ({ editorsPage }) => {
-    await editorsPage.clickCorrected21();
+    await pageObject.clickCorrected21();
 });
 Then('Click the validate button', async ({ editorsPage }) => {
-    await editorsPage.clickvalidate();
+    await pageObject.clickvalidate();
 });
+
 ///// Submit
-Then('verify the submit button are present', async ({ editorsPage }) => {
-    await editorsPage.submitIsVisible();
+When('verify the submit button are present', async ({ editorsPage }) => {
+    await pageObject.submitIsVisible();
 });
 Then('click submit button', async ({ editorsPage }) => {
-    await editorsPage.clickSubmit();
+    await pageObject.clickSubmit();
+});
+Then('Wait for page load to submit', async ({ editorsPage }) => {
+    await pageObject.Waitforload();
 });
 Then('verify after submitted UI text are present in submitted mode', async ({ editorsPage }) => {
-    await editorsPage.AftersubmittedUI();
+    await pageObject.AftersubmittedUI();
 });
+
+
