@@ -10,7 +10,7 @@ Feature: Application UI Validation
      Then upload json file
      When click submit button for Link Generation
      Then Verify on href tag into XML Central Link
-     Then close the xml generate lin
+     Then close the xml generate link
     
 
   
