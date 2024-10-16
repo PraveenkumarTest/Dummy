@@ -1,0 +1,20 @@
+Verifying the element with selector: input[type="text"][placeholder="aus, au, fnm"][title="aus, au, fnm"]
+Element visibled successfully
+Clicking element with selector: input[type="text"][placeholder="aus, au, fnm"][title="aus, au, fnm"]
+Element clicked successfully
+Verifying the element with selector: .options-list.open
+Element visibled successfully
+Key actions performed successfully
+Clicking element with selector: div.option[title="x"]
+Element clicked successfully
+Verifying the element with selector: input[type="text"][placeholder="aus, au, fnm"][title="aus, au, fnm"]
+Element visibled successfully
+Clicking element with selector: input[type="text"][placeholder="aus, au, fnm"][title="aus, au, fnm"]
+Element clicked successfully
+Verifying the element with selector: .options-list.open
+Element visibled successfully
+Key actions performed successfully
+Clicking element with selector: div.option[title="x"]
+Element clicked successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully

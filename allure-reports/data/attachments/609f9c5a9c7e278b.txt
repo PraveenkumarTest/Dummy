@@ -1,0 +1,4 @@
+Verifying the element with selector: button-component[value='next']
+Element visibled successfully
+Clicking element with selector: button-component[value='next']
+Element clicked successfully

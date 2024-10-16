@@ -1,0 +1,6 @@
+Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="authors"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully

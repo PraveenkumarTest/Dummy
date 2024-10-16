@@ -1,0 +1,42 @@
+Verifying the element with selector: .right-icon
+Element visibled successfully
+Unable to click the element with selector: button-component[value='ignore'] page.waitForSelector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('button-component[value=\'ignore\']') to be visible
+
+    at actionAndAssertion.elementClick (D:\XML-Reg2\XML_BDD_UI\tests\utils\actionsAndAssertion.js:54:37)
+    at editorPage.clickCorrected16 (D:\XML-Reg2\XML_BDD_UI\tests\pages\editorPage.js:608:23)
+    at Object.<anonymous> (D:\XML-Reg2\XML_BDD_UI\tests\steps\editorsteps.js:337:23)
+    at D:\XML-Reg2\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js:218:5 {
+  name: 'TimeoutError',
+  [Symbol(step)]: {
+    stepId: 'pw:api@21',
+    location: {
+      file: 'D:\\XML-Reg2\\XML_BDD_UI\\tests\\utils\\actionsAndAssertion.js',
+      line: 54,
+      column: 37,
+      function: 'actionAndAssertion.elementClick'
+    },
+    category: 'pw:api',
+    title: "page.waitForSelector(button-component[value='ignore'])",
+    apiName: 'page.waitForSelector',
+    params: { selector: "button-component[value='ignore']", timeout: 30000 },
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1727933930229,
+    error: {
+      message: 'TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\n' +
+        'Call log:\n' +
+        "  \x1B[2m- waiting for locator('button-component[value=\\'ignore\\']') to be visible\x1B[22m\n",
+      stack: 'TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\n' +
+        'Call log:\n' +
+        "  \x1B[2m- waiting for locator('button-component[value=\\'ignore\\']') to be visible\x1B[22m\n" +
+        '\n' +
+        '    at actionAndAssertion.elementClick (D:\\XML-Reg2\\XML_BDD_UI\\tests\\utils\\actionsAndAssertion.js:54:37)\n' +
+        '    at editorPage.clickCorrected16 (D:\\XML-Reg2\\XML_BDD_UI\\tests\\pages\\editorPage.js:608:23)\n' +
+        '    at Object.<anonymous> (D:\\XML-Reg2\\XML_BDD_UI\\tests\\steps\\editorsteps.js:337:23)\n' +
+        '    at D:\\XML-Reg2\\XML_BDD_UI\\.features-gen\\tests\\features\\editor.feature.spec.js:218:5'
+    }
+  }
+}

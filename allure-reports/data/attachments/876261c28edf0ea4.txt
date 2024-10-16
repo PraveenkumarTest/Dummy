@@ -1,0 +1,12 @@
+Key actions performed successfully
+Key actions performed successfully
+Key actions performed successfully
+Clicking element with selector: .search-input[placeholder="Select Paragraph Style"][value="coversheet"][title="keywordsdefault"]
+Element clicked successfully
+Key actions performed successfully
+Key actions performed successfully
+Key actions performed successfully
+Clicking element with selector: div.option[title="xpara"]
+Element clicked successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
