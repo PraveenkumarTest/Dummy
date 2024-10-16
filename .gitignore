@@ -9,3 +9,5 @@ node_modules/
 /playwright/.cache/
 /allure-reports/
 /allure-results/
+/D-XML-report/
+/test-examples
