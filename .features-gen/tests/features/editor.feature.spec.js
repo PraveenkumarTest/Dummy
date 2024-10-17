@@ -131,7 +131,8 @@ test.describe("Application UI Validation", () => {
 
   test("Verfify Edits on Partial text", async ({ When, editorsPage, Then }) => {
     await When("click on partial text in step3", null, { editorsPage });
-    await Then("click on equation", null, { editorsPage });
+    await Then("click on Edit icon", null, { editorsPage });
+    await When("click and verify on equation is visible", null, { editorsPage });
     await Then("click on inputtext", null, { editorsPage });
     await Then("perform an keyboardact", null, { editorsPage });
     await Then("Add text as input", null, { editorsPage });
@@ -298,26 +299,26 @@ const bddFileMeta = {
   "Verify whether the Acknowledged Option are displayed properly in Step3": {"pickleLocation":"109:3"},
   "Verfify Text delete on Math": {"pickleLocation":"112:3"},
   "Verfify Edits on Partial text": {"pickleLocation":"116:3"},
-  "Verify whether the Displaymath has inlinegraphics are displayed properly in Step3": {"pickleLocation":"126:3"},
-  "Verify whether the Full text are displayed properly in Step3": {"pickleLocation":"130:3"},
-  "Verfify Edits on fnm error": {"pickleLocation":"134:3"},
-  "Verfify Edits and changed snm to x error": {"pickleLocation":"142:3"},
-  "Verify whether the AuthorEditor surname is missing are displayed properly in Step3": {"pickleLocation":"152:3"},
-  "Verify whether the Graphical abstract missing in file are displayed properly in Step3": {"pickleLocation":"156:3"},
-  "Verfify Title not allowed for Keywords.error": {"pickleLocation":"160:3"},
-  "Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3": {"pickleLocation":"168:3"},
-  "Verify whether the Supporting link is missing or incorrect. displayed properly in Step3": {"pickleLocation":"172:3"},
-  "Verify whether the Please check author without surname displayed properly in Step3": {"pickleLocation":"176:3"},
-  "Verify whether the Inconsistent1 author name pattern displayed properly in Step3": {"pickleLocation":"180:3"},
-  "Verify whether the AuthorEditor surname is missing. displayed properly in Step3": {"pickleLocation":"184:3"},
-  "Verify whether the Inconsistent2 author name pattern, displayed properly in Step3": {"pickleLocation":"188:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3": {"pickleLocation":"192:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3": {"pickleLocation":"196:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3": {"pickleLocation":"200:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3": {"pickleLocation":"204:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3": {"pickleLocation":"208:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3": {"pickleLocation":"212:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3": {"pickleLocation":"216:3"},
-  "Verify whether the Check the Corrected21 displayed properly in Step3": {"pickleLocation":"219:3"},
-  "Verify whether the Validate and submit": {"pickleLocation":"224:3"},
+  "Verify whether the Displaymath has inlinegraphics are displayed properly in Step3": {"pickleLocation":"127:3"},
+  "Verify whether the Full text are displayed properly in Step3": {"pickleLocation":"131:3"},
+  "Verfify Edits on fnm error": {"pickleLocation":"135:3"},
+  "Verfify Edits and changed snm to x error": {"pickleLocation":"143:3"},
+  "Verify whether the AuthorEditor surname is missing are displayed properly in Step3": {"pickleLocation":"153:3"},
+  "Verify whether the Graphical abstract missing in file are displayed properly in Step3": {"pickleLocation":"157:3"},
+  "Verfify Title not allowed for Keywords.error": {"pickleLocation":"161:3"},
+  "Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3": {"pickleLocation":"169:3"},
+  "Verify whether the Supporting link is missing or incorrect. displayed properly in Step3": {"pickleLocation":"173:3"},
+  "Verify whether the Please check author without surname displayed properly in Step3": {"pickleLocation":"177:3"},
+  "Verify whether the Inconsistent1 author name pattern displayed properly in Step3": {"pickleLocation":"181:3"},
+  "Verify whether the AuthorEditor surname is missing. displayed properly in Step3": {"pickleLocation":"185:3"},
+  "Verify whether the Inconsistent2 author name pattern, displayed properly in Step3": {"pickleLocation":"189:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3": {"pickleLocation":"193:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3": {"pickleLocation":"197:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3": {"pickleLocation":"201:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3": {"pickleLocation":"205:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3": {"pickleLocation":"209:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3": {"pickleLocation":"213:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3": {"pickleLocation":"217:3"},
+  "Verify whether the Check the Corrected21 displayed properly in Step3": {"pickleLocation":"220:3"},
+  "Verify whether the Validate and submit": {"pickleLocation":"225:3"},
 };

@@ -233,7 +233,10 @@ Then('move and delete text', async ({ editorsPage }) => {
 When('click on partial text in step3', async ({ editorsPage }) => {
     await pageObject.clickclickpxt();
 });
-Then('click on equation', async ({ editorsPage }) => {
+Then('click on Edit icon', async ({ editorsPage }) => {
+    await pageObject.ClickEditicn();
+});
+When('click and verify on equation is visible', async ({ editorsPage }) => {
     await pageObject.eqaIsVisible();
 });
 Then('click on inputtext', async ({ editorsPage }) => {

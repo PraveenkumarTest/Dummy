@@ -107,6 +107,7 @@ constructor(page) {
     this.submit ="button-component[value='submit']";
    ///// Actions
     this.clickptxt ="img[src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAwCAYAAABkOeaOAAAACXBIWXMAABCcAAAQnAEmzTo0AAAABGJhU0UAAAAY00gKyAAAA2pJREFUeF7tmUvITVEUx5c3kbwKIeUxkGciJSaIxAADRaEYiIkBBh55FaUMZCAG9IWSR1HKIykTZIYkJYlSpCiP5BXr3zr3s791zz137332uX2D9at/X2edc++3zj7rrr3+9xKlYRRrgA4a5RnG+sPaq08Y5dnAesj6a6pTaa6wduugUZ7erK+safqEUZ7FrNc6aKTheCajAlC1qF4jMeiz6Lfou6mYwXpA8r5PWIs6nu40VJ4nJgRMCqkYyLrEmsmaxbrF+sYa7l7UCWhJnphtMeOmYjWJIakxhGRWXOrEqmIl6wjrGsmCFVF5nnjz39nfVPRUx11YP1iTVbwqTpHcU399QlF5njVXViVTWXd1sAmoujE66Mlt1j0d9CAmz0Ja4cpOssbpYBMesfbpoAd9WN9Ze/QJD2LybEgrXBk+GXN00IPYxV1I0jeb9VtNbJ4NCXVlg1nHWCdY21kbWR9YE9yLHFaw5jvH3Uj6mg+xi4vN7COrB0n1vs2OD7sXKcrk2ZAQVzae9Yw67qToa0g+j+WsLSQfM2gSyVeZSNyH2MXFrHqRdZA1j2QCOEdSzTjWlM2zIb6uDAm+Z21V8VesNhUDC0h2Xf21HZLOo1+OsEiHcuJFRgcTD/7PHeq44+MeEd/sxEBonu3gCRQR4sraSCrUvRa/ViCRNU4sBiyYvrki3ZSX5YJccA2q1mVdFl+i4lEsY/1izdYnHHxdGR4CEtuh4qhixPGzUBm6kmwkWi9Yp3PiE+VluZxl/aR6h3WB9Yn8CqkQLCws3GfWfXXOxdeV7SdZRHcn7UvSJl46sdSE9lxsQO9Y51V8CsmCr1XxKHaSLDAqDb+H5bmUEFeGasDiYlKogfd+StIuUHljnXOpCF1cGADkucmJ9SLp3ZedWBJw03hiedNAiCvDpoKk15M8KLST6SQbwQHWLtag9qvTEbq420jynJsdowWcYR2lepubhKsk7UET4sqGkoxcX1g3SGba7qw3WXzE/0uTErq4mA6uk7gszLcoKp9JKJrRJE9zlRNrhStLARZrpA52Np5nqhHqyowCULWoXlQxCHFlhgfou+i/wNeVGZ6gUjE5YJf3dWWGJxihMPM+Jj9XZgQCt4be6+PKjEDwPYOvKzMigDU2KgKW2DAMwzAMwzAMwzAMwzAMw4N/5bAIVkLPX68AAABvdEVYdE1hdGhNTAA8bWF0aD48bXNxcnQ+PG1zdXA+PG1pPmE8L21pPjxtbj4yPC9tbj48L21zdXA+PG1vPis8L21vPjxtc3VwPjxtaT5iPC9taT48bW4+MjwvbW4+PC9tc3VwPjwvbXNxcnQ+PC9tYXRoPiCa1nEAAAAASUVORK5CYII=']";
+    this.EqneditIcon ='button-component[value="close"][type="senary"][text="Edit"]'
     this.eqa =".wrs_focusElement";
     this.pos ="input[aria-label='Math input']";
     this.keyboardact1 ="input[aria-label='Math input']";
@@ -122,7 +123,7 @@ constructor(page) {
     this.deleteno="2";
     this.arrowno1="2";
     this.deleteno1="1";
-    this.selectfn ="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(27) > aus:nth-child(12) > au:nth-child(2) > fnm:nth-child(1)";
+    this.selectfn ="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(27) > au:nth-child(7) > fnm:nth-child(1)";
     this.Dropcontain ='input[type="text"][placeholder="aus, au, fnm"][title="aus, au, fnm"]';
     this.clickeditor ='input[type="text"][placeholder="aus, au, fnm"][title="aus, au, fnm"]';
     this.edic =".options-list.open";
@@ -422,6 +423,10 @@ constructor(page) {
   async clickclickpxt()
   {
     await this.action.elementClick(this.clickptxt);
+  }
+  async ClickEditicn()
+  {
+    await this.action.elementClick(this.EqneditIcon);
   }
   async eqaIsVisible()
   {

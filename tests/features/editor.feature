@@ -115,7 +115,8 @@ Feature: Application UI Validation
      
   Scenario: Verfify Edits on Partial text
      When click on partial text in step3
-     Then click on equation
+     Then click on Edit icon
+     When click and verify on equation is visible
      Then click on inputtext
      Then perform an keyboardact
      Then Add text as input

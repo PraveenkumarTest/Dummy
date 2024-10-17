@@ -42,7 +42,7 @@ module.exports = defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
             ['list'],
-            ['html',{ outputFolder:'D-XML-report'}],
+            ['html',{ outputFolder:'XML_report'}],
             ['allure-playwright', {outputFolder:'my-allure-results'}]       
 ],
  
