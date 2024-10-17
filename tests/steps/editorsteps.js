@@ -443,8 +443,12 @@ Then('click submit button', async ({ editorsPage }) => {
 Then('Wait for page load to submit', async ({ editorsPage }) => {
     await pageObject.Waitforload();
 });
-Then('verify after submitted UI text are present in submitted mode', async ({ editorsPage }) => {
+When('verify after submitted UI text are present in submitted mode', async ({ editorsPage }) => {
     await pageObject.AftersubmittedUI();
 });
+Then('verify This article has been already submitted are present', async ({ editorsPage }) => {
+    await pageObject.AftersubmittedverifyText();
+});
+
 
 

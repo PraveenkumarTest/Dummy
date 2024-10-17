@@ -16,7 +16,6 @@ export const test = base.extend({
         await use(pageObject); // Provide the page object to tests
     },
 });
-
 export { sharedBrowserContext, sharedPage };
 
 

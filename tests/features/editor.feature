@@ -226,7 +226,12 @@ Feature: Application UI Validation
      When verify the submit button are present
      Then click submit button
      Then Wait for page load to submit
-     Then verify after submitted UI text are present in submitted mode
+
+  Scenario: Verify whether the Validate and submit
+     When verify after submitted UI text are present in submitted mode
+     Then verify This article has been already submitted are present
+                    
+
 
 
  

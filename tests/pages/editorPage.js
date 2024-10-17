@@ -435,6 +435,7 @@ constructor(page) {
   async cursoroneqn(){
     await this.action.elementClick(this.pos);
   }
+
   async BackspaceKey(){
     await this.action.keyAction(this.backspace)
   }
@@ -730,8 +731,10 @@ constructor(page) {
   async AftersubmittedUI()
   {
     await this.action.elementVisible(this.submittedtext);
-    await this.action.ElementPresentOrNot(this.submittedtext);
   }   
-  
+  async AftersubmittedverifyText()
+  {
+    await this.action.ElementPresentOrNot(this.submittedtext);
+  } 
 }
 
