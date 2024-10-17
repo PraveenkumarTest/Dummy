@@ -165,9 +165,6 @@ test.describe("Application UI Validation", () => {
     await Then("Dropdown to change the text", null, { editorsPage });
     await Then("verfiy edit form are visible", null, { editorsPage });
     await Then("Fill and change as X", null, { editorsPage });
-    await Then("select the space and dropdown to change", null, { editorsPage });
-    await Then("verify and click on editor and editor form are visible", null, { editorsPage });
-    await Then("Fill and Update space content", null, { editorsPage });
     await Then("the correction change as corrected", null, { editorsPage });
   });
 

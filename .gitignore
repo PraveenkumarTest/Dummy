@@ -9,6 +9,7 @@ node_modules/
 /playwright/.cache/
 /allure-reports/
 /allure-results/
+XML_BDD_UI/XML_report
 /XML_report/
 /test-examples/
 D-XML-report/data/47d498a100981ac5d951e25518a899aa427506ea.zip

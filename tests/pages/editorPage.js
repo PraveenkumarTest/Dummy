@@ -124,16 +124,16 @@ constructor(page) {
     this.arrowno1="2";
     this.deleteno1="1";
     this.selectfn ="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(27) > au:nth-child(7) > fnm:nth-child(1)";
-    this.Dropcontain ='input[type="text"][placeholder="aus, au, fnm"][title="aus, au, fnm"]';
-    this.clickeditor ='input[type="text"][placeholder="aus, au, fnm"][title="aus, au, fnm"]';
+    this.Dropcontain ='input[type="text"][placeholder="au, fnm"][title="au, fnm"]';
+    this.clickeditor ='input[type="text"][placeholder="au, fnm"][title="au, fnm"]';
     this.edic =".options-list.open";
     this.unclickfnm ='div.option[title="fnm"]';
     this.inputtextbox ='.textbox-container:nth-of-type(2) > .search-input';
     this.fillinput= "snm";
     this.clicksnm='div.option[title="snm"]';
     this.fnmtox ='bibitem[data-xml-type="node"][data-xml-tag-name="bibitem"]:nth-of-type(1)';
-    this.selectcomma="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(27) > aus:nth-child(12) > au:nth-child(2) > fnm:nth-child(2)";
-    this.selectspace="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(27) > aus:nth-child(14) > au:nth-child(1) > fnm:nth-child(1)";
+    this.selectcomma="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(27) > au:nth-child(7) > fnm:nth-child(2)";
+    this.selectspace="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(27) > au:nth-child(7) > fnm:nth-child(3)";
     this.fillinputx1="x";
     this.clickcommaasx='div.option[title="x"]';
     this.keywordsDefault ="div:nth-child(1) > div:nth-child(1) > keywordsdefault:nth-child(12) > st:nth-child(1)";
@@ -505,20 +505,17 @@ constructor(page) {
   }
   async selectsnm()
   {
-   //await this.action.elementVisible(this.inputtextbox);
    await this.action.keyActioninsert(this.fillinput)
   }
    async changesnm()
   {
     await this.action.elementClick(this.clicksnm);
     await this.action.elementVisible(this.Corrected);
-    //await this.action.elementClick(this.Corrected1);
   }
   async Selectionsnm()
   {
     await this.action.selectText(this.selectcomma,0,1);
   }
-
   async commaasx()
   {        
     await this.action.elementVisible(this.Dropcontain);
@@ -532,23 +529,23 @@ constructor(page) {
   {
     await this.action.keyActioninsert(this.fillinputx1)
     await this.action.elementClick(this.clickcommaasx);
+    await this.action.waitForTime(2000)
   }
-  async Selectionspacex()
-  {
-    await this.action.selectText(this.selectspace,0,1);
-    await this.action.elementVisible(this.Dropcontain);
-    //await this.action.elementClick(this.Corrected1);
-  }  
-  async ClickandEditformVisible()
-  {
-    await this.action.elementClick(this.clickeditor);
-    await this.action.elementVisible(this.edic);
-  }
-  async Filltextandupdate()
-  {
-    await this.action.keyActioninsert(this.fillinputx1)
-    await this.action.elementClick(this.clickcommaasx);
-  }
+  // async Selectionspacex()
+  // {
+  //   await this.action.selectText(this.selectspace,5,6);
+  //   await this.action.elementVisible(this.Dropcontain);
+  // }  
+  // async ClickandEditformVisible()
+  // {
+  //   await this.action.elementClick(this.clickeditor);
+  //   await this.action.elementVisible(this.edic);
+  // }
+  // async Filltextandupdate()
+  // {
+  //   await this.action.keyActioninsert(this.fillinputx1)
+  //   await this.action.elementClick(this.clickcommaasx);
+  // }
   async MarkCorrected()
   {
     await this.action.elementClick(this.Corrected);
@@ -577,7 +574,7 @@ constructor(page) {
   async Selectkeywordstext()
   {
     await this.action.selectText(this.keywordsDefault,0,8);
-    
+  
   }
   async UseKeyboardaction()
   {

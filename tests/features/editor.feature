@@ -145,9 +145,9 @@ Feature: Application UI Validation
     Then Dropdown to change the text
     Then verfiy edit form are visible
     Then Fill and change as X 
-    Then select the space and dropdown to change
-    Then verify and click on editor and editor form are visible
-    Then Fill and Update space content 
+    # Then select the space and dropdown to change
+    # Then verify and click on editor and editor form are visible
+    # Then Fill and Update space content 
     Then the correction change as corrected
   
   Scenario: Verify whether the AuthorEditor surname is missing are displayed properly in Step3

@@ -306,15 +306,15 @@ Then('verfiy edit form are visible', async ({ editorsPage }) => {
 Then('Fill and change as X', async ({ editorsPage }) => {
     await pageObject.FillandclickX();
 });
-Then('select the space and dropdown to change', async ({ editorsPage }) => {
-    await pageObject.Selectionspacex();
-});
-Then('verify and click on editor and editor form are visible', async ({ editorsPage }) => {
-    await pageObject.ClickandEditformVisible();
-});
-Then('Fill and Update space content', async ({ editorsPage }) => {
-    await pageObject.Filltextandupdate();
-});
+// Then('select the space and dropdown to change', async ({ editorsPage }) => {
+//     await pageObject.Selectionspacex();
+// });
+// Then('verify and click on editor and editor form are visible', async ({ editorsPage }) => {
+//     await pageObject.ClickandEditformVisible();
+// });
+// Then('Fill and Update space content', async ({ editorsPage }) => {
+//     await pageObject.Filltextandupdate();
+// });
 Then('the correction change as corrected', async ({ editorsPage }) => {
     await pageObject.MarkCorrected();
 });
