@@ -11,9 +11,7 @@ Feature: Application UI Validation
      When click submit button for Link Generation
      Then Verify on href tag into XML Central Link
      Then close the xml generate link
-    
-
-  
+     
   Scenario: Verify whether the Acknowledged Option are displayed properly in Step1
     When I switch to the child page and close the parent
     When Click on Continue option
@@ -227,7 +225,7 @@ Feature: Application UI Validation
      Then click submit button
      Then Wait for page load to submit
 
-  Scenario: Verify whether the Validate and submit
+  Scenario: Verify whether the after submitted
      When verify after submitted UI text are present in submitted mode
      Then verify This article has been already submitted are present
                     
