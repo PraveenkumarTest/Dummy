@@ -1,0 +1,869 @@
+<testsuites tests="45" failures="0" skipped="0" errors="0" assertions="0" time="646.4687990000006" timestamp="2024-10-21T09:06:05.537Z">
+  <testsuite name="tests\features\editor.feature.spec.js" hostname="chromium" tests="45" failures="0" skipped="0" errors="0" assertions="0" time="328.283" timestamp="2024-10-21T09:06:05.537Z" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js">
+    <testcase name="Verify whether the link generation XML URL" classname="tests\features\editor.feature.spec.js" assertions="0" time="7.815" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="6">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then I open the parent page"></property>
+        <property name="step[passed]" value="When User can add JID"></property>
+        <property name="step[passed]" value="Then User can add AID"></property>
+        <property name="step[passed]" value="Then upload tud xml input"></property>
+        <property name="step[passed]" value="Then upload json file"></property>
+        <property name="step[passed]" value="When click submit button for Link Generation"></property>
+        <property name="step[passed]" value="Then Verify on href tag into XML Central Link"></property>
+        <property name="step[passed]" value="Then close the xml generate link"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[URL2 value deleted from link successfully
+Verifying the element with selector: #jid
+Element visibled successfully
+Clicking element with selector: #jid
+Element clicked successfully
+Key actions performed successfully
+Verifying the element with selector: #aid
+Element visibled successfully
+Clicking element with selector: #aid
+Element clicked successfully
+Key actions performed successfully
+Verifying the element with selector: #xml
+Element visibled successfully
+File uploaded successfully
+Verifying the element with selector: #as
+Element visibled successfully
+File uploaded successfully
+Clicking element with selector: .primary
+Element clicked successfully
+Verifying the element with selector: #response_container
+Element visibled successfully
+Extracted Link: http://10.0.8.123:3000/index.html?token=c07cc20a-fbc0-41ef-95eb-aa4d2fe2e17d
+Extracted Token: c07cc20a-fbc0-41ef-95eb-aa4d2fe2e17d
+Extracted link written to .env.qa file successfully: D:\XML_Regression_Final\XML_BDD_UI\env\.env.qa
+Verifying the element with selector: a[href^="http://10.0.8.123:3000"]
+Element visibled successfully
+Waited for 5000 milliseconds
+Clicking element with selector: a[href^="http://10.0.8.123:3000"]
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="6.392" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="17">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When I switch to the child page and close the parent"></property>
+        <property name="step[passed]" value="When Click on Continue option"></property>
+        <property name="step[passed]" value="Then the Review parastyle label be visible"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Parent tab closed.
+Now working with the child tab.
+Clicking element with selector: button-component[value='math-pre-requisite-step-no']
+Element clicked successfully
+Verifying the element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element present successfully: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle Articletitle are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.45" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="23">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle Articletitle option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle Artice is present"></property>
+        <property name="step[passed]" value="Then Click on verified1 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="articletitle"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle authors are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.839" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="29">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle authors option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle Author is present"></property>
+        <property name="step[passed]" value="Then Click on verified2 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="authors"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle correspondingauthor are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.669" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="35">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle correspondingauthor option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle correspondingauthor is present"></property>
+        <property name="step[passed]" value="Then Click on verified3 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="correspondingauthor"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle e-mail are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.954" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="41">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle e-mail option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle e-mail is present"></property>
+        <property name="step[passed]" value="Then Click on verified4 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="correspondingauthor"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle dummy1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.003" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="47">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle dummy1 option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle dummy1 is present"></property>
+        <property name="step[passed]" value="Then Click on verified5 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="dummy"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle abstract are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.382" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="53">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle abstract option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle abstract is present"></property>
+        <property name="step[passed]" value="Then Click on verified6 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="abstract"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle dummy2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.906" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="59">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle dummy2 option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle dummy2 is present"></property>
+        <property name="step[passed]" value="Then Click on verified7 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="dummy"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle paragraph1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.136" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="65">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle paragraph1 option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle paragraph1 is present"></property>
+        <property name="step[passed]" value="Then Click on verified8 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="paragraph"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle paragraph2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.231" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="71">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle paragraph2 option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle paragraph2 is present"></property>
+        <property name="step[passed]" value="Then Click on verified9 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="fnconflict"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle dummy3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.165" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="77">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle dummy3 option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle dummy3 is present"></property>
+        <property name="step[passed]" value="Then Click on verified10 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="dummy"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle sectiona are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.546" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="83">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle sectiona option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle sectiona is present"></property>
+        <property name="step[passed]" value="Then Click on verified11 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="sectiona"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle paragraph3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.199" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="89">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle paragraph3 option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle paragraph3 is present"></property>
+        <property name="step[passed]" value="Then Click on verified12 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="paragraph"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the parastyle dummy4 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.027" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="95">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Review the parastyle dummy4 option"></property>
+        <property name="step[passed]" value="Then verify whether the parastyle dummy4 is present"></property>
+        <property name="step[passed]" value="Then Click on verified13 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Element clicked successfully
+Verifying the element with selector: input[title="dummy"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the next button are displayed properly" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.134" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="101">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then the Next button is visible"></property>
+        <property name="step[passed]" value="Then Click on Step1 next button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: button-component[value='next']
+Element present successfully: button-component[value='next']
+Clicking element with selector: button-component[value='next']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="13.816" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="106">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When verify step2 acknowledged are displayed"></property>
+        <property name="step[passed]" value="Then Click on Review the front matter content"></property>
+        <property name="step[passed]" value="Then verify front matter content is visible"></property>
+        <property name="step[passed]" value="Then Click on verified14 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: error-container[error-type='fm']
+Element visibled successfully
+Clicking element with selector: error-container[error-type='fm']
+Element clicked successfully
+Verifying the element with selector: input[title="articletitle"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Table 1 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.785" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="113">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When Click on Review the content in Table 1"></property>
+        <property name="step[passed]" value="Then verify teblecontent are visible"></property>
+        <property name="step[passed]" value="Then Click on verified15 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: error-container[error-type='table']
+Element clicked successfully
+Verifying the element with selector: input[title="tablecaption"]
+Element visibled successfully
+Clicking element with selector: button-component[value='verified']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Table 2 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.011" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="119">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then the Next step2 button is visible"></property>
+        <property name="step[passed]" value="Then Click on Next step2 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: button-component[value='next']
+Element present successfully: button-component[value='next']
+Clicking element with selector: button-component[value='next']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="30.742" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="124">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then verify step3 acknowledged are displayed"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Element is not visible with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) page.waitForSelector: Timeout 30000ms exceeded.
+Call log:
+  [2m- waiting for locator('div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)') to be visible[22m
+
+    at actionAndAssertion.elementVisible [90m(D:\XML_Regression_Final\XML_BDD_UI\[39mtests\utils\actionsAndAssertion.js:537:33[90m)[39m
+    at editorPage.verifiedack2sIsVisible [90m(D:\XML_Regression_Final\XML_BDD_UI\[39mtests\pages\editorPage.js:416:23[90m)[39m
+    at Object.<anonymous> [90m(D:\XML_Regression_Final\XML_BDD_UI\[39mtests\steps\editorsteps.js:227:22[90m)[39m
+    at [90mD:\XML_Regression_Final\XML_BDD_UI\[39m.features-gen\tests\features\editor.feature.spec.js:125:5 {
+  name: [32m'TimeoutError'[39m,
+  [[32mSymbol(step)[39m]: {
+    stepId: [32m'pw:api@18'[39m,
+    location: {
+      file: [32m'D:\\XML_Regression_Final\\XML_BDD_UI\\tests\\utils\\actionsAndAssertion.js'[39m,
+      line: [33m537[39m,
+      column: [33m33[39m,
+      function: [32m'actionAndAssertion.elementVisible'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m'page.waitForSelector(div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1))'[39m,
+    apiName: [32m'page.waitForSelector'[39m,
+    params: {
+      selector: [32m'div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)'[39m,
+      timeout: [33m30000[39m
+    },
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1729501700857[39m,
+    error: {
+      message: [32m'TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m"  \x1B[2m- waiting for locator('div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)') to be visible\x1B[22m\n"[39m,
+      stack: [32m'TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m"  \x1B[2m- waiting for locator('div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)') to be visible\x1B[22m\n"[39m +
+        [32m'\n'[39m +
+        [32m'    at actionAndAssertion.elementVisible (D:\\XML_Regression_Final\\XML_BDD_UI\\tests\\utils\\actionsAndAssertion.js:537:33)\n'[39m +
+        [32m'    at editorPage.verifiedack2sIsVisible (D:\\XML_Regression_Final\\XML_BDD_UI\\tests\\pages\\editorPage.js:416:23)\n'[39m +
+        [32m'    at Object.<anonymous> (D:\\XML_Regression_Final\\XML_BDD_UI\\tests\\steps\\editorsteps.js:227:22)\n'[39m +
+        [32m'    at D:\\XML_Regression_Final\\XML_BDD_UI\\.features-gen\\tests\\features\\editor.feature.spec.js:125:5'[39m
+    }
+  }
+}
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verfify Text delete on Math" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.257" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="128">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then move and delete text"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Key action performed successfully (1 of 2)
+Key action performed successfully (2 of 2)
+Key action performed successfully (1 of 2)
+Key action performed successfully (2 of 2)
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verfify Edits on Partial text" classname="tests\features\editor.feature.spec.js" assertions="0" time="29.045" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="132">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When click on partial text in step3"></property>
+        <property name="step[passed]" value="Then click on Edit icon"></property>
+        <property name="step[passed]" value="When click and verify on equation is visible"></property>
+        <property name="step[passed]" value="Then click on inputtext"></property>
+        <property name="step[passed]" value="Then perform an keyboardact"></property>
+        <property name="step[passed]" value="Then Add text as input"></property>
+        <property name="step[passed]" value="Then Add Math update button"></property>
+        <property name="step[passed]" value="Then Delete an Extra Symbol add in Math"></property>
+        <property name="step[passed]" value="Then click Corrected1 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: img[src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAwCAYAAABkOeaOAAAACXBIWXMAABCcAAAQnAEmzTo0AAAABGJhU0UAAAAY00gKyAAAA2pJREFUeF7tmUvITVEUx5c3kbwKIeUxkGciJSaIxAADRaEYiIkBBh55FaUMZCAG9IWSR1HKIykTZIYkJYlSpCiP5BXr3zr3s791zz137332uX2D9at/X2edc++3zj7rrr3+9xKlYRRrgA4a5RnG+sPaq08Y5dnAesj6a6pTaa6wduugUZ7erK+safqEUZ7FrNc6aKTheCajAlC1qF4jMeiz6Lfou6mYwXpA8r5PWIs6nu40VJ4nJgRMCqkYyLrEmsmaxbrF+sYa7l7UCWhJnphtMeOmYjWJIakxhGRWXOrEqmIl6wjrGsmCFVF5nnjz39nfVPRUx11YP1iTVbwqTpHcU399QlF5njVXViVTWXd1sAmoujE66Mlt1j0d9CAmz0Ja4cpOssbpYBMesfbpoAd9WN9Ze/QJD2LybEgrXBk+GXN00IPYxV1I0jeb9VtNbJ4NCXVlg1nHWCdY21kbWR9YE9yLHFaw5jvH3Uj6mg+xi4vN7COrB0n1vs2OD7sXKcrk2ZAQVzae9Yw67qToa0g+j+WsLSQfM2gSyVeZSNyH2MXFrHqRdZA1j2QCOEdSzTjWlM2zIb6uDAm+Z21V8VesNhUDC0h2Xf21HZLOo1+OsEiHcuJFRgcTD/7PHeq44+MeEd/sxEBonu3gCRQR4sraSCrUvRa/ViCRNU4sBiyYvrki3ZSX5YJccA2q1mVdFl+i4lEsY/1izdYnHHxdGR4CEtuh4qhixPGzUBm6kmwkWi9Yp3PiE+VluZxl/aR6h3WB9Yn8CqkQLCws3GfWfXXOxdeV7SdZRHcn7UvSJl46sdSE9lxsQO9Y51V8CsmCr1XxKHaSLDAqDb+H5bmUEFeGasDiYlKogfd+StIuUHljnXOpCF1cGADkucmJ9SLp3ZedWBJw03hiedNAiCvDpoKk15M8KLST6SQbwQHWLtag9qvTEbq420jynJsdowWcYR2lepubhKsk7UET4sqGkoxcX1g3SGba7qw3WXzE/0uTErq4mA6uk7gszLcoKp9JKJrRJE9zlRNrhStLARZrpA52Np5nqhHqyowCULWoXlQxCHFlhgfou+i/wNeVGZ6gUjE5YJf3dWWGJxihMPM+Jj9XZgQCt4be6+PKjEDwPYOvKzMigDU2KgKW2DAMwzAMwzAMwzAMwzAMw4N/5bAIVkLPX68AAABvdEVYdE1hdGhNTAA8bWF0aD48bXNxcnQ+PG1zdXA+PG1pPmE8L21pPjxtbj4yPC9tbj48L21zdXA+PG1vPis8L21vPjxtc3VwPjxtaT5iPC9taT48bW4+MjwvbW4+PC9tc3VwPjwvbXNxcnQ+PC9tYXRoPiCa1nEAAAAASUVORK5CYII=']
+Element clicked successfully
+Clicking element with selector: button-component[value="close"][type="senary"][text="Edit"]
+Element clicked successfully
+Verifying the element with selector: .wrs_focusElement
+Element visibled successfully
+Clicking element with selector: input[aria-label='Math input']
+Element clicked successfully
+Key actions performed successfully
+Key actions performed successfully
+Typing the content in the element with selector: input[aria-label='Math input']
+Text is entered successfully
+Key actions performed successfully
+Clicking element with selector: button-component[value='update-equation']
+Element clicked successfully
+Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1)
+Element clicked successfully
+Key action performed successfully (1 of 2)
+Key action performed successfully (2 of 2)
+Waited for 5000 milliseconds
+Key action performed successfully (1 of 2)
+Key action performed successfully (2 of 2)
+Waited for 5000 milliseconds
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Displaymath has inlinegraphics are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.233" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="144">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then verify Displaymath has inlinegraphics"></property>
+        <property name="step[passed]" value="Then Click on Corrected2 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="displaymath"]
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Full text are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.026" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="149">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then verify Full text are correctly in UI"></property>
+        <property name="step[passed]" value="Then Click on Corrected3 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: [title="displaymath"]
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verfify Edits on fnm error" classname="tests\features\editor.feature.spec.js" assertions="0" time="8.634" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="154">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When click on fnm element error"></property>
+        <property name="step[passed]" value="Then select an firstname text"></property>
+        <property name="step[passed]" value="Then verify editcontainer are visible"></property>
+        <property name="step[passed]" value="When click editor search"></property>
+        <property name="step[passed]" value="Then select an fnm"></property>
+        <property name="step[passed]" value="Then click and change into snm"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)
+Element clicked successfully
+Verifying the element with selector: input[type="text"][placeholder="au, fnm"][title="au, fnm"]
+Element visibled successfully
+Clicking element with selector: input[type="text"][placeholder="au, fnm"][title="au, fnm"]
+Element clicked successfully
+Verifying the element with selector: .options-list.open
+Element visibled successfully
+Key actions performed successfully
+Clicking element with selector: div.option[title="snm"]
+Element clicked successfully
+Verifying the element with selector: button-component[value='corrected']
+Element visibled successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verfify Edits and changed snm to x error" classname="tests\features\editor.feature.spec.js" assertions="0" time="9.514" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="163">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When select an particular text as comma"></property>
+        <property name="step[passed]" value="Then Dropdown to change the text"></property>
+        <property name="step[passed]" value="Then verfiy edit form are visible"></property>
+        <property name="step[passed]" value="Then Fill and change as X"></property>
+        <property name="step[passed]" value="Then the correction change as corrected"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[type="text"][placeholder="au, fnm"][title="au, fnm"]
+Element visibled successfully
+Clicking element with selector: input[type="text"][placeholder="au, fnm"][title="au, fnm"]
+Element clicked successfully
+Verifying the element with selector: .options-list.open
+Element visibled successfully
+Key actions performed successfully
+Clicking element with selector: div.option[title="x"]
+Element clicked successfully
+Waited for 2000 milliseconds
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the AuthorEditor surname is missing are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.832" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="171">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click AuthorEditor surname is missing. Check and correct."></property>
+        <property name="step[passed]" value="Then Click on Corrected5 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: .right-icon
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Graphical abstract missing in file are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.218" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="176">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Graphical abstract missing in file"></property>
+        <property name="step[passed]" value="Then Click on Corrected6 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: [title="coversheet"]
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verfify Title not allowed for Keywords.error" classname="tests\features\editor.feature.spec.js" assertions="0" time="9.715" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="181">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When place cursor on Keywords text and press Enter"></property>
+        <property name="step[passed]" value="Then Select keywords letter and deselect"></property>
+        <property name="step[passed]" value="Then Use keyboard action Ctrl+Space to Change text as destyle"></property>
+        <property name="step[passed]" value="Then change keywords as xpara"></property>
+        <property name="step[passed]" value="Then Insert Xpara"></property>
+        <property name="step[passed]" value="Then click and Mark as corrected"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Key actions performed successfully
+Key actions performed successfully
+Key actions performed successfully
+Clicking element with selector: .search-input[placeholder="Select Paragraph Style"][value="coversheet"][title="keywordsdefault"]
+Element clicked successfully
+Key actions performed successfully
+Key actions performed successfully
+Key actions performed successfully
+Clicking element with selector: div.option[title="xpara"]
+Element clicked successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.066" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="190">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Please check Unlisted cross-ref link tblS1."></property>
+        <property name="step[passed]" value="Then Click on Corrected9 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="paragraph"]
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Supporting link is missing or incorrect. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.042" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="195">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Supporting link is missing or incorrect. Please check."></property>
+        <property name="step[passed]" value="Then Click on Corrected10 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="sectiona"]
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Please check author without surname displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.396" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="200">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Please check author without surname"></property>
+        <property name="step[passed]" value="Then Click on Corrected11 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Inconsistent1 author name pattern displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.636" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="205">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Inconsistent1 author name pattern, please check."></property>
+        <property name="step[passed]" value="Then Click on Corrected12 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the AuthorEditor surname is missing. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.288" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="210">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then AuthorEditor surname is missing. Check and correct."></property>
+        <property name="step[passed]" value="Then Click on Corrected13 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: .right-icon
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Inconsistent2 author name pattern, displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.453" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="215">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Inconsistent2 author name pattern, please check."></property>
+        <property name="step[passed]" value="Then Click on Corrected14 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='corrected']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.67" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="220">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib24."></property>
+        <property name="step[passed]" value="Then Click on Corrected15 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='ignore']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.184" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="225">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib25."></property>
+        <property name="step[passed]" value="Then Click on Corrected16 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='ignore']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.113" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="230">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib26."></property>
+        <property name="step[passed]" value="Then Click on Corrected17 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='ignore']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.076" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="235">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib27."></property>
+        <property name="step[passed]" value="Then Click on Corrected18 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='ignore']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.39" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="240">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib28."></property>
+        <property name="step[passed]" value="Then Click on Corrected19 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='ignore']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.089" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="245">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Click the uncited reference, bib-reference id bib29."></property>
+        <property name="step[passed]" value="Then Click on Corrected20 button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+Clicking element with selector: button-component[value='ignore']
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.006" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="250">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Verify Click the uncited reference, bibreference id bib34."></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: input[title="bibitem"]
+Element visibled successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Check the Corrected21 displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="8.723" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="254">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Then Click on Corrected21 button"></property>
+        <property name="step[passed]" value="Then Click the validate button"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Clicking element with selector: button-component[value='ignore']
+Element clicked successfully
+Verifying the element with selector: button-component[value='next']
+Element present successfully: button-component[value='next']
+Clicking element with selector: button-component[value='next']
+Element clicked successfully
+Waited for 5000 milliseconds
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the Validate and submit" classname="tests\features\editor.feature.spec.js" assertions="0" time="95.365" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="259">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When verify the submit button are present"></property>
+        <property name="step[passed]" value="Then click submit button"></property>
+        <property name="step[passed]" value="Then Wait for page load to submit"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Waited for 20000 milliseconds
+Waited for 10000 milliseconds
+Verifying the element with selector: button-component[value='submit']
+Element present successfully: button-component[value='submit']
+Clicking element with selector: button-component[value='submit']
+Element clicked successfully
+Waited for 20000 milliseconds
+Waited for 10000 milliseconds
+Waited for 20000 milliseconds
+Waited for 10000 milliseconds
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify whether the after submitted" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.11" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="265">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When verify after submitted UI text are present in submitted mode"></property>
+        <property name="step[passed]" value="Then verify This article has been already submitted are present"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: .notification-description
+Element visibled successfully
+Verifying the element with selector: .notification-description
+Element present successfully: .notification-description
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

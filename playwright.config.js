@@ -2,7 +2,9 @@
 const { defineConfig, devices } = require('@playwright/test');
 const { defineBddConfig } = require('playwright-bdd');
 import dotenv from 'dotenv';
+
 const fs = require('fs');
+const TEST_RUN_UUID = '12345-abcde';
 
 const testDir = defineBddConfig({  
   importTestFrom: 'tests/fixtures/fixtures.js',
@@ -43,6 +45,19 @@ module.exports = defineConfig({
   reporter: [
             ['list'],
             ['html',{ outputFolder:'XML_report'}],
+            ['@estruyf/github-actions-reporter'],
+            [
+              'playwright-testmo-reporter',
+              {
+                outputFile: 'testmo/testmo.xml', // Optional: Output file path. Defaults to 'testmo.xml'.
+                embedBrowserType: false, // Optional: Embed browser type in the XML file. Defaults to false.
+                embedTestSteps: true, // Optional: Embed test steps in the XML file. Defaults to true.
+                testStepCategories: ["hook","expect","pw:api","test.step"], // Optional: Test step categories to include in the XML file. Defaults to ["hook","expect","pw:api","test.step"]. Possible options are "hook", "expect", "pw:api", "test.step".
+                testTitleDepth: 1, // Optional: Test case title depth to report in the XML file. Defaults to 1. Increase this to 2 include suite name. Increase this even further to include the path.
+                includeTestSubFields: false, // Optional: Include test sub fields in the XML file. Defaults to false.
+                attachmentBasePathCallback: (basePath) => `http://playwright-s3.services.mycompany.example:9000/test/${TEST_RUN_UUID}/` + basePath.split(/[\\/]/g).join('/'), // Optional: Specify a callback which accepts and returns a string to generate a custom attachment base path. Useful for referring to an artifact storage location for example.
+              }
+            ],
             ['allure-playwright', {outputFolder:'my-allure-results'}]       
 ],
  
@@ -57,9 +72,9 @@ module.exports = defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'retain-on-failure',
+    trace:      'retain-on-failure',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video:      'retain-on-failure',
     launchOptions: {
       
       //args: ["--start-maximized"],

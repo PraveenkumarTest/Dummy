@@ -1,12 +1,13 @@
 {
-  "name": "edc_bdd_ui",
+  "name": "xml_bdd_ui",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "npm run bddgen && npm run playwright-test",
     "bddgen": "npx bddgen",
-    "qa-test": "npx bddgen && cross-env ENV=qa npx playwright test --headed --debug&& npx playwright show-report&&allure generate ./allure-results -o ./allure-report&& allure open allure-reports",
-    "playwright-test": "npx playwright test --reporter=html,list --headed"
+    "qa-test": "npx bddgen && cross-env ENV=qa npx playwright test --headed&& npx playwright show-report&&allure generate ./allure-results -o ./allure-report&& allure open allure-reports",
+    "playwright-test": "npx playwright test --reporter=html,list --headed&& npx playwright show-report && allure generate ./allure-results -o ./allure-report && allure open allure-report"
+    
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,8 @@
     "@types/node": "^22.5.4",
     "allure-playwright": "^3.0.4",
     "cross-env": "^7.0.3",
-    "playwright-bdd": "^7.4.0"
+    "playwright-bdd": "^7.4.0",
+    "playwright-testmo-reporter": "^1.11.0"
   },
   "dependencies": {
     "@estruyf/github-actions-reporter": "^1.9.2",
