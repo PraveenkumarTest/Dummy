@@ -449,6 +449,22 @@ When('verify after submitted UI text are present in submitted mode', async ({ ed
 Then('verify This article has been already submitted are present', async ({ editorsPage }) => {
     await pageObject.AftersubmittedverifyText();
 });
-
-
+When('Verify the Enable Editing button is visible', async ({ editorsPage }) => {
+    await pageObject.Enableeditingbtn();
+});
+Then('User Can click the Enable Editing button', async ({ editorsPage }) => {
+    await pageObject.ClickEnableEditing();
+});
+Then('Click on Proceed button to Enable', async ({ editorsPage }) => {
+    await pageObject.Clickproceedbtn();
+});
+When('check user can able to edit after revert the submit', async ({ editorsPage }) => {
+    await pageObject.elementpresentarenot();
+});
+When('click an submit button', async ({ editorsPage }) => {
+    await pageObject.SUBMITBTN();
+});
+Then('Check and verify This article has been already submitted are present', async ({ editorsPage }) => {
+    await pageObject.AftersubmittedUi();
+});
 

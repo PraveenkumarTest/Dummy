@@ -267,6 +267,21 @@ test.describe("Application UI Validation", () => {
     await Then("verify This article has been already submitted are present", null, { editorsPage });
   });
 
+  test("Verify After submitted UI user can able to Enable editing", async ({ When, editorsPage, Then }) => {
+    await When("Verify the Enable Editing button is visible", null, { editorsPage });
+    await Then("User Can click the Enable Editing button", null, { editorsPage });
+    await Then("Click on Proceed button to Enable", null, { editorsPage });
+  });
+
+  test("Check after enabled editing are user able to edit in UI", async ({ When, editorsPage }) => {
+    await When("check user can able to edit after revert the submit", null, { editorsPage });
+  });
+
+  test("Check After the Enableediting mode user can able to move submitted", async ({ When, editorsPage, Then }) => {
+    await When("click an submit button", null, { editorsPage });
+    await Then("Check and verify This article has been already submitted are present", null, { editorsPage });
+  });
+
 });
 
 // == technical section ==
@@ -323,4 +338,7 @@ const bddFileMeta = {
   "Verify whether the Check the Corrected21 displayed properly in Step3": {"pickleLocation":"218:3"},
   "Verify whether the Validate and submit": {"pickleLocation":"223:3"},
   "Verify whether the after submitted": {"pickleLocation":"228:3"},
+  "Verify After submitted UI user can able to Enable editing": {"pickleLocation":"232:3"},
+  "Check after enabled editing are user able to edit in UI": {"pickleLocation":"237:3"},
+  "Check After the Enableediting mode user can able to move submitted": {"pickleLocation":"240:3"},
 };

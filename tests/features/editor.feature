@@ -228,6 +228,21 @@ Feature: Application UI Validation
   Scenario: Verify whether the after submitted
      When verify after submitted UI text are present in submitted mode
      Then verify This article has been already submitted are present
+
+  Scenario: Verify After submitted UI user can able to Enable editing
+    When Verify the Enable Editing button is visible
+    Then User Can click the Enable Editing button
+    Then Click on Proceed button to Enable
+
+  Scenario: Check after enabled editing are user able to edit in UI
+    When check user can able to edit after revert the submit
+
+  Scenario: Check After the Enableediting mode user can able to move submitted
+    When click an submit button
+    Then Check and verify This article has been already submitted are present 
+
+
+
                     
 
 

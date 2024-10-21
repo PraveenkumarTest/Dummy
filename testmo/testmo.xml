@@ -1,6 +1,6 @@
-<testsuites tests="45" failures="0" skipped="0" errors="0" assertions="0" time="646.4687990000006" timestamp="2024-10-21T09:06:05.537Z">
-  <testsuite name="tests\features\editor.feature.spec.js" hostname="chromium" tests="45" failures="0" skipped="0" errors="0" assertions="0" time="328.283" timestamp="2024-10-21T09:06:05.537Z" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js">
-    <testcase name="Verify whether the link generation XML URL" classname="tests\features\editor.feature.spec.js" assertions="0" time="7.815" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="6">
+<testsuites tests="48" failures="1" skipped="1" errors="0" assertions="0" time="571.052688000001" timestamp="2024-10-21T11:33:08.078Z">
+  <testsuite name="tests\features\editor.feature.spec.js" hostname="chromium" tests="48" failures="1" skipped="1" errors="0" assertions="0" time="274.302" timestamp="2024-10-21T11:33:08.078Z" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js">
+    <testcase name="Verify whether the link generation XML URL" classname="tests\features\editor.feature.spec.js" assertions="0" time="7.581" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="6">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then I open the parent page"></property>
@@ -35,8 +35,8 @@ Clicking element with selector: .primary
 Element clicked successfully
 Verifying the element with selector: #response_container
 Element visibled successfully
-Extracted Link: http://10.0.8.123:3000/index.html?token=c07cc20a-fbc0-41ef-95eb-aa4d2fe2e17d
-Extracted Token: c07cc20a-fbc0-41ef-95eb-aa4d2fe2e17d
+Extracted Link: http://10.0.8.123:3000/index.html?token=6ba298bc-5fdb-4d1e-b298-7ffa38285d31
+Extracted Token: 6ba298bc-5fdb-4d1e-b298-7ffa38285d31
 Extracted link written to .env.qa file successfully: D:\XML_Regression_Final\XML_BDD_UI\env\.env.qa
 Verifying the element with selector: a[href^="http://10.0.8.123:3000"]
 Element visibled successfully
@@ -46,7 +46,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="6.392" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="17">
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="5.96" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="17">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When I switch to the child page and close the parent"></property>
@@ -64,7 +64,7 @@ Element present successfully: div:nth-child(1) > div:nth-child(2) > unacknowledg
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle Articletitle are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.45" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="23">
+    <testcase name="Verify whether the parastyle Articletitle are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.827" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="23">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle Articletitle option"></property>
@@ -82,7 +82,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle authors are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.839" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="29">
+    <testcase name="Verify whether the parastyle authors are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.694" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="29">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle authors option"></property>
@@ -100,7 +100,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle correspondingauthor are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.669" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="35">
+    <testcase name="Verify whether the parastyle correspondingauthor are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.866" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="35">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle correspondingauthor option"></property>
@@ -118,7 +118,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle e-mail are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.954" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="41">
+    <testcase name="Verify whether the parastyle e-mail are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.979" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="41">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle e-mail option"></property>
@@ -136,7 +136,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle dummy1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.003" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="47">
+    <testcase name="Verify whether the parastyle dummy1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.748" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="47">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle dummy1 option"></property>
@@ -154,7 +154,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle abstract are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.382" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="53">
+    <testcase name="Verify whether the parastyle abstract are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.107" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="53">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle abstract option"></property>
@@ -172,7 +172,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle dummy2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.906" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="59">
+    <testcase name="Verify whether the parastyle dummy2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.287" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="59">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle dummy2 option"></property>
@@ -190,7 +190,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle paragraph1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.136" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="65">
+    <testcase name="Verify whether the parastyle paragraph1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.656" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="65">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle paragraph1 option"></property>
@@ -208,7 +208,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle paragraph2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.231" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="71">
+    <testcase name="Verify whether the parastyle paragraph2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.904" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="71">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle paragraph2 option"></property>
@@ -226,7 +226,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle dummy3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.165" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="77">
+    <testcase name="Verify whether the parastyle dummy3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.936" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="77">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle dummy3 option"></property>
@@ -244,7 +244,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle sectiona are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.546" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="83">
+    <testcase name="Verify whether the parastyle sectiona are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.927" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="83">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle sectiona option"></property>
@@ -262,7 +262,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle paragraph3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.199" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="89">
+    <testcase name="Verify whether the parastyle paragraph3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.666" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="89">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle paragraph3 option"></property>
@@ -280,7 +280,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle dummy4 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.027" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="95">
+    <testcase name="Verify whether the parastyle dummy4 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.215" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="95">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle dummy4 option"></property>
@@ -298,7 +298,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the next button are displayed properly" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.134" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="101">
+    <testcase name="Verify whether the next button are displayed properly" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.198" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="101">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then the Next button is visible"></property>
@@ -313,7 +313,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="13.816" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="106">
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="15.232" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="106">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When verify step2 acknowledged are displayed"></property>
@@ -334,7 +334,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Table 1 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.785" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="113">
+    <testcase name="Verify whether the Table 1 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.86" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="113">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When Click on Review the content in Table 1"></property>
@@ -352,7 +352,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Table 2 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.011" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="119">
+    <testcase name="Verify whether the Table 2 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.163" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="119">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then the Next step2 button is visible"></property>
@@ -367,60 +367,19 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="30.742" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="124">
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="21.608" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="124">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then verify step3 acknowledged are displayed"></property>
         <property name="step[passed]" value="After Hooks"></property>
       </properties>
       <system-out>
-        <![CDATA[Element is not visible with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) page.waitForSelector: Timeout 30000ms exceeded.
-Call log:
-  [2m- waiting for locator('div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)') to be visible[22m
-
-    at actionAndAssertion.elementVisible [90m(D:\XML_Regression_Final\XML_BDD_UI\[39mtests\utils\actionsAndAssertion.js:537:33[90m)[39m
-    at editorPage.verifiedack2sIsVisible [90m(D:\XML_Regression_Final\XML_BDD_UI\[39mtests\pages\editorPage.js:416:23[90m)[39m
-    at Object.<anonymous> [90m(D:\XML_Regression_Final\XML_BDD_UI\[39mtests\steps\editorsteps.js:227:22[90m)[39m
-    at [90mD:\XML_Regression_Final\XML_BDD_UI\[39m.features-gen\tests\features\editor.feature.spec.js:125:5 {
-  name: [32m'TimeoutError'[39m,
-  [[32mSymbol(step)[39m]: {
-    stepId: [32m'pw:api@18'[39m,
-    location: {
-      file: [32m'D:\\XML_Regression_Final\\XML_BDD_UI\\tests\\utils\\actionsAndAssertion.js'[39m,
-      line: [33m537[39m,
-      column: [33m33[39m,
-      function: [32m'actionAndAssertion.elementVisible'[39m
-    },
-    category: [32m'pw:api'[39m,
-    title: [32m'page.waitForSelector(div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1))'[39m,
-    apiName: [32m'page.waitForSelector'[39m,
-    params: {
-      selector: [32m'div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)'[39m,
-      timeout: [33m30000[39m
-    },
-    boxedStack: [90mundefined[39m,
-    steps: [],
-    complete: [36m[Function: complete][39m,
-    endWallTime: [33m1729501700857[39m,
-    error: {
-      message: [32m'TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\n'[39m +
-        [32m'Call log:\n'[39m +
-        [32m"  \x1B[2m- waiting for locator('div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)') to be visible\x1B[22m\n"[39m,
-      stack: [32m'TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\n'[39m +
-        [32m'Call log:\n'[39m +
-        [32m"  \x1B[2m- waiting for locator('div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)') to be visible\x1B[22m\n"[39m +
-        [32m'\n'[39m +
-        [32m'    at actionAndAssertion.elementVisible (D:\\XML_Regression_Final\\XML_BDD_UI\\tests\\utils\\actionsAndAssertion.js:537:33)\n'[39m +
-        [32m'    at editorPage.verifiedack2sIsVisible (D:\\XML_Regression_Final\\XML_BDD_UI\\tests\\pages\\editorPage.js:416:23)\n'[39m +
-        [32m'    at Object.<anonymous> (D:\\XML_Regression_Final\\XML_BDD_UI\\tests\\steps\\editorsteps.js:227:22)\n'[39m +
-        [32m'    at D:\\XML_Regression_Final\\XML_BDD_UI\\.features-gen\\tests\\features\\editor.feature.spec.js:125:5'[39m
-    }
-  }
-}
+        <![CDATA[Verifying the element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1)
+Element visibled successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Text delete on Math" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.257" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="128">
+    <testcase name="Verfify Text delete on Math" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.871" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="128">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then move and delete text"></property>
@@ -434,7 +393,7 @@ Key action performed successfully (2 of 2)
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Edits on Partial text" classname="tests\features\editor.feature.spec.js" assertions="0" time="29.045" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="132">
+    <testcase name="Verfify Edits on Partial text" classname="tests\features\editor.feature.spec.js" assertions="0" time="22.465" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="132">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When click on partial text in step3"></property>
@@ -477,7 +436,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Displaymath has inlinegraphics are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.233" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="144">
+    <testcase name="Verify whether the Displaymath has inlinegraphics are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.289" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="144">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then verify Displaymath has inlinegraphics"></property>
@@ -492,7 +451,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Full text are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.026" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="149">
+    <testcase name="Verify whether the Full text are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.022" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="149">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then verify Full text are correctly in UI"></property>
@@ -507,7 +466,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Edits on fnm error" classname="tests\features\editor.feature.spec.js" assertions="0" time="8.634" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="154">
+    <testcase name="Verfify Edits on fnm error" classname="tests\features\editor.feature.spec.js" assertions="0" time="5.001" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="154">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When click on fnm element error"></property>
@@ -535,7 +494,7 @@ Element visibled successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Edits and changed snm to x error" classname="tests\features\editor.feature.spec.js" assertions="0" time="9.514" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="163">
+    <testcase name="Verfify Edits and changed snm to x error" classname="tests\features\editor.feature.spec.js" assertions="0" time="6.844" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="163">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When select an particular text as comma"></property>
@@ -561,7 +520,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the AuthorEditor surname is missing are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.832" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="171">
+    <testcase name="Verify whether the AuthorEditor surname is missing are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.211" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="171">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click AuthorEditor surname is missing. Check and correct."></property>
@@ -576,7 +535,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Graphical abstract missing in file are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.218" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="176">
+    <testcase name="Verify whether the Graphical abstract missing in file are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.299" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="176">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Graphical abstract missing in file"></property>
@@ -591,7 +550,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Title not allowed for Keywords.error" classname="tests\features\editor.feature.spec.js" assertions="0" time="9.715" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="181">
+    <testcase name="Verfify Title not allowed for Keywords.error" classname="tests\features\editor.feature.spec.js" assertions="0" time="5.37" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="181">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When place cursor on Keywords text and press Enter"></property>
@@ -618,7 +577,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.066" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="190">
+    <testcase name="Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.673" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="190">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Please check Unlisted cross-ref link tblS1."></property>
@@ -633,7 +592,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Supporting link is missing or incorrect. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.042" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="195">
+    <testcase name="Verify whether the Supporting link is missing or incorrect. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.83" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="195">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Supporting link is missing or incorrect. Please check."></property>
@@ -648,7 +607,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Please check author without surname displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.396" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="200">
+    <testcase name="Verify whether the Please check author without surname displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.357" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="200">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Please check author without surname"></property>
@@ -663,7 +622,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Inconsistent1 author name pattern displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.636" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="205">
+    <testcase name="Verify whether the Inconsistent1 author name pattern displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.986" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="205">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Inconsistent1 author name pattern, please check."></property>
@@ -678,7 +637,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the AuthorEditor surname is missing. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.288" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="210">
+    <testcase name="Verify whether the AuthorEditor surname is missing. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.36" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="210">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then AuthorEditor surname is missing. Check and correct."></property>
@@ -693,7 +652,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Inconsistent2 author name pattern, displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.453" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="215">
+    <testcase name="Verify whether the Inconsistent2 author name pattern, displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.204" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="215">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Inconsistent2 author name pattern, please check."></property>
@@ -708,7 +667,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.67" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="220">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.426" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="220">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib24."></property>
@@ -723,7 +682,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.184" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="225">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.419" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="225">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib25."></property>
@@ -738,7 +697,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.113" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="230">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.428" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="230">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib26."></property>
@@ -753,7 +712,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.076" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="235">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.938" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="235">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib27."></property>
@@ -768,7 +727,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.39" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="240">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.339" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="240">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib28."></property>
@@ -783,7 +742,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.089" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="245">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.583" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="245">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Click the uncited reference, bib-reference id bib29."></property>
@@ -798,7 +757,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.006" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="250">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.546" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="250">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Click the uncited reference, bibreference id bib34."></property>
@@ -810,7 +769,7 @@ Element visibled successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the Corrected21 displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="8.723" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="254">
+    <testcase name="Verify whether the Check the Corrected21 displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="7.049" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="254">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Corrected21 button"></property>
@@ -828,7 +787,7 @@ Waited for 5000 milliseconds
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Validate and submit" classname="tests\features\editor.feature.spec.js" assertions="0" time="95.365" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="259">
+    <testcase name="Verify whether the Validate and submit" classname="tests\features\editor.feature.spec.js" assertions="0" time="92.637" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="259">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When verify the submit button are present"></property>
@@ -850,7 +809,7 @@ Waited for 10000 milliseconds
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the after submitted" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.11" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="265">
+    <testcase name="Verify whether the after submitted" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.811" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="265">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When verify after submitted UI text are present in submitted mode"></property>
@@ -864,6 +823,97 @@ Verifying the element with selector: .notification-description
 Element present successfully: .notification-description
 ]]>
       </system-out>
+    </testcase>
+    <testcase name="Verify After submitted UI user can able to Enable editing" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.895" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="270">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When Verify the Enable Editing button is visible"></property>
+        <property name="step[passed]" value="Then User Can click the Enable Editing button"></property>
+        <property name="step[passed]" value="Then Click on Proceed button to Enable"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: button-component[type="primary"][value="enable-editing"]
+Element visibled successfully
+Clicking element with selector: button-component[type="primary"][value="enable-editing"]
+Element clicked successfully
+Clicking element with selector: button-component[type="primary"][value="enable-editing-yes"]
+Element clicked successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Check after enabled editing are user able to edit in UI" classname="tests\features\editor.feature.spec.js" assertions="0" time="8.035" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="276">
+      <failure message="editor.feature.spec.js:276:7 Check after enabled editing are user able to edit in UI">
+        <![CDATA[  [chromium] › tests\features\editor.feature.spec.js:276:7 › Application UI Validation › Check after enabled editing are user able to edit in UI › When check user can able to edit after revert the submit 
+
+    Error: Timed out 5000ms waiting for expect(locator).not.toBeVisible()
+
+    Locator: locator('button-component[value=\'next\']')
+    Expected: not visible
+    Received: visible
+    Call log:
+      - expect.soft.not.toBeVisible with timeout 5000ms
+      - waiting for locator('button-component[value=\'next\']')
+      -   locator resolved to <button-component value="next" type="quinary" text="Validate" disabled="false"></button-component>
+      -   unexpected value "visible"
+      -   locator resolved to <button-component value="next" type="quinary" text="Validate" disabled="false"></button-component>
+      -   unexpected value "visible"
+      -   locator resolved to <button-component value="next" type="quinary" text="Validate" disabled="false"></button-component>
+      -   unexpected value "visible"
+      -   locator resolved to <button-component value="next" type="quinary" text="Validate" disabled="false"></button-component>
+      -   unexpected value "visible"
+      -   locator resolved to <button-component value="next" type="quinary" text="Validate" disabled="false"></button-component>
+      -   unexpected value "visible"
+      -   locator resolved to <button-component value="next" type="quinary" text="Validate" disabled="false"></button-component>
+      -   unexpected value "visible"
+      -   locator resolved to <button-component value="next" type="quinary" text="Validate" disabled="false"></button-component>
+      -   unexpected value "visible"
+      -   locator resolved to <button-component value="next" type="quinary" text="Validate" disabled="false"></button-component>
+      -   unexpected value "visible"
+
+
+       at ..\tests\utils\actionsAndAssertion.js:1088
+
+      1086 |         console.log('Verifying the element with selector:', selector);
+      1087 |         const notVisible = await this.page.locator(selector);
+    > 1088 |         await expect.soft(notVisible).not.toBeVisible();
+           |                                           ^
+      1089 |         console.log("Element not visible successfully");
+      1090 |         return true;
+      1091 |     } catch (error) {
+
+        at actionAndAssertion.elementNotVisible (D:\XML_Regression_Final\XML_BDD_UI\tests\utils\actionsAndAssertion.js:1088:43)
+        at editorPage.elementnotpresent (D:\XML_Regression_Final\XML_BDD_UI\tests\pages\editorPage.js:758:5)
+        at Object.<anonymous> (D:\XML_Regression_Final\XML_BDD_UI\tests\steps\editorsteps.js:462:5)
+        at D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js:277:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\tests-features-editor.feat-4535a-are-user-able-to-edit-in-UI-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\tests-features-editor.feat-4535a-are-user-able-to-edit-in-UI-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-features-editor.feat-4535a-are-user-able-to-edit-in-UI-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+      </failure>
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[failure]" value="When check user can able to edit after revert the submit"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+        <property name="step[passed]" value="Worker Cleanup"></property>
+      </properties>
+      <system-out>
+        <![CDATA[Verifying the element with selector: button-component[value='next']
+Element not visible successfully
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Check After the Enableediting mode user can able to move submitted" classname="tests\features\editor.feature.spec.js" assertions="0" time="0" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="280">
+      <skipped/>
     </testcase>
   </testsuite>
 </testsuites>

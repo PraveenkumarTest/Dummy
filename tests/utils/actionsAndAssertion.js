@@ -762,67 +762,6 @@ export class actionAndAssertion {
           console.error(`Error deleting URL2 value: ${error}`);
         }
       }
-
-//     async getLink(cssLocator, options = {}) {
-//     const { waitForVisible = false, timeout = 30000 } = options;
-//     try {
-//       if (waitForVisible) {
-//         await this.page.waitForSelector(cssLocator, { timeout, visible: true });
-//       } else {
-//         await this.page.waitForSelector(cssLocator, { timeout });
-//       }
-//       const link = await this.page.locator(cssLocator).getAttribute('href');
-//       console.log('Extracted Link:', link);
-//       const token = link.split('?token=')[1];
-//       console.log('Extracted Token:', token);
-  
-//       // Read the existing .env.qa file content
-//       const envFilePath = 'D:\\XML-Reg2\\XML_BDD_UI\\env\\.env.qa';
-//       const existingContent = fs.readFileSync(envFilePath, 'utf8');
-  
-//       // Replace only the URL2 variable
-//       const newContent = existingContent.replace(/^URL2=.*/m, `URL2=${link}`);
-  
-//       // Write the updated content back to the .env.qa file
-//       fs.writeFileSync(envFilePath, newContent);
-//       console.log(`Extracted link written to .env.qa file successfully: ${envFilePath}`);
-//       return { link, token };
-//     } catch (error) {
-//       console.log('Unable to extract link with CSS locator:', cssLocator, error);
-//       return null;
-//     }
-//   }
-// async getLink(cssLocator, options = {}) {
-//     const { waitForVisible = false, timeout = 30000 } = options;
-//     try {
-//       if (waitForVisible) {
-//         await this.page.waitForSelector(cssLocator, { timeout, visible: true });
-//       } else {
-//         await this.page.waitForSelector(cssLocator, { timeout });
-//       }
-//       const link = await this.page.locator(cssLocator).getAttribute('href');
-//       console.log('Extracted Link:', link);
-//       const token = link.split('?token=')[1];
-//       console.log('Extracted Token:', token);
-  
-//       // Read the existing .env.qa file content
-//       const envFilePath = 'D:\\XML-Reg2\\XML_BDD_UI\\env\\.env.qa';
-//       try {
-//         const existingContent = fs.readFileSync(envFilePath, 'utf8');
-//         // Replace only the URL2 variable
-//         const newContent = existingContent.replace(/^URL2=.*/m, `URL2=${link}`);
-//         // Write the updated content back to the .env.qa file
-//         fs.writeFileSync(envFilePath, newContent);
-//         console.log(`Extracted link written to .env.qa file successfully: ${envFilePath}`);
-//       } catch (error) {
-//         console.error(`Error reading or writing to file: ${error}`);
-//       }
-//       return { link, token };
-//     } catch (error) {
-//       console.log('Unable to extract link with CSS locator:', cssLocator, error);
-//       return null;
-//     }
-//   }
   async getLink(cssLocator, options = {}) {
     const { waitForVisible = false, timeout = 30000 } = options;
     try {
@@ -1135,6 +1074,24 @@ async handleWindowsAndCloseParent(options = {}) {
     await browser.close();
     throw new Error(`Element not present: ${selector}`);
   }
+}
+async elementNotVisible(selector, options = {}) {
+    const { waitForNotVisible = false, timeout = 30000 } = options;
+    try {
+        if (waitForNotVisible) {
+            await this.page.waitForSelector(selector, { timeout, state: 'hidden' });
+        } else {
+            await this.page.waitForSelector(selector, { timeout });
+        }
+        console.log('Verifying the element with selector:', selector);
+        const notVisible = await this.page.locator(selector);
+        await expect.soft(notVisible).not.toBeVisible();
+        console.log("Element not visible successfully");
+        return true;
+    } catch (error) {
+        console.log('Element is visible with selector:', selector, error);
+        return false;
+    }
 }
     }
 
