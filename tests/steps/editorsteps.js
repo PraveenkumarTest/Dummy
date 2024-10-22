@@ -56,20 +56,14 @@ When('I switch to the child page and close the parent', async function () {
 });
 
 When('Click on Continue option', async ({ editorsPage }) => {
-    // Initialize the page object for the child page
-    
     await pageObject.clicknocon();
 });
 Then('the Review parastyle label be visible', async ({ editorsPage }) => {
-   
     await pageObject.reviewIsVisible();
 });
-
- Then('Click on Review the parastyle Articletitle option', async ({ editorsPage }) => {
-    
+ Then('Click on Review the parastyle Articletitle option', async ({ editorsPage }) => {   
     await pageObject.clickreviewclk(); 
 });
-
 Then('verify whether the parastyle Artice is present', async ({ editorsPage }) => {
     await pageObject.verifyarticletitleIsVisible();    
 });
@@ -223,10 +217,10 @@ Then('Click on Next step2 button', async ({ editorsPage }) => {
 });
 
 ///// Step 3 
+
 Then('verify step3 acknowledged are displayed', async ({ editorsPage }) => {
     await pageObject.verifiedack2sIsVisible();
 });
-
 Then('move and delete text', async ({ editorsPage }) => {
     await pageObject.ArrowandDelaction();
 });
@@ -461,6 +455,16 @@ Then('Click on Proceed button to Enable', async ({ editorsPage }) => {
 When('check user can able to edit after revert the submit', async ({ editorsPage }) => {
     await pageObject.elementpresentarenot();
 });
+// When('Select any text in UI', async ({ editorsPage }) => {    
+//     await pageObject.SelectPara();
+// });
+// Then('click an format button', async ({ editorsPage }) => { 
+//     await pageObject.ClickFormat();
+// });
+// Then('Check user can able to convert text as math', async ({ editorsPage }) => { 
+//     await pageObject.Clickconverttomath();
+// });
+
 When('click an submit button', async ({ editorsPage }) => {
     await pageObject.SUBMITBTN();
 });

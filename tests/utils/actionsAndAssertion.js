@@ -774,7 +774,6 @@ export class actionAndAssertion {
       console.log('Extracted Link:', link);
       const token = link.split('?token=')[1];
       console.log('Extracted Token:', token);
-  
       // Update the URL2 variable in the .env.qa file
       const envFilePath = 'D:\\XML_Regression_Final\\XML_BDD_UI\\env\\.env.qa';
       try {

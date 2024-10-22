@@ -102,8 +102,8 @@ Feature: Application UI Validation
     Then the Next step2 button is visible
     Then Click on Next step2 button
 
-
  
+
   Scenario: Verify whether the Acknowledged Option are displayed properly in Step3
     Then verify step3 acknowledged are displayed
  
@@ -213,12 +213,11 @@ Feature: Application UI Validation
     Then Click on Corrected20 button
   
   Scenario: Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3
-    Then Verify Click the uncited reference, bibreference id bib34.
+    Then Verify Click the uncited reference, bibreference id bib34. 
   
   Scenario: Verify whether the Check the Corrected21 displayed properly in Step3
     Then Click on Corrected21 button
     Then Click the validate button
-
   
   Scenario: Verify whether the Validate and submit
      When verify the submit button are present
@@ -237,9 +236,16 @@ Feature: Application UI Validation
   Scenario: Check after enabled editing are user able to edit in UI
     When check user can able to edit after revert the submit
 
+# Scenario: Check and verify user can able to convert Normal text into Math QA server
+  #   When Select any text in UI
+  #   Then click an format button
+  #   Then Check user can able to convert text as math    
+
   Scenario: Check After the Enableediting mode user can able to move submitted
     When click an submit button
     Then Check and verify This article has been already submitted are present 
+    
+
 
 
 
