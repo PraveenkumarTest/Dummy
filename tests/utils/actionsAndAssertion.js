@@ -1,13 +1,23 @@
 import { test, expect } from '@playwright/test';
 import { sharedBrowserContext } from '../fixtures/fixtures';
-// const path = require('path'); // Import the path module
-import * as fs from 'fs';
+//import * as fs from 'fs';
+import * as path from 'path';
+import { diffWords } from 'diff';
+
 require('dotenv').config({ path: 'D:/XML-Reg2/XML_BDD_UI/env/.env.qa' });
 
+const { exec } = require('child_process');
 const assert = require('assert');
-const defaultTimeout = 30000;
-export class actionAndAssertion {
+const xml2js = require('xml2js');
+const deepEqual = require('deep-equal');
 
+ const fs = require('fs') // Correctly using the promises API
+ const fsp = require('fs').promises
+
+const defaultTimeout = 30000;     // Importing the file system module
+// const path = require('path');  // Importing the path module
+
+export class actionAndAssertion {
     constructor(page) {
         this.page = page;
     }
@@ -1055,7 +1065,7 @@ async handleWindowsAndCloseParent(options = {}) {
             throw error; // Rethrow the error for better error handling
         }
     }
-   async  ElementPresentOrNot(selector, options = {}) {
+async  ElementPresentOrNot(selector, options = {}) {
     const { waitForVisible = false, timeout = defaultTimeout } = options;
    try {
     if (waitForVisible) {
@@ -1092,7 +1102,369 @@ async elementNotVisible(selector, options = {}) {
         return false;
     }
 }
+async  Seefile(sourceDirectory, fileName) {
+    let flag = false;
+    try {
+        // Construct the full path to the file
+        const filePath = path.join(sourceDirectory, fileName); 
+        // Check if the file exists
+        flag = fs.existsSync(filePath);
+        // Log the result
+        if (flag) {
+            console.log("pass: File Present - " + path.basename(fileName));
+        } else {
+            console.log("fail: File Not Present - " + path.basename(fileName));
+        }
+    } catch (error) {
+        console.error("Error occurred: " + error.message);
     }
+    return flag;
+}
+// Define execPromise function
+// async execPromise(command) {
+//     return new Promise((resolve, reject) => {
+//         exec(command, (error, stdout, stderr) => {
+//             if (error) {
+//                 return reject(error);
+//             }
+//             resolve(stdout);
+//         });
+//     });
+// }
+
+// // Define xmlComparison function
+// async  xmlComparison(actualPath, expectedPath) {
+//     // Log paths
+//     console.log(`Actual Path: ${actualPath}`);
+//     console.log(`Expected Path: ${expectedPath}`);
+    
+//     try {
+//         // Check if both files exist using fs.access
+//         await Promise.all([
+//             fs.access(actualPath, fs.constants.F_OK),
+//             fs.access(expectedPath, fs.constants.F_OK)
+//         ]);
+//     } catch (error) {
+//         console.error('Error during file access:', error.message);
+//         return false;
+//     }
+    
+//     // Construct command to run the Python script
+//     const command = `python path/to/your_script.py ${expectedPath}`;
+    
+//     try {
+//         // Execute the command using execPromise
+//         const processOutput = await execPromise(command);
+        
+//         // Check for differences in output
+//         if (processOutput.includes('DIFF found')) {
+//             throw new Error('Differences found in XML comparison.');
+//         }
+        
+//         console.log('XML Comparison completed successfully.');
+//         return true;
+//     } catch (error) {
+//         console.error('Error during XML comparison:', error.message);
+//         return false;
+//     }
+// }
+
+
+// async  compareXmlFiles(sourceDirectory, expectedFileName, actualFileName) {
+//     let areIdentical = false;
+//     try {
+//         const expectedFilePath = path.join(sourceDirectory, expectedFileName);
+//         const actualFilePath = path.join(sourceDirectory, actualFileName);
+
+//         // Ensure both files exist
+//         await Promise.all([
+//             fs.access(expectedFilePath),
+//             fs.access(actualFilePath)
+//         ]);
+        
+//         // Read the XML files
+//         const expectedXml = await fs.readFile(expectedFilePath, 'utf8');
+//         const actualXml = await fs.readFile(actualFilePath, 'utf8');
+
+//         // Parse XML to JSON
+//         const parser = new xml2js.Parser();
+//         const expectedJson = await parser.parseStringPromise(expectedXml);
+//         const actualJson = await parser.parseStringPromise(actualXml);
+
+//         // Compare JSON representations
+//         areIdentical = JSON.stringify(expectedJson) === JSON.stringify(actualJson);
+
+//         // Log the result
+//         if (areIdentical) {
+//             console.log("pass: XML files are identical - " + path.basename(expectedFileName));
+//         } else {
+//             console.log("fail: XML files are not identical - " + path.basename(expectedFileName));
+//         }
+//     } catch (error) {
+//         console.error("Error occurred: " + error.message);
+//     }
+//     return areIdentical;
+// }
+// async compareXmlFiles(expectedFilePath, actualFilePath) {
+//     try {
+//         // Check if both files exist synchronously
+//         if (!fs.existsSync(expectedFilePath) || !fs.existsSync(actualFilePath)) {
+//             console.log("One or both files do not exist.");
+//             return false;
+//         }
+
+//         // Read the XML files
+//         const expectedXml = fs.readFileSync(expectedFilePath, 'utf8');
+//         const actualXml = fs.readFileSync(actualFilePath, 'utf8');
+
+//         // Compare XML contents
+//         if (expectedXml === actualXml) {
+//             console.log("pass: XML files are identical - " + path.basename(expectedFilePath));
+//             return true;
+//         } else {
+//             console.log("fail: XML files are not identical - " + path.basename(expectedFilePath));
+//             return false;
+//         }
+//     } catch (error) {
+//         console.error("Error occurred: " + error.message);
+//         return false;
+//     }
+// }
+/**
+ * Compares two XML files and logs the differences in terms of added and removed tags/text.
+//  * @param {string} expectedFilePath - The path to the expected XML file.
+//  * @param {string} actualFilePath - The path to the actual XML file.
+//  * @returns {boolean} - True if files are identical, false otherwise.
+//  */
+// async  compareXmlFiles(expectedFilePath, actualFilePath) {
+//     try {
+//         // Check if both files exist synchronously
+//         if (!fs.existsSync(expectedFilePath) || !fs.existsSync(actualFilePath)) {
+//             console.log("One or both files do not exist.");
+//             return false;
+//         }
+//         // Read the XML files
+//         const expectedXml = fs.readFileSync(expectedFilePath, 'utf8');
+//         const actualXml = fs.readFileSync(actualFilePath, 'utf8');
+
+//         // Compare XML contents
+//         if (expectedXml === actualXml) {
+//             console.log("pass: XML files are identical - " + path.basename(expectedFilePath));
+//             return true;
+//         } else {
+//             console.log("fail: XML files are not identical - " + path.basename(expectedFilePath));
+//             const differences = diffWords(expectedXml, actualXml);
+//             differences.forEach(part => {
+//                 if (part.added) {
+//                     console.log(`Added: ${part.value}`);
+//                 } else if (part.removed) {
+//                     console.log(`Removed: ${part.value}`);
+//                 }
+//             });
+//             return false;
+//         }
+//     } catch (error) {
+//         console.error("Error occurred: " + error.message);
+//         return false;
+//     }
+// }
+// async compareXmlFiles(expectedFilePath, actualFilePath) {
+//     try {
+//         // Check if both files exist asynchronously
+//         await Promise.all([
+//             fs.access(expectedFilePath),
+//             fs.access(actualFilePath)
+//         ]);
+
+//         // Read the XML files
+//         const expectedXml =  fs.readFile(expectedFilePath, 'utf8');
+//         const actualXml =  fs.readFile(actualFilePath, 'utf8');
+
+//         // Compare XML contents
+//         if (expectedXml === actualXml) {
+//             console.log("pass: XML files are identical - " + path.basename(expectedFilePath));
+//             return true;
+//         } else {
+//             console.log("fail: XML files are not identical - " + path.basename(expectedFilePath));
+//             const differences = diffWords(expectedXml, actualXml);
+//             differences.forEach(part => {
+//                 if (part.added) {
+//                     console.log(`Added: ${part.value}`);
+//                 } else if (part.removed) {
+//                     console.log(`Removed: ${part.value}`);
+//                 }
+//             });
+//             return false;
+//         }
+//     } catch (error) {
+//         console.error("Error occurred: " + error.message);
+//         return false;
+//     }
+// }
+
+// async  compareXMLFiles(actualFilePath, expectedFilePath) {
+//   try {
+//     // Ensure paths are valid strings
+//     if (typeof actualFilePath !== 'string' || typeof expectedFilePath !== 'string') {
+//       throw new Error('File paths must be strings.');
+//     }
+
+//     // Convert paths to absolute paths
+//     actualFilePath = path.resolve(actualFilePath);
+//     expectedFilePath = path.resolve(expectedFilePath);
+
+//     // Logging file paths for debugging
+//     console.log('Actual File Path:', actualFilePath);
+//     console.log('Expected File Path:', expectedFilePath);
+
+//     // Check if files exist
+//     if (!fs.existsSync(actualFilePath)) {
+//       throw new Error(`Actual file does not exist: ${actualFilePath}`);
+//     }
+//     if (!fs.existsSync(expectedFilePath)) {
+//       throw new Error(`Expected file does not exist: ${expectedFilePath}`);
+//     }
+
+//     // Read actual file
+//     const actualData = await fsp.readFile(actualFilePath, 'utf8');
+//     console.log('Actual file content:', actualData);
+
+//     // Read expected file
+//     const expectedData = await fsp.readFile(expectedFilePath, 'utf8');
+//     console.log('Expected file content:', expectedData);
+
+//     // Proceed with XML comparison logic here...
+
+//   } catch (error) {
+//     console.error('Error reading or comparing XML files:', error);
+//   }
+// }
+
+// async  compareXMLFiles(actualFilePath, expectedFilePath) {
+//   try {
+//     // Convert paths to absolute paths and check if files exist
+//     actualFilePath = path.resolve(actualFilePath);
+//     expectedFilePath = path.resolve(expectedFilePath);
+
+//     if (!fs.existsSync(actualFilePath)) {
+//       throw new Error(`Actual file does not exist: ${actualFilePath}`);
+//     }
+//     if (!fs.existsSync(expectedFilePath)) {
+//       throw new Error(`Expected file does not exist: ${expectedFilePath}`);
+//     }
+
+//     // Read and parse both XML files
+//     const [actualData, expectedData] = await Promise.all([
+//       fsp.readFile(actualFilePath, 'utf8'),
+//       fsp.readFile(expectedFilePath, 'utf8')
+//     ]);
+
+//     const parser = new xml2js.Parser({ explicitArray: false });
+//     const [actualXML, expectedXML] = await Promise.all([
+//       parser.parseStringPromise(actualData),
+//       parser.parseStringPromise(expectedData)
+//     ]);
+
+//     // Find differences directly within the same function
+//     const differences = (function findDifferences(actual, expected) {
+//       const differences = {};
+      
+//       for (const key in expected) {
+//         if (!(key in actual)) {
+//           differences[key] = { actual: null, expected: expected[key] };
+//         } else if (typeof expected[key] === 'object' && expected[key] !== null) {
+//           const nestedDifferences = findDifferences(actual[key], expected[key]); // Recursive comparison
+//           if (nestedDifferences) {
+//             differences[key] = nestedDifferences;
+//           }
+//         } else if (!deepEqual(actual[key], expected[key])) {
+//           differences[key] = { actual: actual[key], expected: expected[key] };
+//         }
+//       }
+      
+//       return Object.keys(differences).length > 0 ? differences : null;
+//     })(actualXML, expectedXML); // Immediately invoked function expression (IIFE)
+
+//     // Check if there are differences and log them
+//     if (differences) {
+//       console.log('Differences found in the expected XML compared to the actual XML:');
+//       console.log(JSON.stringify(differences, null, 2));
+//     } else {
+//       console.log('The expected XML matches the actual XML.');
+//     }
+
+//   } catch (error) {
+//     console.error('Error reading or comparing XML files:', error);
+//   }
+// }
+
+
+
+async  compareXMLFiles(actualFilePath, expectedFilePath) {
+  try {
+    // Convert paths to absolute paths and check if files exist
+    actualFilePath = path.resolve(actualFilePath);
+    expectedFilePath = path.resolve(expectedFilePath);
+
+    if (!fs.existsSync(actualFilePath)) {
+      throw new Error(`Actual file does not exist: ${actualFilePath}`);
+    }
+    if (!fs.existsSync(expectedFilePath)) {
+      throw new Error(`Expected file does not exist: ${expectedFilePath}`);
+    }
+
+    // Read and parse both XML files
+    const [actualData, expectedData] = await Promise.all([
+      fsp.readFile(actualFilePath, 'utf8'),
+      fsp.readFile(expectedFilePath, 'utf8')
+    ]);
+
+    const parser = new xml2js.Parser({ explicitArray: false });
+    const [actualXML, expectedXML] = await Promise.all([
+      parser.parseStringPromise(actualData),
+      parser.parseStringPromise(expectedData)
+    ]);
+
+    // Initialize a difference count variable
+    let differenceCount = 0;
+
+    // Find differences directly within the same function
+    const differences = (function findDifferences(actual, expected) {
+      const differences = {};
+      
+      for (const key in expected) {
+        if (!(key in actual)) {
+          differences[key] = { actual: null, expected: expected[key] };
+          differenceCount++; // Increment count when a difference is found
+        } else if (typeof expected[key] === 'object' && expected[key] !== null) {
+          const nestedDifferences = findDifferences(actual[key], expected[key]); // Recursive comparison
+          if (nestedDifferences) {
+            differences[key] = nestedDifferences;
+          }
+        } else if (!deepEqual(actual[key], expected[key])) {
+          differences[key] = { actual: actual[key], expected: expected[key] };
+          differenceCount++; // Increment count when a difference is found
+        }
+      }
+      
+      return Object.keys(differences).length > 0 ? differences : null;
+    })(actualXML, expectedXML); // Immediately invoked function expression (IIFE)
+
+    // Check if there are differences and log them
+    if (differences) {
+      console.log('Differences found in the expected XML compared to the actual XML:');
+      console.log(JSON.stringify(differences, null, 2));
+      console.log(`Total number of differences found: ${differenceCount}`);
+    } else {
+      console.log('The expected XML matches the actual XML.');
+    }
+
+  } catch (error) {
+    console.error('Error reading or comparing XML files:', error);
+  }
+}
+
+}
 
 
 

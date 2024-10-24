@@ -16,6 +16,9 @@ Feature: Application UI Validation
     When I switch to the child page and close the parent
     When Click on Continue option
     Then the Review parastyle label be visible
+
+  Scenario: Verify after submitted outxml compare
+    When To check outxml are stored in server path
   
   Scenario: Verify whether the parastyle Articletitle are displayed properly in Step1
     Then Click on Review the parastyle Articletitle option
@@ -244,6 +247,9 @@ Feature: Application UI Validation
   Scenario: Check After the Enableediting mode user can able to move submitted
     When click an submit button
     Then Check and verify This article has been already submitted are present 
+
+  Scenario: To check after submitted outxml compare
+    When To check outxml are stored in server path
     
 
 

@@ -1,6 +1,5 @@
 import { basename } from 'path';
 import { actionAndAssertion } from '../utils/actionsAndAssertion';
-
 import { sharedBrowserContext } from '../fixtures/fixtures';
 
 export class editorPage {
@@ -111,9 +110,18 @@ constructor(page) {
     this.ProceedButton ='button-component[type="primary"][value="enable-editing-yes"]';
 
   ///// Formatting Normal text to Math
-  this.Para ='[data-xml-linenumber-id="Line_manuscript_18"]'; 
-  this.format ="menu-component[name='Format']";
-  this.Mathconvert ='[data-value="math"]';
+    this.Para ='[data-xml-linenumber-id="Line_manuscript_18"]'; 
+    this.format ="menu-component[name='Format']";
+    this.Mathconvert ='[data-value="math"]';
+
+  ////// Server path
+    // this.Serverpath ="//tnqfs07/NIMBLE-UAT/TNQFS20/smart_tool/ACS/JZ/4c01650/customer.xml";
+    this.Serverpath = "D:/OUTXML/";
+    this.ActualName ="customer.xml";
+    this.ExpectedName ="customer1.xml";
+    this.FileName ='Customer.xml';
+    this.Actualpath='D:/OUTXML/New/JZ_4C01650_IN.xml'
+    this.Expectedpath='D:/OUTXML/New/jz4c01650_OUT.xml'
 
 
    ///// Actions
@@ -212,6 +220,15 @@ constructor(page) {
   {        
     await this.action.ElementPresentOrNot(this.review);
   }
+
+  ////OUT XML
+  async CheckOuT()
+  {
+   await this.action.Seefile(this.Serverpath,this.FileName);
+   await this.action.compareXMLFiles(this.Actualpath,this.Expectedpath);
+  }
+
+
 //////////
   async clickreviewclk()
   {
@@ -788,5 +805,6 @@ constructor(page) {
    await this.action.waitForTime(20000)
    await this.action.waitForTime(20000)
    await this.action.elementVisible(this.submittedtext);
-  } 
+  }
+
 }

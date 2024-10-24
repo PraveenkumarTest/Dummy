@@ -61,6 +61,13 @@ When('Click on Continue option', async ({ editorsPage }) => {
 Then('the Review parastyle label be visible', async ({ editorsPage }) => {
     await pageObject.reviewIsVisible();
 });
+
+////OUT XML
+When('To check outxml are stored in server path', async ({ editorsPage }) => {
+    await pageObject.CheckOuT();
+});
+
+
  Then('Click on Review the parastyle Articletitle option', async ({ editorsPage }) => {   
     await pageObject.clickreviewclk(); 
 });
@@ -471,4 +478,6 @@ When('click an submit button', async ({ editorsPage }) => {
 Then('Check and verify This article has been already submitted are present', async ({ editorsPage }) => {
     await pageObject.AftersubmittedUi();
 });
+
+
 

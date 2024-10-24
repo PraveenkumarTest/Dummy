@@ -45,7 +45,7 @@ module.exports = defineConfig({
   reporter: [
             ['list'],
             ['html',{ outputFolder:'XML_report'}],
-            ['@estruyf/github-actions-reporter'],
+            //['@estruyf/github-actions-reporter'],
             [
               'playwright-testmo-reporter',
               {
