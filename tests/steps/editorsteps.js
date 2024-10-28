@@ -61,13 +61,6 @@ When('Click on Continue option', async ({ editorsPage }) => {
 Then('the Review parastyle label be visible', async ({ editorsPage }) => {
     await pageObject.reviewIsVisible();
 });
-
-////OUT XML
-When('To check outxml are stored in server path', async ({ editorsPage }) => {
-    await pageObject.CheckOuT();
-});
-
-
  Then('Click on Review the parastyle Articletitle option', async ({ editorsPage }) => {   
     await pageObject.clickreviewclk(); 
 });
@@ -430,9 +423,64 @@ Then('Verify Click the uncited reference, bibreference id bib34.', async ({ edit
 Then('Click on Corrected21 button', async ({ editorsPage }) => {
     await pageObject.clickCorrected21();
 });
-Then('Click the validate button', async ({ editorsPage }) => {
+
+////// Skip Error
+When('Xml link user able to change URL as opsHead', async ({ editorsPage }) => {
+  await pageObject.SKIPERRORMode();
+});
+Then('Made an some correction in UI', async ({ editorsPage }) => {
+    await pageObject.Somecorrection();
+});
+ Then('Click the validate button', async ({ editorsPage }) => {
     await pageObject.clickvalidate();
 });
+
+
+/////// 
+Then('Users able to visible skip error option is visible', async ({ editorsPage }) => {
+    await pageObject.Skiperrorisvisible();
+});
+When('user can click skip error option', async ({ editorsPage }) => {
+    await pageObject.clickskiperror();
+});
+Then('Dropdown reason for skip error', async ({ editorsPage }) => {
+    await pageObject.Dropdowntoreason();
+});
+Then('click an skip error button to update', async ({ editorsPage }) => {
+    await pageObject.clickskiptourupdate();
+});
+
+Then('Click Validate btn', async ({ editorsPage }) => {
+    await pageObject.clickvalidatelast();
+});
+
+/// Again clear final error
+When('Verify and Click final stage of 1st error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerrorone();
+});
+Then('Verify and Click final stage of 2nd error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerrortwo();
+});
+Then('Verify and Click final stage of 3rd error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerrorthree();
+});
+Then('Verify and Click final stage of 4th error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerrorofour();
+});
+Then('Verify and Click final stage of 5th error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerrorfive();
+});
+Then('Verify and Click final stage of 6th error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerrorsix();
+});
+Then('Verify and Click final stage of 7th error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerrorseven();
+});
+Then('click VALIDATE Button', async ({ editorsPage }) => {
+    await pageObject.CLICKVALIDATE();
+});
+
+
 
 ///// Submit
 When('verify the submit button are present', async ({ editorsPage }) => {
@@ -472,6 +520,8 @@ When('check user can able to edit after revert the submit', async ({ editorsPage
 //     await pageObject.Clickconverttomath();
 // });
 
+
+
 When('click an submit button', async ({ editorsPage }) => {
     await pageObject.SUBMITBTN();
 });
@@ -479,5 +529,9 @@ Then('Check and verify This article has been already submitted are present', asy
     await pageObject.AftersubmittedUi();
 });
 
+////OUT XML
+When('To check outxml are stored in server path', async ({ editorsPage }) => {
+    await pageObject.CheckOuT();
+});
 
 

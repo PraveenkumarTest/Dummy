@@ -5,7 +5,7 @@
   "scripts": {
     "test": "npm run bddgen && npm run playwright-test",
     "bddgen": "npx bddgen",
-    "qa-test": "npx bddgen && cross-env ENV=qa npx playwright test --headed && npx playwright show-report&&allure generate ./allure-results -o ./allure-report&& allure open allure-reports",
+    "qa-test": "npx bddgen && cross-env ENV=qa npx playwright test --headed&& npx playwright show-report&&allure generate ./allure-results -o ./allure-report&& allure open allure-reports",
     "playwright-test": "npx playwright test --reporter=html,list --headed&& npx playwright show-report && allure generate ./allure-results -o ./allure-report && allure open allure-report"
   },
   "keywords": [],
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@estruyf/github-actions-reporter": "^1.9.2",
+    "chalk": "^5.3.0",
     "deep-equal": "^2.2.3",
     "diff": "^7.0.0",
     "dotenv": "^16.4.5",

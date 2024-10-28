@@ -15,10 +15,7 @@ Feature: Application UI Validation
   Scenario: Verify whether the Acknowledged Option are displayed properly in Step1
     When I switch to the child page and close the parent
     When Click on Continue option
-    Then the Review parastyle label be visible
-
-  Scenario: Verify after submitted outxml compare
-    When To check outxml are stored in server path
+    Then the Review parastyle label be visible 
   
   Scenario: Verify whether the parastyle Articletitle are displayed properly in Step1
     Then Click on Review the parastyle Articletitle option
@@ -220,16 +217,40 @@ Feature: Application UI Validation
   
   Scenario: Verify whether the Check the Corrected21 displayed properly in Step3
     Then Click on Corrected21 button
+
+  Scenario: Change URL as opsHead to skip this error
+    When Xml link user able to change URL as opsHead
+    Then Made an some correction in UI
     Then Click the validate button
-  
+
+  Scenario: User able to skip error in Step3  
+    Then Users able to visible skip error option is visible
+    When user can click skip error option
+    Then Dropdown reason for skip error
+    Then click an skip error button to update
+      
+  Scenario: User able to click validate to check   
+    Then Click Validate btn
+
+  Scenario: Again clear some errors in final stage
+    When Verify and Click final stage of 1st error
+    Then Verify and Click final stage of 2nd error
+    Then Verify and Click final stage of 3rd error
+    Then Verify and Click final stage of 4th error
+    Then Verify and Click final stage of 5th error
+    Then Verify and Click final stage of 6th error
+    Then Verify and Click final stage of 7th error
+    Then click VALIDATE Button
+
+
   Scenario: Verify whether the Validate and submit
-     When verify the submit button are present
-     Then click submit button
-     Then Wait for page load to submit
+    When verify the submit button are present
+    Then click submit button
+    Then Wait for page load to submit
 
   Scenario: Verify whether the after submitted
-     When verify after submitted UI text are present in submitted mode
-     Then verify This article has been already submitted are present
+    When verify after submitted UI text are present in submitted mode
+    Then verify This article has been already submitted are present
 
   Scenario: Verify After submitted UI user can able to Enable editing
     When Verify the Enable Editing button is visible
@@ -239,7 +260,7 @@ Feature: Application UI Validation
   Scenario: Check after enabled editing are user able to edit in UI
     When check user can able to edit after revert the submit
 
-# Scenario: Check and verify user can able to convert Normal text into Math QA server
+  #  Scenario: Check and verify user can able to convert Normal text into Math QA server
   #   When Select any text in UI
   #   Then click an format button
   #   Then Check user can able to convert text as math    
@@ -248,7 +269,7 @@ Feature: Application UI Validation
     When click an submit button
     Then Check and verify This article has been already submitted are present 
 
-  Scenario: To check after submitted outxml compare
+  Scenario: Verify after submitted outxml compare
     When To check outxml are stored in server path
     
 

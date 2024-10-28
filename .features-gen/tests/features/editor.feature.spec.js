@@ -20,10 +20,6 @@ test.describe("Application UI Validation", () => {
     await Then("the Review parastyle label be visible", null, { editorsPage });
   });
 
-  test("Verify after submitted outxml compare", async ({ When, editorsPage }) => {
-    await When("To check outxml are stored in server path", null, { editorsPage });
-  });
-
   test("Verify whether the parastyle Articletitle are displayed properly in Step1", async ({ Then, editorsPage }) => {
     await Then("Click on Review the parastyle Articletitle option", null, { editorsPage });
     await Then("verify whether the parastyle Artice is present", null, { editorsPage });
@@ -257,7 +253,34 @@ test.describe("Application UI Validation", () => {
 
   test("Verify whether the Check the Corrected21 displayed properly in Step3", async ({ Then, editorsPage }) => {
     await Then("Click on Corrected21 button", null, { editorsPage });
+  });
+
+  test("Change URL as opsHead to skip this error", async ({ When, editorsPage, Then }) => {
+    await When("Xml link user able to change URL as opsHead", null, { editorsPage });
+    await Then("Made an some correction in UI", null, { editorsPage });
     await Then("Click the validate button", null, { editorsPage });
+  });
+
+  test("User able to skip error in Step3", async ({ Then, editorsPage, When }) => {
+    await Then("Users able to visible skip error option is visible", null, { editorsPage });
+    await When("user can click skip error option", null, { editorsPage });
+    await Then("Dropdown reason for skip error", null, { editorsPage });
+    await Then("click an skip error button to update", null, { editorsPage });
+  });
+
+  test("User able to click validate to check", async ({ Then, editorsPage }) => {
+    await Then("Click Validate btn", null, { editorsPage });
+  });
+
+  test("Again clear some errors in final stage", async ({ When, editorsPage, Then }) => {
+    await When("Verify and Click final stage of 1st error", null, { editorsPage });
+    await Then("Verify and Click final stage of 2nd error", null, { editorsPage });
+    await Then("Verify and Click final stage of 3rd error", null, { editorsPage });
+    await Then("Verify and Click final stage of 4th error", null, { editorsPage });
+    await Then("Verify and Click final stage of 5th error", null, { editorsPage });
+    await Then("Verify and Click final stage of 6th error", null, { editorsPage });
+    await Then("Verify and Click final stage of 7th error", null, { editorsPage });
+    await Then("click VALIDATE Button", null, { editorsPage });
   });
 
   test("Verify whether the Validate and submit", async ({ When, editorsPage, Then }) => {
@@ -286,7 +309,7 @@ test.describe("Application UI Validation", () => {
     await Then("Check and verify This article has been already submitted are present", null, { editorsPage });
   });
 
-  test("To check after submitted outxml compare", async ({ When, editorsPage }) => {
+  test("Verify after submitted outxml compare", async ({ When, editorsPage }) => {
     await When("To check outxml are stored in server path", null, { editorsPage });
   });
 
@@ -303,52 +326,55 @@ test.use({
 const bddFileMeta = {
   "Verify whether the link generation XML URL": {"pickleLocation":"5:3"},
   "Verify whether the Acknowledged Option are displayed properly in Step1": {"pickleLocation":"15:3"},
-  "Verify after submitted outxml compare": {"pickleLocation":"20:3"},
-  "Verify whether the parastyle Articletitle are displayed properly in Step1": {"pickleLocation":"23:3"},
-  "Verify whether the parastyle authors are displayed properly in Step1": {"pickleLocation":"28:3"},
-  "Verify whether the parastyle correspondingauthor are displayed properly in Step1": {"pickleLocation":"33:3"},
-  "Verify whether the parastyle e-mail are displayed properly in Step1": {"pickleLocation":"38:3"},
-  "Verify whether the parastyle dummy1 are displayed properly in Step1": {"pickleLocation":"43:3"},
-  "Verify whether the parastyle abstract are displayed properly in Step1": {"pickleLocation":"48:3"},
-  "Verify whether the parastyle dummy2 are displayed properly in Step1": {"pickleLocation":"53:3"},
-  "Verify whether the parastyle paragraph1 are displayed properly in Step1": {"pickleLocation":"58:3"},
-  "Verify whether the parastyle paragraph2 are displayed properly in Step1": {"pickleLocation":"63:3"},
-  "Verify whether the parastyle dummy3 are displayed properly in Step1": {"pickleLocation":"68:3"},
-  "Verify whether the parastyle sectiona are displayed properly in Step1": {"pickleLocation":"73:3"},
-  "Verify whether the parastyle paragraph3 are displayed properly in Step1": {"pickleLocation":"78:3"},
-  "Verify whether the parastyle dummy4 are displayed properly in Step1": {"pickleLocation":"83:3"},
-  "Verify whether the next button are displayed properly": {"pickleLocation":"88:3"},
-  "Verify whether the Acknowledged Option are displayed properly in Step2": {"pickleLocation":"93:3"},
-  "Verify whether the Table 1 are displayed properly in Step2": {"pickleLocation":"99:3"},
-  "Verify whether the Table 2 are displayed properly in Step2": {"pickleLocation":"104:3"},
-  "Verify whether the Acknowledged Option are displayed properly in Step3": {"pickleLocation":"110:3"},
-  "Verfify Text delete on Math": {"pickleLocation":"113:3"},
-  "Verfify Edits on Partial text": {"pickleLocation":"117:3"},
-  "Verify whether the Displaymath has inlinegraphics are displayed properly in Step3": {"pickleLocation":"128:3"},
-  "Verify whether the Full text are displayed properly in Step3": {"pickleLocation":"132:3"},
-  "Verfify Edits on fnm error": {"pickleLocation":"136:3"},
-  "Verfify Edits and changed snm to x error": {"pickleLocation":"144:3"},
-  "Verify whether the AuthorEditor surname is missing are displayed properly in Step3": {"pickleLocation":"154:3"},
-  "Verify whether the Graphical abstract missing in file are displayed properly in Step3": {"pickleLocation":"158:3"},
-  "Verfify Title not allowed for Keywords.error": {"pickleLocation":"162:3"},
-  "Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3": {"pickleLocation":"170:3"},
-  "Verify whether the Supporting link is missing or incorrect. displayed properly in Step3": {"pickleLocation":"174:3"},
-  "Verify whether the Please check author without surname displayed properly in Step3": {"pickleLocation":"178:3"},
-  "Verify whether the Inconsistent1 author name pattern displayed properly in Step3": {"pickleLocation":"182:3"},
-  "Verify whether the AuthorEditor surname is missing. displayed properly in Step3": {"pickleLocation":"186:3"},
-  "Verify whether the Inconsistent2 author name pattern, displayed properly in Step3": {"pickleLocation":"190:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3": {"pickleLocation":"194:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3": {"pickleLocation":"198:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3": {"pickleLocation":"202:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3": {"pickleLocation":"206:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3": {"pickleLocation":"210:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3": {"pickleLocation":"214:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3": {"pickleLocation":"218:3"},
-  "Verify whether the Check the Corrected21 displayed properly in Step3": {"pickleLocation":"221:3"},
-  "Verify whether the Validate and submit": {"pickleLocation":"225:3"},
-  "Verify whether the after submitted": {"pickleLocation":"230:3"},
-  "Verify After submitted UI user can able to Enable editing": {"pickleLocation":"234:3"},
-  "Check after enabled editing are user able to edit in UI": {"pickleLocation":"239:3"},
-  "Check After the Enableediting mode user can able to move submitted": {"pickleLocation":"247:3"},
-  "To check after submitted outxml compare": {"pickleLocation":"251:3"},
+  "Verify whether the parastyle Articletitle are displayed properly in Step1": {"pickleLocation":"20:3"},
+  "Verify whether the parastyle authors are displayed properly in Step1": {"pickleLocation":"25:3"},
+  "Verify whether the parastyle correspondingauthor are displayed properly in Step1": {"pickleLocation":"30:3"},
+  "Verify whether the parastyle e-mail are displayed properly in Step1": {"pickleLocation":"35:3"},
+  "Verify whether the parastyle dummy1 are displayed properly in Step1": {"pickleLocation":"40:3"},
+  "Verify whether the parastyle abstract are displayed properly in Step1": {"pickleLocation":"45:3"},
+  "Verify whether the parastyle dummy2 are displayed properly in Step1": {"pickleLocation":"50:3"},
+  "Verify whether the parastyle paragraph1 are displayed properly in Step1": {"pickleLocation":"55:3"},
+  "Verify whether the parastyle paragraph2 are displayed properly in Step1": {"pickleLocation":"60:3"},
+  "Verify whether the parastyle dummy3 are displayed properly in Step1": {"pickleLocation":"65:3"},
+  "Verify whether the parastyle sectiona are displayed properly in Step1": {"pickleLocation":"70:3"},
+  "Verify whether the parastyle paragraph3 are displayed properly in Step1": {"pickleLocation":"75:3"},
+  "Verify whether the parastyle dummy4 are displayed properly in Step1": {"pickleLocation":"80:3"},
+  "Verify whether the next button are displayed properly": {"pickleLocation":"85:3"},
+  "Verify whether the Acknowledged Option are displayed properly in Step2": {"pickleLocation":"90:3"},
+  "Verify whether the Table 1 are displayed properly in Step2": {"pickleLocation":"96:3"},
+  "Verify whether the Table 2 are displayed properly in Step2": {"pickleLocation":"101:3"},
+  "Verify whether the Acknowledged Option are displayed properly in Step3": {"pickleLocation":"107:3"},
+  "Verfify Text delete on Math": {"pickleLocation":"110:3"},
+  "Verfify Edits on Partial text": {"pickleLocation":"114:3"},
+  "Verify whether the Displaymath has inlinegraphics are displayed properly in Step3": {"pickleLocation":"125:3"},
+  "Verify whether the Full text are displayed properly in Step3": {"pickleLocation":"129:3"},
+  "Verfify Edits on fnm error": {"pickleLocation":"133:3"},
+  "Verfify Edits and changed snm to x error": {"pickleLocation":"141:3"},
+  "Verify whether the AuthorEditor surname is missing are displayed properly in Step3": {"pickleLocation":"151:3"},
+  "Verify whether the Graphical abstract missing in file are displayed properly in Step3": {"pickleLocation":"155:3"},
+  "Verfify Title not allowed for Keywords.error": {"pickleLocation":"159:3"},
+  "Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3": {"pickleLocation":"167:3"},
+  "Verify whether the Supporting link is missing or incorrect. displayed properly in Step3": {"pickleLocation":"171:3"},
+  "Verify whether the Please check author without surname displayed properly in Step3": {"pickleLocation":"175:3"},
+  "Verify whether the Inconsistent1 author name pattern displayed properly in Step3": {"pickleLocation":"179:3"},
+  "Verify whether the AuthorEditor surname is missing. displayed properly in Step3": {"pickleLocation":"183:3"},
+  "Verify whether the Inconsistent2 author name pattern, displayed properly in Step3": {"pickleLocation":"187:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3": {"pickleLocation":"191:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3": {"pickleLocation":"195:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3": {"pickleLocation":"199:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3": {"pickleLocation":"203:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3": {"pickleLocation":"207:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3": {"pickleLocation":"211:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3": {"pickleLocation":"215:3"},
+  "Verify whether the Check the Corrected21 displayed properly in Step3": {"pickleLocation":"218:3"},
+  "Change URL as opsHead to skip this error": {"pickleLocation":"221:3"},
+  "User able to skip error in Step3": {"pickleLocation":"226:3"},
+  "User able to click validate to check": {"pickleLocation":"232:3"},
+  "Again clear some errors in final stage": {"pickleLocation":"235:3"},
+  "Verify whether the Validate and submit": {"pickleLocation":"246:3"},
+  "Verify whether the after submitted": {"pickleLocation":"251:3"},
+  "Verify After submitted UI user can able to Enable editing": {"pickleLocation":"255:3"},
+  "Check after enabled editing are user able to edit in UI": {"pickleLocation":"260:3"},
+  "Check After the Enableediting mode user can able to move submitted": {"pickleLocation":"268:3"},
+  "Verify after submitted outxml compare": {"pickleLocation":"272:3"},
 };

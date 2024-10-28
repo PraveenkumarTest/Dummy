@@ -4,12 +4,14 @@ import { sharedBrowserContext } from '../fixtures/fixtures';
 import * as path from 'path';
 import { diffWords } from 'diff';
 
+
 require('dotenv').config({ path: 'D:/XML-Reg2/XML_BDD_UI/env/.env.qa' });
 
 const { exec } = require('child_process');
 const assert = require('assert');
 const xml2js = require('xml2js');
 const deepEqual = require('deep-equal');
+
 
  const fs = require('fs') // Correctly using the promises API
  const fsp = require('fs').promises
@@ -1120,225 +1122,6 @@ async  Seefile(sourceDirectory, fileName) {
     }
     return flag;
 }
-// Define execPromise function
-// async execPromise(command) {
-//     return new Promise((resolve, reject) => {
-//         exec(command, (error, stdout, stderr) => {
-//             if (error) {
-//                 return reject(error);
-//             }
-//             resolve(stdout);
-//         });
-//     });
-// }
-
-// // Define xmlComparison function
-// async  xmlComparison(actualPath, expectedPath) {
-//     // Log paths
-//     console.log(`Actual Path: ${actualPath}`);
-//     console.log(`Expected Path: ${expectedPath}`);
-    
-//     try {
-//         // Check if both files exist using fs.access
-//         await Promise.all([
-//             fs.access(actualPath, fs.constants.F_OK),
-//             fs.access(expectedPath, fs.constants.F_OK)
-//         ]);
-//     } catch (error) {
-//         console.error('Error during file access:', error.message);
-//         return false;
-//     }
-    
-//     // Construct command to run the Python script
-//     const command = `python path/to/your_script.py ${expectedPath}`;
-    
-//     try {
-//         // Execute the command using execPromise
-//         const processOutput = await execPromise(command);
-        
-//         // Check for differences in output
-//         if (processOutput.includes('DIFF found')) {
-//             throw new Error('Differences found in XML comparison.');
-//         }
-        
-//         console.log('XML Comparison completed successfully.');
-//         return true;
-//     } catch (error) {
-//         console.error('Error during XML comparison:', error.message);
-//         return false;
-//     }
-// }
-
-
-// async  compareXmlFiles(sourceDirectory, expectedFileName, actualFileName) {
-//     let areIdentical = false;
-//     try {
-//         const expectedFilePath = path.join(sourceDirectory, expectedFileName);
-//         const actualFilePath = path.join(sourceDirectory, actualFileName);
-
-//         // Ensure both files exist
-//         await Promise.all([
-//             fs.access(expectedFilePath),
-//             fs.access(actualFilePath)
-//         ]);
-        
-//         // Read the XML files
-//         const expectedXml = await fs.readFile(expectedFilePath, 'utf8');
-//         const actualXml = await fs.readFile(actualFilePath, 'utf8');
-
-//         // Parse XML to JSON
-//         const parser = new xml2js.Parser();
-//         const expectedJson = await parser.parseStringPromise(expectedXml);
-//         const actualJson = await parser.parseStringPromise(actualXml);
-
-//         // Compare JSON representations
-//         areIdentical = JSON.stringify(expectedJson) === JSON.stringify(actualJson);
-
-//         // Log the result
-//         if (areIdentical) {
-//             console.log("pass: XML files are identical - " + path.basename(expectedFileName));
-//         } else {
-//             console.log("fail: XML files are not identical - " + path.basename(expectedFileName));
-//         }
-//     } catch (error) {
-//         console.error("Error occurred: " + error.message);
-//     }
-//     return areIdentical;
-// }
-// async compareXmlFiles(expectedFilePath, actualFilePath) {
-//     try {
-//         // Check if both files exist synchronously
-//         if (!fs.existsSync(expectedFilePath) || !fs.existsSync(actualFilePath)) {
-//             console.log("One or both files do not exist.");
-//             return false;
-//         }
-
-//         // Read the XML files
-//         const expectedXml = fs.readFileSync(expectedFilePath, 'utf8');
-//         const actualXml = fs.readFileSync(actualFilePath, 'utf8');
-
-//         // Compare XML contents
-//         if (expectedXml === actualXml) {
-//             console.log("pass: XML files are identical - " + path.basename(expectedFilePath));
-//             return true;
-//         } else {
-//             console.log("fail: XML files are not identical - " + path.basename(expectedFilePath));
-//             return false;
-//         }
-//     } catch (error) {
-//         console.error("Error occurred: " + error.message);
-//         return false;
-//     }
-// }
-/**
- * Compares two XML files and logs the differences in terms of added and removed tags/text.
-//  * @param {string} expectedFilePath - The path to the expected XML file.
-//  * @param {string} actualFilePath - The path to the actual XML file.
-//  * @returns {boolean} - True if files are identical, false otherwise.
-//  */
-// async  compareXmlFiles(expectedFilePath, actualFilePath) {
-//     try {
-//         // Check if both files exist synchronously
-//         if (!fs.existsSync(expectedFilePath) || !fs.existsSync(actualFilePath)) {
-//             console.log("One or both files do not exist.");
-//             return false;
-//         }
-//         // Read the XML files
-//         const expectedXml = fs.readFileSync(expectedFilePath, 'utf8');
-//         const actualXml = fs.readFileSync(actualFilePath, 'utf8');
-
-//         // Compare XML contents
-//         if (expectedXml === actualXml) {
-//             console.log("pass: XML files are identical - " + path.basename(expectedFilePath));
-//             return true;
-//         } else {
-//             console.log("fail: XML files are not identical - " + path.basename(expectedFilePath));
-//             const differences = diffWords(expectedXml, actualXml);
-//             differences.forEach(part => {
-//                 if (part.added) {
-//                     console.log(`Added: ${part.value}`);
-//                 } else if (part.removed) {
-//                     console.log(`Removed: ${part.value}`);
-//                 }
-//             });
-//             return false;
-//         }
-//     } catch (error) {
-//         console.error("Error occurred: " + error.message);
-//         return false;
-//     }
-// }
-// async compareXmlFiles(expectedFilePath, actualFilePath) {
-//     try {
-//         // Check if both files exist asynchronously
-//         await Promise.all([
-//             fs.access(expectedFilePath),
-//             fs.access(actualFilePath)
-//         ]);
-
-//         // Read the XML files
-//         const expectedXml =  fs.readFile(expectedFilePath, 'utf8');
-//         const actualXml =  fs.readFile(actualFilePath, 'utf8');
-
-//         // Compare XML contents
-//         if (expectedXml === actualXml) {
-//             console.log("pass: XML files are identical - " + path.basename(expectedFilePath));
-//             return true;
-//         } else {
-//             console.log("fail: XML files are not identical - " + path.basename(expectedFilePath));
-//             const differences = diffWords(expectedXml, actualXml);
-//             differences.forEach(part => {
-//                 if (part.added) {
-//                     console.log(`Added: ${part.value}`);
-//                 } else if (part.removed) {
-//                     console.log(`Removed: ${part.value}`);
-//                 }
-//             });
-//             return false;
-//         }
-//     } catch (error) {
-//         console.error("Error occurred: " + error.message);
-//         return false;
-//     }
-// }
-
-// async  compareXMLFiles(actualFilePath, expectedFilePath) {
-//   try {
-//     // Ensure paths are valid strings
-//     if (typeof actualFilePath !== 'string' || typeof expectedFilePath !== 'string') {
-//       throw new Error('File paths must be strings.');
-//     }
-
-//     // Convert paths to absolute paths
-//     actualFilePath = path.resolve(actualFilePath);
-//     expectedFilePath = path.resolve(expectedFilePath);
-
-//     // Logging file paths for debugging
-//     console.log('Actual File Path:', actualFilePath);
-//     console.log('Expected File Path:', expectedFilePath);
-
-//     // Check if files exist
-//     if (!fs.existsSync(actualFilePath)) {
-//       throw new Error(`Actual file does not exist: ${actualFilePath}`);
-//     }
-//     if (!fs.existsSync(expectedFilePath)) {
-//       throw new Error(`Expected file does not exist: ${expectedFilePath}`);
-//     }
-
-//     // Read actual file
-//     const actualData = await fsp.readFile(actualFilePath, 'utf8');
-//     console.log('Actual file content:', actualData);
-
-//     // Read expected file
-//     const expectedData = await fsp.readFile(expectedFilePath, 'utf8');
-//     console.log('Expected file content:', expectedData);
-
-//     // Proceed with XML comparison logic here...
-
-//   } catch (error) {
-//     console.error('Error reading or comparing XML files:', error);
-//   }
-// }
 
 // async  compareXMLFiles(actualFilePath, expectedFilePath) {
 //   try {
@@ -1365,6 +1148,9 @@ async  Seefile(sourceDirectory, fileName) {
 //       parser.parseStringPromise(expectedData)
 //     ]);
 
+//     // Initialize a difference count variable
+//     let differenceCount = 0;
+
 //     // Find differences directly within the same function
 //     const differences = (function findDifferences(actual, expected) {
 //       const differences = {};
@@ -1372,6 +1158,7 @@ async  Seefile(sourceDirectory, fileName) {
 //       for (const key in expected) {
 //         if (!(key in actual)) {
 //           differences[key] = { actual: null, expected: expected[key] };
+//           differenceCount++; // Increment count when a difference is found
 //         } else if (typeof expected[key] === 'object' && expected[key] !== null) {
 //           const nestedDifferences = findDifferences(actual[key], expected[key]); // Recursive comparison
 //           if (nestedDifferences) {
@@ -1379,6 +1166,7 @@ async  Seefile(sourceDirectory, fileName) {
 //           }
 //         } else if (!deepEqual(actual[key], expected[key])) {
 //           differences[key] = { actual: actual[key], expected: expected[key] };
+//           differenceCount++; // Increment count when a difference is found
 //         }
 //       }
       
@@ -1389,6 +1177,7 @@ async  Seefile(sourceDirectory, fileName) {
 //     if (differences) {
 //       console.log('Differences found in the expected XML compared to the actual XML:');
 //       console.log(JSON.stringify(differences, null, 2));
+//       console.log(`Total number of differences found: ${differenceCount}`);
 //     } else {
 //       console.log('The expected XML matches the actual XML.');
 //     }
@@ -1399,13 +1188,189 @@ async  Seefile(sourceDirectory, fileName) {
 // }
 
 
+// async  compareXMLFiles(actualFilePath, expectedFilePath) {
+//   try {
+//     // Dynamically import chalk using the ESM import()
+//     const chalk = (await import('chalk')).default;
+
+//     // Resolve file paths
+//     actualFilePath = path.resolve(actualFilePath);
+//     expectedFilePath = path.resolve(expectedFilePath);
+
+//     // Check if files exist
+//     if (!fs.existsSync(actualFilePath)) {
+//       throw new Error(`Actual file does not exist: ${actualFilePath}`);
+//     }
+//     if (!fs.existsSync(expectedFilePath)) {
+//       throw new Error(`Expected file does not exist: ${expectedFilePath}`);
+//     }
+
+//     // Read and parse both XML files
+//     const [actualData, expectedData] = await Promise.all([
+//       fsp.readFile(actualFilePath, 'utf8'),
+//       fsp.readFile(expectedFilePath, 'utf8'),
+//     ]);
+
+//     const parser = new xml2js.Parser({ explicitArray: false });
+//     const [actualXML, expectedXML] = await Promise.all([
+//       parser.parseStringPromise(actualData),
+//       parser.parseStringPromise(expectedData),
+//     ]);
+
+//     let differenceCount = 0;
+
+//     // Find differences between actual and expected XML
+//     const differences = (function findDifferences(actual, expected) {
+//       const differences = {};
+      
+//       for (const key in expected) {
+//         if (!(key in actual)) {
+//           differences[key] = { actual: null, expected: expected[key] };
+//           differenceCount++;
+//         } else if (typeof expected[key] === 'object' && expected[key] !== null) {
+//           const nestedDifferences = findDifferences(actual[key], expected[key]);
+//           if (nestedDifferences) {
+//             differences[key] = nestedDifferences;
+//           }
+//         } else if (!deepEqual(actual[key], expected[key])) {
+//           differences[key] = { actual: actual[key], expected: expected[key] };
+//           differenceCount++;
+//         }
+//       }
+
+//       // Handle extra tags in the actual XML
+//       for (const key in actual) {
+//         if (!(key in expected)) {
+//           differences[key] = { actual: actual[key], expected: null };
+//           differenceCount++;
+//         }
+//       }
+
+//       return Object.keys(differences).length > 0 ? differences : null;
+//     })(actualXML, expectedXML);
+
+//     // Display differences if any
+//     if (differences) {
+//       console.log(chalk.red('Differences found in the expected XML compared to the actual XML:'));
+      
+//       const coloredDifferences = {};
+//       for (const key in differences) {
+//         const { actual, expected } = differences[key];
+//         // Add colored strings to JSON object
+//         coloredDifferences[key] = {
+//           actual: chalk.green(JSON.stringify(actual, null, 2)),
+//           expected: chalk.red(JSON.stringify(expected, null, 2)),
+//         };
+//       }
+
+//       console.log(JSON.stringify(differences, null, 2));
+//       console.log(JSON.stringify(coloredDifferences, null, 2));
+
+//       console.log(chalk.green(`Total number of differences found: ${differenceCount}`));
+//     } else {
+//       console.log(chalk.green('The expected XML matches the actual XML.'));
+//     }
+
+//   } catch (error) {
+//     console.error('Error reading or comparing XML files:', error);
+//   }
+// }
+
+// async  compareXMLFiles(actualFilePath, expectedFilePath) {
+//   try {
+//     // Dynamically import chalk for color output
+//     const chalk = (await import('chalk')).default;
+
+//     // Resolve file paths
+//     actualFilePath = path.resolve(actualFilePath);
+//     expectedFilePath = path.resolve(expectedFilePath);
+
+//     // Check if files exist
+//     if (!fs.existsSync(actualFilePath)) {
+//       throw new Error(`Actual file does not exist: ${actualFilePath}`);
+//     }
+//     if (!fs.existsSync(expectedFilePath)) {
+//       throw new Error(`Expected file does not exist: ${expectedFilePath}`);
+//     }
+
+//     // Read and parse both XML files
+//     const [actualData, expectedData] = await Promise.all([
+//       fsp.readFile(actualFilePath, 'utf8'),
+//       fsp.readFile(expectedFilePath, 'utf8'),
+//     ]);
+
+//     const parser = new xml2js.Parser({ explicitArray: false });
+//     const [actualXML, expectedXML] = await Promise.all([
+//       parser.parseStringPromise(actualData),
+//       parser.parseStringPromise(expectedData),
+//     ]);
+
+//     let differenceCount = 0;
+
+//     // Function to compare actual XML (base) to expected XML
+//     const differences = (function findDifferences(actual, expected, parentKey = '') {
+//       const differences = {};
+
+//       // Check every tag in the actual XML
+//       for (const key in actual) {
+//         const fullKey = parentKey ? `${parentKey} > ${key}` : key; // Full tag path for nested tags
+//         if (!(key in expected)) {
+//           // Tag exists in actual but not in expected (Removed from expected)
+//           console.log(chalk.red(`[Removed Tag] ${fullKey}: Present in actual, missing in expected.`));
+//           differences[fullKey] = { actual: actual[key], expected: null };
+//           differenceCount++;
+//         } else if (typeof actual[key] === 'object' && actual[key] !== null) {
+//           // Recursively compare nested tags
+//           const nestedDifferences = findDifferences(actual[key], expected[key], fullKey);
+//           if (nestedDifferences) {
+//             differences[fullKey] = nestedDifferences;
+//           }
+//         } else if (!deepEqual(actual[key], expected[key])) {
+//           // Tag exists in both but has different values (Modified)
+//           console.log(chalk.yellow(`[Modified Tag] ${fullKey}:`));
+//           console.log(chalk.green(`  Actual: ${actual[key]}`));
+//           console.log(chalk.red(`  Expected: ${expected[key]}`));
+//           differences[fullKey] = { actual: actual[key], expected: expected[key] };
+//           differenceCount++;
+//         }
+//       }
+
+//       // Check for tags in the expected XML that are missing from the actual XML (Added in expected)
+//       for (const key in expected) {
+//         const fullKey = parentKey ? `${parentKey} > ${key}` : key;
+//         if (!(key in actual)) {
+//           console.log(chalk.blue(`[Added Tag] ${fullKey}: Present in expected, missing in actual.`));
+//           differences[fullKey] = { actual: null, expected: expected[key] }; // Added in expected
+//           differenceCount++;
+//         }
+//       }
+
+//       return Object.keys(differences).length > 0 ? differences : null;
+//     })(actualXML, expectedXML);
+
+//     // Display differences if any
+//     if (differences) {
+//         console.log(JSON.stringify(differences, null, 2));
+//       console.log(chalk.red(`\nTotal number of differences found: ${differenceCount}`));
+//     } else {
+//       console.log(chalk.green('The expected XML matches the actual XML.'));
+//     }
+
+//   } catch (error) {
+//     console.error('Error reading or comparing XML files:', error);
+//   }
+// }
 
 async  compareXMLFiles(actualFilePath, expectedFilePath) {
   try {
-    // Convert paths to absolute paths and check if files exist
+    // Dynamically import chalk for color output
+    const chalk = (await import('chalk')).default;
+
+    // Resolve file paths
     actualFilePath = path.resolve(actualFilePath);
     expectedFilePath = path.resolve(expectedFilePath);
 
+    // Check if files exist
     if (!fs.existsSync(actualFilePath)) {
       throw new Error(`Actual file does not exist: ${actualFilePath}`);
     }
@@ -1416,52 +1381,191 @@ async  compareXMLFiles(actualFilePath, expectedFilePath) {
     // Read and parse both XML files
     const [actualData, expectedData] = await Promise.all([
       fsp.readFile(actualFilePath, 'utf8'),
-      fsp.readFile(expectedFilePath, 'utf8')
+      fsp.readFile(expectedFilePath, 'utf8'),
     ]);
 
     const parser = new xml2js.Parser({ explicitArray: false });
     const [actualXML, expectedXML] = await Promise.all([
       parser.parseStringPromise(actualData),
-      parser.parseStringPromise(expectedData)
+      parser.parseStringPromise(expectedData),
     ]);
 
-    // Initialize a difference count variable
     let differenceCount = 0;
 
-    // Find differences directly within the same function
-    const differences = (function findDifferences(actual, expected) {
+    // Function to compare actual XML (base) to expected XML
+    const differences = (function findDifferences(actual, expected, parentKey = '', diffList = []) {
       const differences = {};
-      
-      for (const key in expected) {
-        if (!(key in actual)) {
-          differences[key] = { actual: null, expected: expected[key] };
-          differenceCount++; // Increment count when a difference is found
-        } else if (typeof expected[key] === 'object' && expected[key] !== null) {
-          const nestedDifferences = findDifferences(actual[key], expected[key]); // Recursive comparison
-          if (nestedDifferences) {
-            differences[key] = nestedDifferences;
-          }
+
+      // Check every tag in the actual XML
+      for (const key in actual) {
+        const fullKey = parentKey ? `${parentKey} > ${key}` : key; // Full tag path for nested tags
+        if (!(key in expected)) {
+          // Tag exists in actual but not in expected (Removed from expected)
+          differenceCount++;
+          diffList.push({
+            number: differenceCount,
+            message: `[Removed Tag] ${fullKey}: Present in actual, missing in expected.`,
+            actual: actual[key],
+            expected: null
+          });
+        } else if (typeof actual[key] === 'object' && actual[key] !== null) {
+          // Recursively compare nested tags
+          findDifferences(actual[key], expected[key], fullKey, diffList);
         } else if (!deepEqual(actual[key], expected[key])) {
-          differences[key] = { actual: actual[key], expected: expected[key] };
-          differenceCount++; // Increment count when a difference is found
+          // Tag exists in both but has different values (Modified)
+          differenceCount++;
+          diffList.push({
+            number: differenceCount,
+            message: `[Modified Tag] ${fullKey}:`,
+            actual: actual[key],
+            expected: expected[key]
+          });
         }
       }
-      
-      return Object.keys(differences).length > 0 ? differences : null;
-    })(actualXML, expectedXML); // Immediately invoked function expression (IIFE)
 
-    // Check if there are differences and log them
-    if (differences) {
-      console.log('Differences found in the expected XML compared to the actual XML:');
-      console.log(JSON.stringify(differences, null, 2));
-      console.log(`Total number of differences found: ${differenceCount}`);
+      // Check for tags in the expected XML that are missing from the actual XML (Added in expected)
+      for (const key in expected) {
+        const fullKey = parentKey ? `${parentKey} > ${key}` : key;
+        if (!(key in actual)) {
+          differenceCount++;
+          diffList.push({
+            number: differenceCount,
+            message: `[Added Tag] ${fullKey}: Present in expected, missing in actual.`,
+            actual: null,
+            expected: expected[key]
+          });
+        }
+      }
+
+      return diffList;
+    })(actualXML, expectedXML);
+
+    // Display differences if any
+    if (differences.length > 0) {
+      console.log(chalk.red(`\nTotal number of differences found: ${differenceCount}\n`));
+      differences.forEach(diff => {
+        console.log(chalk.cyan(`Difference ${diff.number}:`));
+        console.log(chalk.yellow(diff.message));
+        if (diff.actual !== null) {
+          console.log(chalk.green(`  Actual: ${JSON.stringify(diff.actual, null, 2)}`));
+        }
+        if (diff.expected !== null) {
+          console.log(chalk.red(`  Expected: ${JSON.stringify(diff.expected, null, 2)}`));
+        }
+        console.log('\n');
+      });
     } else {
-      console.log('The expected XML matches the actual XML.');
+      console.log(chalk.green('The expected XML matches the actual XML.'));
     }
 
   } catch (error) {
     console.error('Error reading or comparing XML files:', error);
   }
+}
+async addModeToCurrentUrl(mode) {
+    try {
+        // Get the current URL from the page
+        const currentUrl = this.page.url();
+        
+        // Check if the URL already has a query string
+        const hasQueryString = currentUrl.includes('?');
+        
+        // Construct the new URL with the mode parameter
+        const separator = hasQueryString ? '&' : '?';
+        const newUrl = `${currentUrl}${separator}mode=${mode}`;
+
+        console.log('Navigating to updated URL:', newUrl);
+
+        // Option 1: Update the URL in the address bar without reloading the page
+        await this.page.evaluate((url) => {
+            window.history.pushState({}, '', url);
+        }, newUrl);
+        
+        // Option 2: Trigger a navigation to the new URL (simulating "Enter")
+        await this.page.goto(newUrl); // Use this to actually navigate to the updated URL
+    } catch (error) {
+        console.error('Error updating URL:', error);
+        throw new Error('Failed to update the URL');
+    }
+}
+async selectTextwitherror(selector, startPosition, endPosition) {
+    try {
+        const locator = await this.page.locator(selector);
+        const elementHandle = await locator.elementHandle();
+        
+        if (!elementHandle) {
+            console.error(`Element not found for selector: ${selector}`);
+            return;
+        }
+
+        await locator.evaluate(
+            (element, { startPosition, endPosition }) => {
+                const textNode = element.childNodes[0];
+                if (!textNode) {
+                    console.error('No child nodes found for the element.');
+                    return;
+                }
+
+                const content = textNode.textContent;
+                if (content && startPosition >= 0 && endPosition <= content.length && startPosition < endPosition) {
+                    const range = document.createRange();
+                    range.setStart(textNode, startPosition);
+                    range.setEnd(textNode, endPosition);
+                    const selection = document.getSelection();
+                    selection?.removeAllRanges();
+                    selection?.addRange(range);
+                } else {
+                    console.error('Invalid start or end position.');
+                }
+            },
+            { startPosition, endPosition }
+        );
+    } catch (error) {
+        console.error('Error in selectText:', error);
+    }
+}
+async selectAllText(selector) {
+    try {
+        const locator = await this.page.locator(selector);
+        const elementHandle = await locator.elementHandle();
+
+        if (!elementHandle) {
+            console.error(`Element not found for selector: ${selector}`);
+            return;
+        }
+
+        await locator.evaluate((element) => {
+            const textNode = element.childNodes[0];
+            if (!textNode) {
+                throw new Error('No child nodes found for the element.');
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(textNode); // Selects the entire content of the text node
+            const selection = document.getSelection();
+            selection?.removeAllRanges();
+            selection?.addRange(range);
+        });
+    } catch (error) {
+        console.error('Error in selectAllText:', error.message);
+    }
+}
+async scrollToElement(selector) {
+    try {
+        const locator = await this.page.locator(selector);
+        const elementHandle = await locator.elementHandle();
+
+        if (!elementHandle) {
+            console.error(`Element not found for selector: ${selector}`);
+            return;
+        }
+
+        await locator.evaluate((element) => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+        });
+    } catch (error) {
+        console.error('Error in scrollToElement:', error.message);
+    }
 }
 
 }

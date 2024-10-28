@@ -114,14 +114,34 @@ constructor(page) {
     this.format ="menu-component[name='Format']";
     this.Mathconvert ='[data-value="math"]';
 
-  ////// Server path
+  ////// Local path for xml comapre
     // this.Serverpath ="//tnqfs07/NIMBLE-UAT/TNQFS20/smart_tool/ACS/JZ/4c01650/customer.xml";
-    this.Serverpath = "D:/OUTXML/";
+    this.Localpath = "D:/OUTXML/";
     this.ActualName ="customer.xml";
     this.ExpectedName ="customer1.xml";
     this.FileName ='Customer.xml';
     this.Actualpath='D:/OUTXML/New/JZ_4C01650_IN.xml'
     this.Expectedpath='D:/OUTXML/New/jz4c01650_OUT.xml'
+
+  ////// Server path for Xml compare
+    this.Serverpath ="//tnqfs07/TESTING_SERVICES/Praveen_S";
+    this.ServerFileName ='JZ_4C01650.xml';
+    this.ServerActualpath='//tnqfs07/TESTING_SERVICES/Praveen_S/XML_Compare/JZ_4C01650_IN.xml';
+    this.ServerExpectedpath='//tnqfs07/TESTING_SERVICES/Praveen_S/XML_Compare/jz4c01650_OUT.xml';
+
+  ////// Skip Error
+    this.Addhref ="opsHead";
+    this.Placeholder='input.search-input[placeholder="Apply Inline Style"][value="kwd"][title="kwd"]'
+    this.InputasSt="kwd";
+    this.clickst='div.option[title="kwd"]';
+    this.SelectTextto ='div:nth-child(1) > div:nth-child(1) > keywordsdefault:nth-child(13) > kwd:nth-child(3)';
+    this.Skiperroricon ='.additional-menu-icon';
+    this.clicskiperror ='.menu-option-container';
+    this.clickDropdownerror ='.dropdown-icon';
+    this.selectreason='li.dropdown-option[data-value="error-not-applicable-for-this-article"]';
+    this.Clickskiperrorupdatebtn ="button-component[value='skipped']";
+
+    
 
 
    ///// Actions
@@ -220,16 +240,6 @@ constructor(page) {
   {        
     await this.action.ElementPresentOrNot(this.review);
   }
-
-  ////OUT XML
-  async CheckOuT()
-  {
-   await this.action.Seefile(this.Serverpath,this.FileName);
-   await this.action.compareXMLFiles(this.Actualpath,this.Expectedpath);
-  }
-
-
-//////////
   async clickreviewclk()
   {
     await this.action.elementClick(this.reviewclk);
@@ -595,6 +605,7 @@ constructor(page) {
   async clickCorrected6()
   {
     await this.action.elementClick(this.Corrected);
+    await this.action.waitForTime(5000);
   }
   async keywordsdefault()
   {
@@ -613,7 +624,6 @@ constructor(page) {
   }
    async ChangeXpara()
    {
-    // await this.action.insertText(this.keywordsDefault,4);
     await this.action.elementClick(this.keywordstext)
     await this.action.keyAction(this.copyall);
   }
@@ -732,17 +742,106 @@ constructor(page) {
     await this.action.elementClick(this.ignore);
   }
 
+  ////Skip error
+  async SKIPERRORMode()
+  {        
+    await this.action.addModeToCurrentUrl(this.Addhref);
+    await this.action.waitForTime(10000);
+  }
+  async Somecorrection()
+  {
+    await this.action.scrollToElement(this.SelectTextto);
+    await this.action.selectAllText(this.SelectTextto);
+    await this.action.waitForTime(5000);
+    await this.action.elementClick(this.Placeholder)
+    await this.action.keyActioninsert(this.InputasSt)
+    await this.action.elementClick(this.clickst);
+    await this.action.waitForTime(5000);
+  }
   async clickvalidate()
   {
     await this.action.ElementPresentOrNot(this.validate);
     await this.action.elementClick(this.validate);
-    await this.action.waitForTime(5000);
+    await this.action.waitForTime(10000);
+    await this.action.waitForTime(10000);
   }
 
+  async Skiperrorisvisible()
+  {
+    await this.action.elementVisible(this.Skiperroricon);
+    await this.action.elementClick(this.Skiperroricon);
+  }
+
+  async clickskiperror()
+  {
+    await this.action.elementVisible(this.clicskiperror);
+    await this.action.elementClick(this.clicskiperror);
+  }
+
+  async Dropdowntoreason()
+  {
+    await this.action.elementClick(this.clickDropdownerror);
+    await this.action.elementClick(this.selectreason);
+  }
+
+  async clickskiptourupdate()
+  {
+    await this.action.elementVisible(this.Clickskiperrorupdatebtn);
+    await this.action.elementClick(this.Clickskiperrorupdatebtn);
+  }
+
+  async clickvalidatelast()
+  {
+    await this.action.ElementPresentOrNot(this.validate);
+    await this.action.elementClick(this.validate);
+    await this.action.waitForTime(10000);
+  }
+
+  ////Final Error clear
+  async clickfinalerrorone()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerrortwo()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib25);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerrorthree()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib26);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerrorofour()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib27);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerrorfive()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib28);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerrorsix()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib29);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerrorseven()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib34);
+    await this.action.elementClick(this.ignore);
+  }
+  async CLICKVALIDATE()
+  {
+   await this.action.ElementPresentOrNot(this.validate);
+   await this.action.elementClick(this.validate);
+   await this.action.waitForTime(10000);
+  }
 ////// User able to Submit 
   async submitIsVisible()
   {
-    await this.action.waitForTime(20000);
     await this.action.waitForTime(10000);
     await this.action.ElementPresentOrNot(this.submit);
   }
@@ -796,6 +895,8 @@ constructor(page) {
   //   await this.action.elementClick(this.Mathconvert);
   //   await this.action.waitForTime(5000)
   // }
+
+  ////
   async SUBMITBTN()
   {
     await this.action.elementClick(this.submit);
@@ -806,5 +907,15 @@ constructor(page) {
    await this.action.waitForTime(20000)
    await this.action.elementVisible(this.submittedtext);
   }
+  ////OUT XML
+  async CheckOuT()
+  {
+    /// To check local path
+  // await this.action.Seefile(this.Localpath,this.FileName);
+  // await this.action.compareXMLFiles(this.Actualpath,this.Expectedpath);
 
+  /// To check Server path
+   await this.action.Seefile(this.Serverpath,this.ServerFileName);
+   await this.action.compareXMLFiles(this.ServerActualpath,this.ServerExpectedpath);
+  }
 }
