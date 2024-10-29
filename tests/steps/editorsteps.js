@@ -61,6 +61,10 @@ When('Click on Continue option', async ({ editorsPage }) => {
 Then('the Review parastyle label be visible', async ({ editorsPage }) => {
     await pageObject.reviewIsVisible();
 });
+Then('Files are moved', async ({ editorsPage }) => {
+    await pageObject.movedfiles();
+});
+
  Then('Click on Review the parastyle Articletitle option', async ({ editorsPage }) => {   
     await pageObject.clickreviewclk(); 
 });
@@ -519,9 +523,6 @@ When('check user can able to edit after revert the submit', async ({ editorsPage
 // Then('Check user can able to convert text as math', async ({ editorsPage }) => { 
 //     await pageObject.Clickconverttomath();
 // });
-
-
-
 When('click an submit button', async ({ editorsPage }) => {
     await pageObject.SUBMITBTN();
 });
@@ -530,8 +531,23 @@ Then('Check and verify This article has been already submitted are present', asy
 });
 
 ////OUT XML
-When('To check outxml are stored in server path', async ({ editorsPage }) => {
-    await pageObject.CheckOuT();
+Then('OUT xml are stored in XMLcentral UAT path & Moved to Testing services path to compare', async ({ editorsPage }) => {
+    await pageObject.Getoutxmlcopyandmoved();
 });
 
+When('To check INxml are stored in server path are visible', async ({ editorsPage }) => {
+    await pageObject.CheckIN();
+});
+
+Then('To check after submitted OUTxml are stored in server path', async ({ editorsPage }) => {
+    await pageObject.Checkout();
+});
+
+When('After submitted OUTxml are compare with INxml', async ({ editorsPage }) => {
+    await pageObject.ComparexmlFiles();
+});
+
+Then('Delete OUTxml in Testing path after all verified', async ({ editorsPage }) => {
+    await pageObject.DeleteOUTxml();
+});
 

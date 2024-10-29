@@ -1,6 +1,6 @@
-<testsuites tests="53" failures="0" skipped="0" errors="0" assertions="0" time="750.0569819999934" timestamp="2024-10-25T14:58:26.865Z">
-  <testsuite name="tests\features\editor.feature.spec.js" hostname="chromium" tests="53" failures="0" skipped="0" errors="0" assertions="0" time="403.75" timestamp="2024-10-25T14:58:26.865Z" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js">
-    <testcase name="Verify whether the link generation XML URL" classname="tests\features\editor.feature.spec.js" assertions="0" time="8.991" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="6">
+<testsuites tests="55" failures="0" skipped="0" errors="0" assertions="0" time="1051.5248860000372" timestamp="2024-10-29T13:37:56.208Z">
+  <testsuite name="tests\features\editor.feature.spec.js" hostname="chromium" tests="55" failures="0" skipped="0" errors="0" assertions="0" time="455.494" timestamp="2024-10-29T13:37:56.208Z" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js">
+    <testcase name="Verify whether the link generation XML URL" classname="tests\features\editor.feature.spec.js" assertions="0" time="7.956" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="6">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then I open the parent page"></property>
@@ -35,8 +35,8 @@ Clicking element with selector: .primary
 Element clicked successfully
 Verifying the element with selector: #response_container
 Element visibled successfully
-Extracted Link: http://10.0.8.123:3000/index.html?token=c5dd91e0-8bc2-460f-80a7-24322b739806
-Extracted Token: c5dd91e0-8bc2-460f-80a7-24322b739806
+Extracted Link: http://10.0.8.123:3000/index.html?token=6b755c48-1130-428b-a8e2-1ae1681174dd
+Extracted Token: 6b755c48-1130-428b-a8e2-1ae1681174dd
 Extracted link written to .env.qa file successfully: D:\XML_Regression_Final\XML_BDD_UI\env\.env.qa
 Verifying the element with selector: a[href^="http://10.0.8.123:3000"]
 Element visibled successfully
@@ -46,12 +46,13 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="7.864" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="17">
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="23.683" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="17">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When I switch to the child page and close the parent"></property>
         <property name="step[passed]" value="When Click on Continue option"></property>
         <property name="step[passed]" value="Then the Review parastyle label be visible"></property>
+        <property name="step[passed]" value="Then Files are moved"></property>
         <property name="step[passed]" value="After Hooks"></property>
       </properties>
       <system-out>
@@ -61,10 +62,17 @@ Clicking element with selector: button-component[value='math-pre-requisite-step-
 Element clicked successfully
 Verifying the element with selector: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
 Element present successfully: div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)
+Waited for 5000 milliseconds
+Total files: 0
+Total directories: 2
+Directory to delete folders from: \\tnqfs07\XMLCENTRAL\UAT\files\xmlcentral-sqc\customer-xml-conversion-local\JZ\4C01650
+Folder deleted successfully: \\tnqfs07\XMLCENTRAL\UAT\files\xmlcentral-sqc\customer-xml-conversion-local\JZ\4C01650\7c8d2d13-64c9-440c-a321-5f8d8e24a255
+Folder deleted successfully: \\tnqfs07\XMLCENTRAL\UAT\files\xmlcentral-sqc\customer-xml-conversion-local\JZ\4C01650\c3f941fd-9f08-432c-a5ca-79e0ba32ffa3
+Waited for 10000 milliseconds
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle Articletitle are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.439" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="23">
+    <testcase name="Verify whether the parastyle Articletitle are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.369" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="24">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle Articletitle option"></property>
@@ -82,7 +90,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle authors are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.984" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="29">
+    <testcase name="Verify whether the parastyle authors are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.697" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="30">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle authors option"></property>
@@ -100,7 +108,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle correspondingauthor are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.123" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="35">
+    <testcase name="Verify whether the parastyle correspondingauthor are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.956" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="36">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle correspondingauthor option"></property>
@@ -118,7 +126,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle e-mail are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.309" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="41">
+    <testcase name="Verify whether the parastyle e-mail are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.539" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="42">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle e-mail option"></property>
@@ -136,7 +144,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle dummy1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.059" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="47">
+    <testcase name="Verify whether the parastyle dummy1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.582" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="48">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle dummy1 option"></property>
@@ -154,7 +162,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle abstract are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.494" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="53">
+    <testcase name="Verify whether the parastyle abstract are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.641" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="54">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle abstract option"></property>
@@ -172,7 +180,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle dummy2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.114" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="59">
+    <testcase name="Verify whether the parastyle dummy2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.806" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="60">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle dummy2 option"></property>
@@ -190,7 +198,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle paragraph1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.626" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="65">
+    <testcase name="Verify whether the parastyle paragraph1 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.553" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="66">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle paragraph1 option"></property>
@@ -208,7 +216,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle paragraph2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.393" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="71">
+    <testcase name="Verify whether the parastyle paragraph2 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.13" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="72">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle paragraph2 option"></property>
@@ -226,7 +234,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle dummy3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.737" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="77">
+    <testcase name="Verify whether the parastyle dummy3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.981" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="78">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle dummy3 option"></property>
@@ -244,7 +252,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle sectiona are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.216" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="83">
+    <testcase name="Verify whether the parastyle sectiona are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.087" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="84">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle sectiona option"></property>
@@ -262,7 +270,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle paragraph3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.28" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="89">
+    <testcase name="Verify whether the parastyle paragraph3 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.396" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="90">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle paragraph3 option"></property>
@@ -280,7 +288,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the parastyle dummy4 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.526" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="95">
+    <testcase name="Verify whether the parastyle dummy4 are displayed properly in Step1" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.831" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="96">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Review the parastyle dummy4 option"></property>
@@ -298,7 +306,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the next button are displayed properly" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.892" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="101">
+    <testcase name="Verify whether the next button are displayed properly" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.682" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="102">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then the Next button is visible"></property>
@@ -313,7 +321,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="14.281" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="106">
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="18.194" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="107">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When verify step2 acknowledged are displayed"></property>
@@ -334,7 +342,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Table 1 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.462" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="113">
+    <testcase name="Verify whether the Table 1 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="2.582" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="114">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When Click on Review the content in Table 1"></property>
@@ -352,7 +360,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Table 2 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.993" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="119">
+    <testcase name="Verify whether the Table 2 are displayed properly in Step2" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.042" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="120">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then the Next step2 button is visible"></property>
@@ -367,7 +375,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="24.876" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="124">
+    <testcase name="Verify whether the Acknowledged Option are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="24.419" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="125">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then verify step3 acknowledged are displayed"></property>
@@ -379,7 +387,7 @@ Element visibled successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Text delete on Math" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.437" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="128">
+    <testcase name="Verfify Text delete on Math" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.307" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="129">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then move and delete text"></property>
@@ -393,7 +401,7 @@ Key action performed successfully (2 of 2)
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Edits on Partial text" classname="tests\features\editor.feature.spec.js" assertions="0" time="20.904" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="132">
+    <testcase name="Verfify Edits on Partial text" classname="tests\features\editor.feature.spec.js" assertions="0" time="19.519" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="133">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When click on partial text in step3"></property>
@@ -436,7 +444,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Displaymath has inlinegraphics are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.054" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="144">
+    <testcase name="Verify whether the Displaymath has inlinegraphics are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.991" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="145">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then verify Displaymath has inlinegraphics"></property>
@@ -451,7 +459,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Full text are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.366" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="149">
+    <testcase name="Verify whether the Full text are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.969" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="150">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then verify Full text are correctly in UI"></property>
@@ -466,7 +474,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Edits on fnm error" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.8" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="154">
+    <testcase name="Verfify Edits on fnm error" classname="tests\features\editor.feature.spec.js" assertions="0" time="4.13" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="155">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When click on fnm element error"></property>
@@ -494,7 +502,7 @@ Element visibled successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Edits and changed snm to x error" classname="tests\features\editor.feature.spec.js" assertions="0" time="5.283" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="163">
+    <testcase name="Verfify Edits and changed snm to x error" classname="tests\features\editor.feature.spec.js" assertions="0" time="5.014" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="164">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When select an particular text as comma"></property>
@@ -520,7 +528,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the AuthorEditor surname is missing are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.193" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="171">
+    <testcase name="Verify whether the AuthorEditor surname is missing are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.159" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="172">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click AuthorEditor surname is missing. Check and correct."></property>
@@ -535,7 +543,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Graphical abstract missing in file are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="6.246" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="176">
+    <testcase name="Verify whether the Graphical abstract missing in file are displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="6.159" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="177">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Graphical abstract missing in file"></property>
@@ -551,7 +559,7 @@ Waited for 5000 milliseconds
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verfify Title not allowed for Keywords.error" classname="tests\features\editor.feature.spec.js" assertions="0" time="3.937" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="181">
+    <testcase name="Verfify Title not allowed for Keywords.error" classname="tests\features\editor.feature.spec.js" assertions="0" time="8.699" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="182">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When place cursor on Keywords text and press Enter"></property>
@@ -564,6 +572,7 @@ Waited for 5000 milliseconds
       </properties>
       <system-out>
         <![CDATA[Key actions performed successfully
+Waited for 5000 milliseconds
 Key actions performed successfully
 Key actions performed successfully
 Clicking element with selector: .search-input[placeholder="Select Paragraph Style"][value="coversheet"][title="keywordsdefault"]
@@ -578,7 +587,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.337" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="190">
+    <testcase name="Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.86" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="191">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Please check Unlisted cross-ref link tblS1."></property>
@@ -593,7 +602,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Supporting link is missing or incorrect. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.379" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="195">
+    <testcase name="Verify whether the Supporting link is missing or incorrect. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.043" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="196">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Supporting link is missing or incorrect. Please check."></property>
@@ -608,7 +617,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Please check author without surname displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.246" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="200">
+    <testcase name="Verify whether the Please check author without surname displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.149" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="201">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Please check author without surname"></property>
@@ -623,7 +632,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Inconsistent1 author name pattern displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.879" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="205">
+    <testcase name="Verify whether the Inconsistent1 author name pattern displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.121" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="206">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Inconsistent1 author name pattern, please check."></property>
@@ -638,7 +647,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the AuthorEditor surname is missing. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.332" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="210">
+    <testcase name="Verify whether the AuthorEditor surname is missing. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.225" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="211">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then AuthorEditor surname is missing. Check and correct."></property>
@@ -653,7 +662,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Inconsistent2 author name pattern, displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.176" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="215">
+    <testcase name="Verify whether the Inconsistent2 author name pattern, displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.92" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="216">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Inconsistent2 author name pattern, please check."></property>
@@ -668,7 +677,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.378" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="220">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.285" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="221">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib24."></property>
@@ -683,7 +692,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.386" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="225">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.163" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="226">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib25."></property>
@@ -698,7 +707,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.274" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="230">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.157" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="231">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib26."></property>
@@ -713,7 +722,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.212" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="235">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.141" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="236">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib27."></property>
@@ -728,7 +737,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.17" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="240">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.083" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="241">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Check the uncited reference, bibreference id bib28."></property>
@@ -743,7 +752,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.024" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="245">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.049" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="246">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Click the uncited reference, bib-reference id bib29."></property>
@@ -758,7 +767,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.818" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="250">
+    <testcase name="Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.909" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="251">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Verify Click the uncited reference, bibreference id bib34."></property>
@@ -770,7 +779,7 @@ Element visibled successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Check the Corrected21 displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.701" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="254">
+    <testcase name="Verify whether the Check the Corrected21 displayed properly in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.624" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="255">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click on Corrected21 button"></property>
@@ -782,7 +791,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Change URL as opsHead to skip this error" classname="tests\features\editor.feature.spec.js" assertions="0" time="48.933" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="258">
+    <testcase name="Change URL as opsHead to skip this error" classname="tests\features\editor.feature.spec.js" assertions="0" time="47.067" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="259">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When Xml link user able to change URL as opsHead"></property>
@@ -791,7 +800,7 @@ Element clicked successfully
         <property name="step[passed]" value="After Hooks"></property>
       </properties>
       <system-out>
-        <![CDATA[Navigating to updated URL: http://10.0.8.123:3000/index.html?token=c5dd91e0-8bc2-460f-80a7-24322b739806&mode=opsHead
+        <![CDATA[Navigating to updated URL: http://10.0.8.123:3000/index.html?token=6b755c48-1130-428b-a8e2-1ae1681174dd&mode=opsHead
 Waited for 10000 milliseconds
 Waited for 5000 milliseconds
 Clicking element with selector: input.search-input[placeholder="Apply Inline Style"][value="kwd"][title="kwd"]
@@ -809,7 +818,7 @@ Waited for 10000 milliseconds
 ]]>
       </system-out>
     </testcase>
-    <testcase name="User able to skip error in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="14.431" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="264">
+    <testcase name="User able to skip error in Step3" classname="tests\features\editor.feature.spec.js" assertions="0" time="13.19" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="265">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Users able to visible skip error option is visible"></property>
@@ -838,7 +847,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="User able to click validate to check" classname="tests\features\editor.feature.spec.js" assertions="0" time="11.469" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="271">
+    <testcase name="User able to click validate to check" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.887" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="272">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="Then Click Validate btn"></property>
@@ -849,11 +858,10 @@ Element clicked successfully
 Element present successfully: button-component[value='next']
 Clicking element with selector: button-component[value='next']
 Element clicked successfully
-Waited for 10000 milliseconds
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Again clear some errors in final stage" classname="tests\features\editor.feature.spec.js" assertions="0" time="32.668" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="275">
+    <testcase name="Again clear some errors in final stage" classname="tests\features\editor.feature.spec.js" assertions="0" time="46.164" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="276">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When Verify and Click final stage of 1st error"></property>
@@ -903,7 +911,7 @@ Waited for 10000 milliseconds
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the Validate and submit" classname="tests\features\editor.feature.spec.js" assertions="0" time="72.197" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="286">
+    <testcase name="Verify whether the Validate and submit" classname="tests\features\editor.feature.spec.js" assertions="0" time="72.134" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="287">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When verify the submit button are present"></property>
@@ -924,7 +932,7 @@ Waited for 10000 milliseconds
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify whether the after submitted" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.759" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="292">
+    <testcase name="Verify whether the after submitted" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.574" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="293">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When verify after submitted UI text are present in submitted mode"></property>
@@ -939,7 +947,7 @@ Element present successfully: .notification-description
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify After submitted UI user can able to Enable editing" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.299" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="297">
+    <testcase name="Verify After submitted UI user can able to Enable editing" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.317" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="298">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When Verify the Enable Editing button is visible"></property>
@@ -957,7 +965,7 @@ Element clicked successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Check after enabled editing are user able to edit in UI" classname="tests\features\editor.feature.spec.js" assertions="0" time="7.284" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="303">
+    <testcase name="Check after enabled editing are user able to edit in UI" classname="tests\features\editor.feature.spec.js" assertions="0" time="10.05" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="304">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When check user can able to edit after revert the submit"></property>
@@ -970,7 +978,7 @@ Element visibled successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Check After the Enableediting mode user can able to move submitted" classname="tests\features\editor.feature.spec.js" assertions="0" time="57.71" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="307">
+    <testcase name="Check After the Enableediting mode user can able to move submitted" classname="tests\features\editor.feature.spec.js" assertions="0" time="55.246" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="308">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
         <property name="step[passed]" value="When click an submit button"></property>
@@ -987,268 +995,48 @@ Element visibled successfully
 ]]>
       </system-out>
     </testcase>
-    <testcase name="Verify after submitted outxml compare" classname="tests\features\editor.feature.spec.js" assertions="0" time="1.809" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="312">
+    <testcase name="Move OUTxml are xmlcentral UAT path to testing path" classname="tests\features\editor.feature.spec.js" assertions="0" time="20.852" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="313">
       <properties>
         <property name="step[passed]" value="Before Hooks"></property>
-        <property name="step[passed]" value="When To check outxml are stored in server path"></property>
+        <property name="step[passed]" value="Then OUT xml are stored in XMLcentral UAT path &amp; Moved to Testing services path to compare"></property>
         <property name="step[passed]" value="After Hooks"></property>
       </properties>
       <system-out>
-        <![CDATA[pass: File Present - JZ_4C01650.xml
-[31m[39m
-[31mTotal number of differences found: 38[39m
-[31m[39m
-[36mDifference 1:[39m
-[33m[Modified Tag] document > metadata > document-meta > contrib-group > contrib > 8 > name > surname:[39m
-[32m  Actual: "Zhao"[39m
-[31m  Expected: "Zha"[39m
-
-
-[36mDifference 2:[39m
-[33m[Modified Tag] document > metadata > document-meta > contrib-group > aff > 1 > state-csu:[39m
-[32m  Actual: "Hong Kong"[39m
-[31m  Expected: "Hong Kongs"[39m
-
-
-[36mDifference 3:[39m
-[33m[Modified Tag] document > metadata > document-meta > contrib-group > aff > 1 > country > _:[39m
-[32m  Actual: "China"[39m
-[31m  Expected: "Chinas"[39m
-
-
-[36mDifference 4:[39m
-[33m[Removed Tag] document > metadata > document-meta > abstract-group > abstract > p > _: Present in actual, missing in expected.[39m
-[32m  Actual: "The oxidation of Sn can occur even after the completion of the perovskite crystallization in low oxygen environment. Concerning this, the natural anti-oxidant vitamin C (VC) is introduced to the surface of Sn-Pb mixed perovskite using a post-processing method to achieve the purpose of inhibiting Sn oxidation and enhancing perovskite solar cells (PSCs) performance. The results indicate that the VC could effectively inhibit Sn oxidation and heal the vacancy defects of annealed perovskite film. Meanwhile, the introduction of VC significantly improves the morphology and crystalline quality of the perovskite films. After optimization, the highest power conversion efficiency (PCE) of the VC-treated Sn-Pb mixed device increased to 20.44%. Moreover, the VC-treated unencapsulated device shows excellent long-term stability, retaining 75.3% of its initial efficiency after 800 h aging in N atmosphere, which is much higher than that the 20.1% of the control device."[39m
-
-
-[36mDifference 5:[39m
-[33m[Removed Tag] document > metadata > document-meta > abstract-group > abstract > p > sup: Present in actual, missing in expected.[39m
-[32m  Actual: [[39m
-[32m  "2+",[39m
-[32m  "2+",[39m
-[32m  "2+"[39m
-[32m][39m
-
-
-[36mDifference 6:[39m
-[33m[Removed Tag] document > metadata > document-meta > abstract-group > abstract > p > sub: Present in actual, missing in expected.[39m
-[32m  Actual: "2"[39m
-
-
-[36mDifference 7:[39m
-[33m[Added Tag] document > metadata > document-meta > abstract-group > abstract > p > 0: Present in expected, missing in actual.[39m
-[31m  Expected: {[39m
-[31m  "_": "Sn can occur even after the completion of the perovskite crystallization in low oxygen environment. Concerning this, the natural anti-oxidant vitamin C (VC) is introduced to the surface of Sn-Pb mixed perovskite using a post-processing method to achieve the purpose of inhibiting Sn oxidation and enhancing perovskite solar cells (PSCs) performance. The results indicate that the VC could effectively inhibit Sn oxidation and heal the vacancy defects of annealed perovskite film. Meanwhile, the introduction of VC significantly improves the morphology and crystalline quality of the perovskite films. After optimization, the highest power conversion efficiency (PCE) of the VC-treated Sn-Pb mixed device increased to 20.44%. Moreover, the VC-treated unencapsulated device shows excellent long-term stability, retaining 75.3% of its initial efficiency after 800 h aging in N atmosphere, which is much higher than that the 20.1% of the control device.",[39m
-[31m  "sup": [[39m
-[31m    "2+",[39m
-[31m    "2+",[39m
-[31m    "2+"[39m
-[31m  ],[39m
-[31m  "sub": "2"[39m
-[31m}[39m
-
-
-[36mDifference 8:[39m
-[33m[Added Tag] document > metadata > document-meta > abstract-group > abstract > p > 1: Present in expected, missing in actual.[39m
-[31m  Expected: "1234567890"[39m
-
-
-[36mDifference 9:[39m
-[33m[Modified Tag] document > body > p > 0 > _:[39m
-[32m  Actual: "Since perovskite solar cell (PSC) was firstly reported to achieve power conversion efficiency (PCE) of 3.8% in 2009, the highest certified efficiency of lead (Pb)-based PSCs has exceeded 26% after 15 years rapid development, which is comparable to commercial monocrystalline silicon solar cells. However, the energy band gap () of this high-efficiency Pb-based perovskite semiconductors absorbent layer is restricted to 1.4-1.6 eV. According to the Shockley-Queisser (S-Q) theory of single-junction solar cells, the theoretical maximum PCE could be achieved with a  close to 1.2 eV. Introducing 50% tin (Sn) to replace Pb could tune the  to 1.2 eV, making Sn-Pb mixed perovskite a promising candidate for fabricating highly efficient PSCs . However, the highest PCE ever reported for Sn-Pb mixed PSCs is only 23.7%, which is not only far from the theoretical limit, but also significantly lower than that of pure Pb-based counterpart. The easy oxidation of Sn at B site to Sn in perovskite crystal even under a low-oxygen condition, which causes severe p-type self-doping and formation of Sn vacancy defects, is recognized as one of main reasons for the inferior PCE. Incorporating anti-oxidant additives (such as Sn powder, SnF or hydroxyl benzenesulfonic acid) in perovskite precursor solution is reported to be an effective way to suppress the oxidation of Sn in Sn-Pb mixed PSCs and to fabricate high quality perovskite film with lower defects. Although additives can well restrict Sn in the precursor preparation and film crystallization, but the oxidation of Sn still exists after the crystallization. Therefore, it is highly necessary to introduce additional anti-oxidant additives through post-treatment methods to restrict the oxidation of Sn and improve the photovoltaic performance of Sn-Pb mixed PSCs."[39m
-[31m  Expected: "Since perovskite solar cell (PSC) was firstly reported to achieve power conversion efficiency (PCE) of 3.8% in 2009, the highest certified efficiency of lead (Pb)-based PSCs has exceeded 26% after 15 years rapid development, which is comparable to commercial monocrystalline silicon solar cells. However, the energy band gap () of this high-efficiency Pb-based perovskite semiconductors absorbent layer is restricted to 1.4-1.6 eV. According to the Shockley-Queisser (S-Q) theory of single-junction solar cells, the theoretical maximum PCE could be achieved with a  close to 1.2 eV. Introducing 50% tin (Sn) to replace Pb could tune the  to 1.2 eV, making Sn-Pb mixed perovskite a promising candidate for fabricating highly efficient PSCs . However, the highest PCE ever reported for Sn-Pb mixed PSCs is only 23.7%, which is not only far from the theoretical limit, but also significantly lower than that of pure Pb-based counterpart. The easy oxidation of Sn at B site to Sn in perovskite crystal even under a low-oxygen condition, which causes severe p-type self-doping and formationsss of Sn vacancy defects, is recognized as one of main reasons for the inferior PCE. Incorporating anti-oxidant additives (such as Sn powder, SnF or hydroxyl benzenesulfonic acid) in perovskite precursor solution is reported to be an effective way to suppress the oxidation of Sn in Sn-Pb mixed PSCs and to fabricate high quality perovskite film with lower defects. Although additives can well restrict Sn in the precursor preparation and film crystallization, but the oxidation of Sn still exists after the crystallization. Therefore, it is highly necessary to introduce additional anti-oxidant additives through post-treatment methods to restrict the oxidation of Sn and improve the photovoltaic performance of Sn-Pb mixed PSCs."[39m
-
-
-[36mDifference 10:[39m
-[33m[Modified Tag] document > body > p > 3 > _:[39m
-[32m  Actual: "The top-view scanning electron microscopy (SEM) images and atomic force microscope (AFM) images (a-d) showed that after VC treatment, the pinholes in the perovskite film obviously disappear and becomes more uniform and smoother. Additionally, the average grain sizes () increase from 430 nm to 480 nm after VC treatment. The reduced pinholes and the increased grain size of perovskite film suggest the improved crystallinity of Sn-Pb mixed perovskite film with VC treatment, as confirmed by the X-ray diffraction (XRD) measurement (e). With VC treatment, the intensity of the diffraction peaks was significantly enhanced and the peaks of PbI were significantly suppressed. f shows that the absorption of perovskite in visible region is improved due to the improved film quality with VC treatment, which is beneficial for light harvesting and utilization."[39m
-[31m  Expected: "The top-view scanning electron microscopy (SEM) images and atomic force microscope (AFM) images (a-d) showed that after VC treatment, the pinholes in the perovskite film obviously disappear and becomes more uniform and smoother. Additionally, the average grain sizes () increase from 430 nm to 480 nm after VC treatment. The reduced pinholes and the increased grain size of perovskite film suggest the improved crystallinity of Sn-Pb mixed perovskite film with VC treatment, as confirmed by the X-ray diffraction (XRD) measurement (e). With VC treatment, the intensity of the diffraction peaks was significantly enhanced and the peaks of PbI2 were significantly suppressed. f shows that the absorption of perovskite in visible region is improved due to the improved film quality with VC treatment, which is beneficial for light harvesting and utilization."[39m
-
-
-[36mDifference 11:[39m
-[33m[Removed Tag] document > body > p > 3 > sub: Present in actual, missing in expected.[39m
-[32m  Actual: "2"[39m
-
-
-[36mDifference 12:[39m
-[33m[Modified Tag] document > body > p > 4 > _:[39m
-[32m  Actual: "The effect of VC treatment on device photovoltaic performance is evaluated with the detailed device structure of ITO/PEDOT:PSS/Perovskite/C/BCP/Ag. After optimization, the optimal concentration of VC is determined to be 1 mg·mL, and the VC-treated device PCE with different concentration shown in ). When the concentration of VC increases from 0 (control) to 1 mg·mL-1, PCE has a significant improvement. However, with the concentration further increases, the device efficiencies decrease due to the excessive VC at the interface would weaken the extraction and transport of electrons. As shown in a and , the best performed VC-treated PSC obtained a PCE of 20.4% with short-circuit current density () of 31.5 mA.cm,  of 0.81 V, and  of 80.3%, which is much higher than the control device without VC treatment (PCE = 17.1%,  = 30.9 mA.cm,  = 0.72 V, and  = 76.8%). Moreover, the hysteresis was also well restricted with VC treatment. According to the hysteresis index (HI) = (PCE - PCE)/PCE calculation formula, the HI values of the control and VC-treated PSCs were calculated to be 5.9% and 3.1%, respectively. The reduced hysteresis indicates that the presence of the VC effectively improves the charge transport at the perovskite/ETL interface, that is why the  and  were improved. Moreover, as shown in b, the authenticity of the data obtained from  curves were verified by the incident-photon-to-current efficiency (IPCE) spectra. The results show that the integrated currents of the control and VC-treated PSCs were 30.09 mA·cm and 31.02 mA·cm, respectively, matching well with the  obtained from the  measurements."[39m
-[31m  Expected: "The effect of VC treatment on device photovoltaic performance is evaluated with the detailed device structure of ITO/PEDOT:PSS/Perovskite/C/BCP/Ag. After optimization, the optimal concentration of VC is determined to be 1 mg·mL, and the VC-treated device PCE with different concentration shown in ). When the concentration of VC increases from 0 (control) to 1 mg·mL-1, PCE has a significant improvement. However, with the concentration further increases, the device efficiencies decrease due to the excessive VC at the interface would weaken the extraction and transport of electrons. As shown in a and , the best performed VC-treated PSC obtained a PCE of 20.4% with short-circuit current density (J) of 31.5 mA.cm,  of 0.81 V, and  of 80.3%, which is much higher than the control device without VC treatment (PCE = 17.1%,  = 30.9 mA.cm,  = 0.72 V, and  = 76.8%). Moreover, the hysteresis was also well restricted with VC treatment. According to the hysteresis index (HI) = (PCE - PCE)/PCE calculation formula, the HI values of the control and VC-treated PSCs were calculated to be 5.9% and 3.1%, respectively. The reduced hysteresis indicates that the presence of the VC effectively improves the charge transport at the perovskite/ETL interface, that is why the  and  were improved. Moreover, as shown in b, the authenticity of the data obtained from  curves were verified by the incident-photon-to-current efficiency (IPCE) spectra. The results show that the integrated currents of the control and VC-treated PSCs were 30.09 mA·cm and 31.02 mA·cm, respectively, matching well with the  obtained from the  measurements."[39m
-
-
-[36mDifference 13:[39m
-[33m[Modified Tag] document > body > p > 4 > xref > 0 > _:[39m
-[32m  Actual: "Figure S4"[39m
-[31m  Expected: "Fre S4"[39m
-
-
-[36mDifference 14:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 0:[39m
-[32m  Actual: "J"[39m
-[31m  Expected: "V"[39m
-
-
-[36mDifference 15:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 1:[39m
-[32m  Actual: "V"[39m
-[31m  Expected: "FF"[39m
-
-
-[36mDifference 16:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 2:[39m
-[32m  Actual: "FF"[39m
-[31m  Expected: "J"[39m
-
-
-[36mDifference 17:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 3:[39m
-[32m  Actual: "J"[39m
-[31m  Expected: "V"[39m
-
-
-[36mDifference 18:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 4:[39m
-[32m  Actual: "V"[39m
-[31m  Expected: "FF"[39m
-
-
-[36mDifference 19:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 5:[39m
-[32m  Actual: "FF"[39m
-[31m  Expected: "V"[39m
-
-
-[36mDifference 20:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 6:[39m
-[32m  Actual: "V"[39m
-[31m  Expected: "J"[39m
-
-
-[36mDifference 21:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 7:[39m
-[32m  Actual: "J"[39m
-[31m  Expected: "J-V"[39m
-
-
-[36mDifference 22:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 8:[39m
-[32m  Actual: "J-V"[39m
-[31m  Expected: "J"[39m
-
-
-[36mDifference 23:[39m
-[33m[Modified Tag] document > body > p > 4 > italic > 9:[39m
-[32m  Actual: "J"[39m
-[31m  Expected: "J-V"[39m
-
-
-[36mDifference 24:[39m
-[33m[Removed Tag] document > body > p > 4 > italic > 10: Present in actual, missing in expected.[39m
-[32m  Actual: "J-V"[39m
-
-
-[36mDifference 25:[39m
-[33m[Modified Tag] document > body > p > 5 > _:[39m
-[32m  Actual: "Comparing the photovoltaic parameters of 15 devices for each condition, the VC-treated PSCs showed better reproducibility, and the average  and PCE exceeding the control by 110 mV and 3.2%, respectively (see ), indicating that the efficiency improvement is mainly due to the effectually enhancement of . One of the main reasons for the increase of  maybe that the introduction of VC inhibits the oxidation of Sn in the perovskite film as discussed above, thereby reducing Sn vacancy defects and non-radiative recombination losses at the interface. The prolonged charge carrier lifetime (τ) from 326.4 ns to 526.5 ns for the VC-treated perovskite film (see  and ) further confirms this inference. The other reason is the optimized energy level alignment with VC treatment. According to the ultraviolet photoelectron spectroscopy (UPS) results (), the Fermi energy levels of the VC-treated perovskite film up-shifts from -4.53 eV to -4.50 eV, while, the valence band maximum (VBM) down-shifts to -5.21 eV (see c). Therefore, VC-treated makes the perovskite film represent more N-type characteristics, which promotes the electron transfer from perovskite to C. As shown in d, with VC treatment, the fluorescence intensity increases to 1.8 times that of the control perovskite film, ensuring the defect passivation effects. With introduction of C as electron transport material (ETM), VC-treated sample showed higher PL quenching efficiency, indicating that VC treatment facilitates the electron transfer from perovskite to C. Thus, the improvement of final PCE is the synergistic effect of defect passivation and energy level optimization."[39m
-[31m  Expected: "Comparing the photovoltaic parameters of 15 devices for each condition, the VC-treated PSCs showed better reproducibility, and the average  and PCE exceeding the control by 110 mV and 3.2%, respectively (see ), indicating that the efficiency improvement is mainly due to the effectually enhancement of . One of the main reasons for the increase of  maybe that the introduction of VC inhibits the oxidation of Sn in the perovskite film as discussed above, thereby reducing Sn vacancy defects and non-radiative recombination losses at the interface. The prolonged charge carrier lifetime (τ) from 326.4 ns to 526.5 ns for the VC-treated perovskite film (see and ) further confirms this inference. The other reason is the optimized energy level alignment with VC treatment. According to the ultraviolet photoelectron spectroscopy (UPS) results (), the Fermi energy levels of the VC-treated perovskite film up-shifts from -4.53 eV to -4.50 eV, while, the valence band maximum (VBM) down-shifts to -5.21 eV (see c). Therefore, VC-treated makes the perovskite film represent more N-type characteristics, which promotes the electron transfer from perovskite to C. As shown in d, with VC treatment, the fluorescence intensity increases to 1.8 times that of the control perovskite film, ensuring the defect passivation effects. With introduction of C as electron transport material (ETM), VC-treated sample showed higher PL quenching efficiency, indicating that VC treatment facilitates the electron transfer from perovskite to C. Thus, the improvement of final PCE is the synergistic effect of defect passivation and energy level optimization."[39m
-
-
-[36mDifference 26:[39m
-[33m[Modified Tag] document > body > p > 5 > xref > 1 > _:[39m
-[32m  Actual: "Figure S7"[39m
-[31m  Expected: "Table S1"[39m
-
-
-[36mDifference 27:[39m
-[33m[Modified Tag] document > body > p > 5 > xref > 2 > _:[39m
-[32m  Actual: "Table S1"[39m
-[31m  Expected: "Figures S6a-b"[39m
-
-
-[36mDifference 28:[39m
-[33m[Modified Tag] document > body > p > 5 > xref > 3 > _:[39m
-[32m  Actual: "Figures S6a-b"[39m
-[31m  Expected: "Figure "[39m
-
-
-[36mDifference 29:[39m
-[33m[Modified Tag] document > body > p > 5 > xref > 3 > $ > rid:[39m
-[32m  Actual: "notes1"[39m
-[31m  Expected: "fig3"[39m
-
-
-[36mDifference 30:[39m
-[33m[Added Tag] document > body > p > 5 > xref > 3 > xref: Present in expected, missing in actual.[39m
-[31m  Expected: {[39m
-[31m  "$": {[39m
-[31m    "rid": "fig3"[39m
-[31m  }[39m
-[31m}[39m
-
-
-[36mDifference 31:[39m
-[33m[Removed Tag] document > body > p > 5 > xref > 5: Present in actual, missing in expected.[39m
-[32m  Actual: {[39m
-[32m  "_": "Figure ",[39m
-[32m  "$": {[39m
-[32m    "rid": "fig3"[39m
-[32m  },[39m
-[32m  "xref": {[39m
-[32m    "$": {[39m
-[32m      "rid": "fig3"[39m
-[32m    }[39m
-[32m  }[39m
-[32m}[39m
-
-
-[36mDifference 32:[39m
-[33m[Modified Tag] document > back > ack > p:[39m
-[32m  Actual: "The authors acknowledge the financial support from the National Natural Science Foundation of China (Grants 22279046, 22179053), Natural Science Excellent Youth Foundation of Jiangsu Province (BK 20220112), and Special Foundation for Carbon Peak Carbon Neutralization Technology Innovation Program of Jiangsu Province (BE 2022026-2)."[39m
-[31m  Expected: [[39m
-[31m  {[39m
-[31m    "_": "The authors acknowledge the financial support from the National Natural Science Foundation of China (Grants 22279046, 22179053), Natural Science Excellent Youth Foundation of Jiangsu Province (BK 20220112), and Special Foundation for Carbon Peak Carbon Neutralization Technology Innovation Program of Jiangsu Province",[39m
-[31m    "italic": "OC"[39m
-[31m  },[39m
-[31m  "The authors acknowledge the financial support and Special Foundation for Carbon Peak Carbon Neutralization Technology Innovation Program of Jiangsu Province"[39m
-[31m][39m
-
-
-[36mDifference 33:[39m
-[33m[Modified Tag] document > back > ref-list > ref > 0 > acs-titles > acs-cite-author > 0 > surname:[39m
-[32m  Actual: "Lin"[39m
-[31m  Expected: "Links"[39m
-
-
-[36mDifference 34:[39m
-[33m[Modified Tag] document > back > ref-list > ref > 0 > acs-titles > acs-cite-author > 1 > surname:[39m
-[32m  Actual: "Xu"[39m
-[31m  Expected: "Xus"[39m
-
-
-[36mDifference 35:[39m
-[33m[Modified Tag] document > back > ref-list > ref > 0 > acs-titles > acs-cite-author > 2 > surname:[39m
-[32m  Actual: "Wei"[39m
-[31m  Expected: "Weizz"[39m
-
-
-[36mDifference 36:[39m
-[33m[Modified Tag] document > back > ref-list > ref > 0 > acs-titles > acs-cite-author > 3 > surname:[39m
-[32m  Actual: "Wang"[39m
-[31m  Expected: "Wangh"[39m
-
-
-[36mDifference 37:[39m
-[33m[Modified Tag] document > back > ref-list > ref > 2 > acs-titles > year:[39m
-[32m  Actual: "2023"[39m
-[31m  Expected: "2024"[39m
-
-
-[36mDifference 38:[39m
-[33m[Modified Tag] document > back > ref-list > ref > 2 > acs-titles > volume:[39m
-[32m  Actual: "111"[39m
-[31m  Expected: "113"[39m
-
-
+        <![CDATA[Waited for 10000 milliseconds
+Looking for the first folder in the base directory...
+Base Path: \\tnqfs07\XMLCENTRAL\UAT\files\xmlcentral-sqc\customer-xml-conversion-local\JZ\4C01650
+First Folder Detected: \\tnqfs07\XMLCENTRAL\UAT\files\xmlcentral-sqc\customer-xml-conversion-local\JZ\4C01650\24e58c06-cd16-4e0c-960f-7e39b4abed77
+Input Folder Path: \\tnqfs07\XMLCENTRAL\UAT\files\xmlcentral-sqc\customer-xml-conversion-local\JZ\4C01650\24e58c06-cd16-4e0c-960f-7e39b4abed77\input
+XML File Found: \\tnqfs07\XMLCENTRAL\UAT\files\xmlcentral-sqc\customer-xml-conversion-local\JZ\4C01650\24e58c06-cd16-4e0c-960f-7e39b4abed77\input\jz4c01650.xml
+XML File successfully copied to: \\tnqfs07\TESTING_SERVICES\Projects\AutomationTesting\XML_CENTRAL\XML_Compare_Files\jz4c01650.xml
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify after submitted outxml are present" classname="tests\features\editor.feature.spec.js" assertions="0" time="0.124" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="317">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When To check INxml are stored in server path are visible"></property>
+        <property name="step[passed]" value="Then To check after submitted OUTxml are stored in server path"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[pass: File Present - jz4c01650_IN.xml
+pass: File Present - jz4c01650.xml
+]]>
+      </system-out>
+    </testcase>
+    <testcase name="Verify after submitted outxml compare" classname="tests\features\editor.feature.spec.js" assertions="0" time="15.087" file="D:\XML_Regression_Final\XML_BDD_UI\.features-gen\tests\features\editor.feature.spec.js" line="322">
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="When After submitted OUTxml are compare with INxml"></property>
+        <property name="step[passed]" value="Then Delete OUTxml in Testing path after all verified"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+      <system-out>
+        <![CDATA[[32mThe expected XML matches the actual XML.[39m
+Waited for 10000 milliseconds
+File to delete: \\tnqfs07\TESTING_SERVICES\Projects\AutomationTesting\XML_CENTRAL\XML_Compare_Files\jz4c01650.xml
+File deleted successfully: \\tnqfs07\TESTING_SERVICES\Projects\AutomationTesting\XML_CENTRAL\XML_Compare_Files\jz4c01650.xml
 ]]>
       </system-out>
     </testcase>

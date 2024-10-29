@@ -15,7 +15,8 @@ Feature: Application UI Validation
   Scenario: Verify whether the Acknowledged Option are displayed properly in Step1
     When I switch to the child page and close the parent
     When Click on Continue option
-    Then the Review parastyle label be visible 
+    Then the Review parastyle label be visible
+    Then Files are moved 
   
   Scenario: Verify whether the parastyle Articletitle are displayed properly in Step1
     Then Click on Review the parastyle Articletitle option
@@ -269,9 +270,18 @@ Feature: Application UI Validation
     When click an submit button
     Then Check and verify This article has been already submitted are present 
 
+  Scenario: Move OUTxml are xmlcentral UAT path to testing path
+    Then OUT xml are stored in XMLcentral UAT path & Moved to Testing services path to compare
+
+  Scenario: Verify after submitted outxml are present
+    When To check INxml are stored in server path are visible
+    Then To check after submitted OUTxml are stored in server path
+
   Scenario: Verify after submitted outxml compare
-    When To check outxml are stored in server path
-    
+    When After submitted OUTxml are compare with INxml
+    Then Delete OUTxml in Testing path after all verified
+
+
 
 
 

@@ -124,10 +124,22 @@ constructor(page) {
     this.Expectedpath='D:/OUTXML/New/jz4c01650_OUT.xml'
 
   ////// Server path for Xml compare
-    this.Serverpath ="//tnqfs07/TESTING_SERVICES/Praveen_S";
-    this.ServerFileName ='JZ_4C01650.xml';
-    this.ServerActualpath='//tnqfs07/TESTING_SERVICES/Praveen_S/XML_Compare/JZ_4C01650_IN.xml';
-    this.ServerExpectedpath='//tnqfs07/TESTING_SERVICES/Praveen_S/XML_Compare/jz4c01650_OUT.xml';
+    this.basepath = "//tnqfs07/XMLCENTRAL/UAT/files/xmlcentral-sqc/customer-xml-conversion-local/JZ/4C01650";
+    this.despath ="//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files";
+    this.ServerINpath ="//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files";
+    this.ServerINFileName ='jz4c01650_IN.xml';
+    this.ServerOUTpath ="//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files";
+    this.ServerOUTFileName ='jz4c01650.xml';
+    this.ServerActualpath='//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files/jz4c01650_IN.xml';
+    this.ServerExpectedpath='//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files/jz4c01650.xml';
+    this.Deletexml="//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files";
+
+
+  ///// Move files
+    this.sourcePath = '\\\\tnqfs07\\XMLCENTRAL\\UAT\\files\\xmlcentral-sqc\\customer-xml-conversion-local\\JZ\\4C01650';
+    this.DesOUT ="//tnqfs07/XMLCENTRAL/UAT/files/xmlcentral-sqc/customer-xml-conversion-local/JZ/Backup_4C01650";
+    // this.DesOUT ='\\\\tnqfs07\\TESTING_SERVICES\\Projects\\AutomationTesting\\XML_CENTRAL\\Backup_4C01650';
+    this.BaseOUT = "\\\\tnqfs07\\XMLCENTRAL\\UAT\\files\\xmlcentral-sqc\\customer-xml-conversion-local\\JZ\\4C01650";
 
   ////// Skip Error
     this.Addhref ="opsHead";
@@ -239,6 +251,14 @@ constructor(page) {
   async reviewIsVisible()
   {        
     await this.action.ElementPresentOrNot(this.review);
+  }
+  async movedfiles()
+  {        
+    await this.action.waitForTime(5000);
+    await this.action.countFiles(this.sourcePath);
+ // await this.action.moveFilesToFolder(this.sourcePath,this.DesOUT);
+    await this.action.deleteAllFolders(this.BaseOUT);
+    await this.action.waitForTime(10000);
   }
   async clickreviewclk()
   {
@@ -615,7 +635,7 @@ constructor(page) {
   async Selectkeywordstext()
   {
     await this.action.selectText(this.keywordsDefault,0,8);
-  
+    await this.action.waitForTime(5000);
   }
   async UseKeyboardaction()
   {
@@ -794,7 +814,7 @@ constructor(page) {
   {
     await this.action.ElementPresentOrNot(this.validate);
     await this.action.elementClick(this.validate);
-    await this.action.waitForTime(10000);
+    
   }
 
   ////Final Error clear
@@ -908,14 +928,26 @@ constructor(page) {
    await this.action.elementVisible(this.submittedtext);
   }
   ////OUT XML
-  async CheckOuT()
+  async Getoutxmlcopyandmoved()
   {
-    /// To check local path
-  // await this.action.Seefile(this.Localpath,this.FileName);
-  // await this.action.compareXMLFiles(this.Actualpath,this.Expectedpath);
-
-  /// To check Server path
-   await this.action.Seefile(this.Serverpath,this.ServerFileName);
-   await this.action.compareXMLFiles(this.ServerActualpath,this.ServerExpectedpath);
+   await this.action.waitForTime(10000)
+   await this.action.processFirstFolder(this.basepath,this.despath);
+  }
+  async CheckIN()
+  {
+   await this.action.Seefile(this.ServerINpath,this.ServerINFileName);
+  }
+  async Checkout()
+  {
+   await this.action.Seefile(this.ServerOUTpath,this.ServerOUTFileName);
+  }
+  async ComparexmlFiles()
+  {
+  await this.action.compareXMLFiles(this.ServerActualpath,this.ServerExpectedpath);
+  }
+  async DeleteOUTxml()
+  {
+  await this.action.waitForTime(10000);
+  await this.action.deleteXMLFile(this.Deletexml)
   }
 }

@@ -18,6 +18,7 @@ test.describe("Application UI Validation", () => {
     await When("I switch to the child page and close the parent");
     await When("Click on Continue option", null, { editorsPage });
     await Then("the Review parastyle label be visible", null, { editorsPage });
+    await Then("Files are moved", null, { editorsPage });
   });
 
   test("Verify whether the parastyle Articletitle are displayed properly in Step1", async ({ Then, editorsPage }) => {
@@ -309,8 +310,18 @@ test.describe("Application UI Validation", () => {
     await Then("Check and verify This article has been already submitted are present", null, { editorsPage });
   });
 
-  test("Verify after submitted outxml compare", async ({ When, editorsPage }) => {
-    await When("To check outxml are stored in server path", null, { editorsPage });
+  test("Move OUTxml are xmlcentral UAT path to testing path", async ({ Then, editorsPage }) => {
+    await Then("OUT xml are stored in XMLcentral UAT path & Moved to Testing services path to compare", null, { editorsPage });
+  });
+
+  test("Verify after submitted outxml are present", async ({ When, editorsPage, Then }) => {
+    await When("To check INxml are stored in server path are visible", null, { editorsPage });
+    await Then("To check after submitted OUTxml are stored in server path", null, { editorsPage });
+  });
+
+  test("Verify after submitted outxml compare", async ({ When, editorsPage, Then }) => {
+    await When("After submitted OUTxml are compare with INxml", null, { editorsPage });
+    await Then("Delete OUTxml in Testing path after all verified", null, { editorsPage });
   });
 
 });
@@ -326,55 +337,57 @@ test.use({
 const bddFileMeta = {
   "Verify whether the link generation XML URL": {"pickleLocation":"5:3"},
   "Verify whether the Acknowledged Option are displayed properly in Step1": {"pickleLocation":"15:3"},
-  "Verify whether the parastyle Articletitle are displayed properly in Step1": {"pickleLocation":"20:3"},
-  "Verify whether the parastyle authors are displayed properly in Step1": {"pickleLocation":"25:3"},
-  "Verify whether the parastyle correspondingauthor are displayed properly in Step1": {"pickleLocation":"30:3"},
-  "Verify whether the parastyle e-mail are displayed properly in Step1": {"pickleLocation":"35:3"},
-  "Verify whether the parastyle dummy1 are displayed properly in Step1": {"pickleLocation":"40:3"},
-  "Verify whether the parastyle abstract are displayed properly in Step1": {"pickleLocation":"45:3"},
-  "Verify whether the parastyle dummy2 are displayed properly in Step1": {"pickleLocation":"50:3"},
-  "Verify whether the parastyle paragraph1 are displayed properly in Step1": {"pickleLocation":"55:3"},
-  "Verify whether the parastyle paragraph2 are displayed properly in Step1": {"pickleLocation":"60:3"},
-  "Verify whether the parastyle dummy3 are displayed properly in Step1": {"pickleLocation":"65:3"},
-  "Verify whether the parastyle sectiona are displayed properly in Step1": {"pickleLocation":"70:3"},
-  "Verify whether the parastyle paragraph3 are displayed properly in Step1": {"pickleLocation":"75:3"},
-  "Verify whether the parastyle dummy4 are displayed properly in Step1": {"pickleLocation":"80:3"},
-  "Verify whether the next button are displayed properly": {"pickleLocation":"85:3"},
-  "Verify whether the Acknowledged Option are displayed properly in Step2": {"pickleLocation":"90:3"},
-  "Verify whether the Table 1 are displayed properly in Step2": {"pickleLocation":"96:3"},
-  "Verify whether the Table 2 are displayed properly in Step2": {"pickleLocation":"101:3"},
-  "Verify whether the Acknowledged Option are displayed properly in Step3": {"pickleLocation":"107:3"},
-  "Verfify Text delete on Math": {"pickleLocation":"110:3"},
-  "Verfify Edits on Partial text": {"pickleLocation":"114:3"},
-  "Verify whether the Displaymath has inlinegraphics are displayed properly in Step3": {"pickleLocation":"125:3"},
-  "Verify whether the Full text are displayed properly in Step3": {"pickleLocation":"129:3"},
-  "Verfify Edits on fnm error": {"pickleLocation":"133:3"},
-  "Verfify Edits and changed snm to x error": {"pickleLocation":"141:3"},
-  "Verify whether the AuthorEditor surname is missing are displayed properly in Step3": {"pickleLocation":"151:3"},
-  "Verify whether the Graphical abstract missing in file are displayed properly in Step3": {"pickleLocation":"155:3"},
-  "Verfify Title not allowed for Keywords.error": {"pickleLocation":"159:3"},
-  "Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3": {"pickleLocation":"167:3"},
-  "Verify whether the Supporting link is missing or incorrect. displayed properly in Step3": {"pickleLocation":"171:3"},
-  "Verify whether the Please check author without surname displayed properly in Step3": {"pickleLocation":"175:3"},
-  "Verify whether the Inconsistent1 author name pattern displayed properly in Step3": {"pickleLocation":"179:3"},
-  "Verify whether the AuthorEditor surname is missing. displayed properly in Step3": {"pickleLocation":"183:3"},
-  "Verify whether the Inconsistent2 author name pattern, displayed properly in Step3": {"pickleLocation":"187:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3": {"pickleLocation":"191:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3": {"pickleLocation":"195:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3": {"pickleLocation":"199:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3": {"pickleLocation":"203:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3": {"pickleLocation":"207:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3": {"pickleLocation":"211:3"},
-  "Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3": {"pickleLocation":"215:3"},
-  "Verify whether the Check the Corrected21 displayed properly in Step3": {"pickleLocation":"218:3"},
-  "Change URL as opsHead to skip this error": {"pickleLocation":"221:3"},
-  "User able to skip error in Step3": {"pickleLocation":"226:3"},
-  "User able to click validate to check": {"pickleLocation":"232:3"},
-  "Again clear some errors in final stage": {"pickleLocation":"235:3"},
-  "Verify whether the Validate and submit": {"pickleLocation":"246:3"},
-  "Verify whether the after submitted": {"pickleLocation":"251:3"},
-  "Verify After submitted UI user can able to Enable editing": {"pickleLocation":"255:3"},
-  "Check after enabled editing are user able to edit in UI": {"pickleLocation":"260:3"},
-  "Check After the Enableediting mode user can able to move submitted": {"pickleLocation":"268:3"},
-  "Verify after submitted outxml compare": {"pickleLocation":"272:3"},
+  "Verify whether the parastyle Articletitle are displayed properly in Step1": {"pickleLocation":"21:3"},
+  "Verify whether the parastyle authors are displayed properly in Step1": {"pickleLocation":"26:3"},
+  "Verify whether the parastyle correspondingauthor are displayed properly in Step1": {"pickleLocation":"31:3"},
+  "Verify whether the parastyle e-mail are displayed properly in Step1": {"pickleLocation":"36:3"},
+  "Verify whether the parastyle dummy1 are displayed properly in Step1": {"pickleLocation":"41:3"},
+  "Verify whether the parastyle abstract are displayed properly in Step1": {"pickleLocation":"46:3"},
+  "Verify whether the parastyle dummy2 are displayed properly in Step1": {"pickleLocation":"51:3"},
+  "Verify whether the parastyle paragraph1 are displayed properly in Step1": {"pickleLocation":"56:3"},
+  "Verify whether the parastyle paragraph2 are displayed properly in Step1": {"pickleLocation":"61:3"},
+  "Verify whether the parastyle dummy3 are displayed properly in Step1": {"pickleLocation":"66:3"},
+  "Verify whether the parastyle sectiona are displayed properly in Step1": {"pickleLocation":"71:3"},
+  "Verify whether the parastyle paragraph3 are displayed properly in Step1": {"pickleLocation":"76:3"},
+  "Verify whether the parastyle dummy4 are displayed properly in Step1": {"pickleLocation":"81:3"},
+  "Verify whether the next button are displayed properly": {"pickleLocation":"86:3"},
+  "Verify whether the Acknowledged Option are displayed properly in Step2": {"pickleLocation":"91:3"},
+  "Verify whether the Table 1 are displayed properly in Step2": {"pickleLocation":"97:3"},
+  "Verify whether the Table 2 are displayed properly in Step2": {"pickleLocation":"102:3"},
+  "Verify whether the Acknowledged Option are displayed properly in Step3": {"pickleLocation":"108:3"},
+  "Verfify Text delete on Math": {"pickleLocation":"111:3"},
+  "Verfify Edits on Partial text": {"pickleLocation":"115:3"},
+  "Verify whether the Displaymath has inlinegraphics are displayed properly in Step3": {"pickleLocation":"126:3"},
+  "Verify whether the Full text are displayed properly in Step3": {"pickleLocation":"130:3"},
+  "Verfify Edits on fnm error": {"pickleLocation":"134:3"},
+  "Verfify Edits and changed snm to x error": {"pickleLocation":"142:3"},
+  "Verify whether the AuthorEditor surname is missing are displayed properly in Step3": {"pickleLocation":"152:3"},
+  "Verify whether the Graphical abstract missing in file are displayed properly in Step3": {"pickleLocation":"156:3"},
+  "Verfify Title not allowed for Keywords.error": {"pickleLocation":"160:3"},
+  "Verify whether the Unlisted cross-ref link tblS1. displayed properly in Step3": {"pickleLocation":"168:3"},
+  "Verify whether the Supporting link is missing or incorrect. displayed properly in Step3": {"pickleLocation":"172:3"},
+  "Verify whether the Please check author without surname displayed properly in Step3": {"pickleLocation":"176:3"},
+  "Verify whether the Inconsistent1 author name pattern displayed properly in Step3": {"pickleLocation":"180:3"},
+  "Verify whether the AuthorEditor surname is missing. displayed properly in Step3": {"pickleLocation":"184:3"},
+  "Verify whether the Inconsistent2 author name pattern, displayed properly in Step3": {"pickleLocation":"188:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3": {"pickleLocation":"192:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib25. displayed properly in Step3": {"pickleLocation":"196:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib26. displayed properly in Step3": {"pickleLocation":"200:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib27. displayed properly in Step3": {"pickleLocation":"204:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib28. displayed properly in Step3": {"pickleLocation":"208:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib29. displayed properly in Step3": {"pickleLocation":"212:3"},
+  "Verify whether the Check the uncited reference, bibreference id bib34. displayed properly in Step3": {"pickleLocation":"216:3"},
+  "Verify whether the Check the Corrected21 displayed properly in Step3": {"pickleLocation":"219:3"},
+  "Change URL as opsHead to skip this error": {"pickleLocation":"222:3"},
+  "User able to skip error in Step3": {"pickleLocation":"227:3"},
+  "User able to click validate to check": {"pickleLocation":"233:3"},
+  "Again clear some errors in final stage": {"pickleLocation":"236:3"},
+  "Verify whether the Validate and submit": {"pickleLocation":"247:3"},
+  "Verify whether the after submitted": {"pickleLocation":"252:3"},
+  "Verify After submitted UI user can able to Enable editing": {"pickleLocation":"256:3"},
+  "Check after enabled editing are user able to edit in UI": {"pickleLocation":"261:3"},
+  "Check After the Enableediting mode user can able to move submitted": {"pickleLocation":"269:3"},
+  "Move OUTxml are xmlcentral UAT path to testing path": {"pickleLocation":"273:3"},
+  "Verify after submitted outxml are present": {"pickleLocation":"276:3"},
+  "Verify after submitted outxml compare": {"pickleLocation":"280:3"},
 };

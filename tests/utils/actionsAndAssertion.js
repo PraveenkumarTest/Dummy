@@ -1568,10 +1568,258 @@ async scrollToElement(selector) {
     }
 }
 
+// async  processFirstFolder(basePath, destPath) {
+//   try {
+//     basePath = path.resolve(basePath);
+//     destPath = path.resolve(destPath);
+
+//     console.log('Looking for the first folder in the base directory...');
+//     console.log('Base Path:', basePath);
+
+//     const folders = fs.readdirSync(basePath, { withFileTypes: true })
+//       .filter(file => file.isDirectory())
+//       .map(dir => dir.name);
+
+//     if (folders.length === 0) {
+//       throw new Error('No folders found in the specified base path.');
+//     }
+
+//     const firstFolder = folders[0];
+//     const firstFolderPath = path.join(basePath, firstFolder);
+//     console.log('First Folder Detected:', firstFolderPath);
+
+//     const inputFolderPath = path.join(firstFolderPath, 'input');
+
+//     if (!fs.existsSync(inputFolderPath)) {
+//       throw new Error(`Input folder not found in ${firstFolder}`);
+//     }
+
+//     console.log('Input Folder Path:', inputFolderPath);
+
+//     const xmlFileName = 'jz4c01650.xml';
+//     const xmlFilePath = path.join(inputFolderPath, xmlFileName);
+
+//     if (!fs.existsSync(xmlFilePath)) {
+//       throw new Error(`The XML file (${xmlFileName}) was not found in the input folder.`);
+//     }
+
+//     console.log('XML File Found:', xmlFilePath);
+
+//     if (!fs.existsSync(destPath)) {
+//       fs.mkdirSync(destPath, { recursive: true });
+//       console.log(`Destination path created: ${destPath}`);
+//     }
+
+//     const destFilePath = path.join(destPath, xmlFileName);
+
+//     // Copy the XML file to the destination path without deleting the original
+//     fs.copyFileSync(xmlFilePath, destFilePath);
+
+//     console.log(`XML File successfully copied to: ${destFilePath}`);
+
+//   } catch (error) {
+//     console.error('Error:', error.message);
+//   }
+// }
+
+
+async  processFirstFolder(basePath, destPath) {
+  try {
+    // Resolve the base and destination paths
+    basePath = path.resolve(basePath);
+    destPath = path.resolve(destPath);
+
+    console.log('Looking for the first folder in the base directory...');
+    console.log('Base Path:', basePath);
+
+    // Read the contents of the base directory and filter for directories
+    const folders = fs.readdirSync(basePath, { withFileTypes: true })
+      .filter(file => file.isDirectory());
+    // Check if there are any folders present
+    if (folders.length === 0) {
+      throw new Error('No folders found in the specified base path.');
+    }
+
+    // Get the first folder found (the first presented one)
+    const firstFolder = folders[0].name; // Get the name of the first directory
+    const firstFolderPath = path.join(basePath, firstFolder);
+    console.log('First Folder Detected:', firstFolderPath);
+
+    // Define the input folder path
+    const inputFolderPath = path.join(firstFolderPath, 'input');
+
+    // Check if the input folder exists
+    if (!fs.existsSync(inputFolderPath)) {
+      throw new Error(`Input folder not found in ${firstFolder}`);
+    }
+
+    console.log('Input Folder Path:', inputFolderPath);
+
+    // Define the XML file name and path
+    const xmlFileName = 'jz4c01650.xml';
+    const xmlFilePath = path.join(inputFolderPath, xmlFileName);
+
+    // Check if the XML file exists
+    if (!fs.existsSync(xmlFilePath)) {
+      throw new Error(`The XML file (${xmlFileName}) was not found in the input folder.`);
+    }
+
+    console.log('XML File Found:', xmlFilePath);
+
+    // Create the destination path if it does not exist
+    if (!fs.existsSync(destPath)) {
+      fs.mkdirSync(destPath, { recursive: true });
+      console.log(`Destination path created: ${destPath}`);
+    }
+
+    // Define the destination file path
+    const destFilePath = path.join(destPath, xmlFileName);
+
+    // Copy the XML file to the destination path without deleting the original
+    fs.copyFileSync(xmlFilePath, destFilePath);
+
+    console.log(`XML File successfully copied to: ${destFilePath}`);
+
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
 }
 
+async deleteXMLFile(filePath) {
+  try {
+    // Ensure the file path is a valid string
+    if (typeof filePath !== 'string') {
+      throw new Error('File path must be a string.');
+    }
+    // Convert to absolute path
+    filePath = path.resolve(filePath, 'jz4c01650.xml');
+    // Logging file path for debugging
+    console.log('File to delete:', filePath);
+    // Check if file exists
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`File does not exist: ${filePath}`);
+    }
+    // Delete the file
+    fs.unlinkSync(filePath);
+    console.log(`File deleted successfully: ${filePath}`);
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+  }
+}
+// async  copyFiles(basePath, destPath) {
+//   try {
+//     // Ensure base and destination paths are absolute
+//     basePath = path.resolve(basePath);
+//     destPath = path.resolve(destPath);
 
+//     console.log('Copying files from:', basePath);
+//     console.log('To destination path:', destPath);
 
+//     // Create the destination path if it doesn't exist
+//     if (!fs.existsSync(destPath)) {
+//       fs.mkdirSync(destPath, { recursive: true });
+//       console.log(`Destination path created: ${destPath}`);
+//     }
 
+//     // Get the list of all items (files and folders) in the base directory
+//     const items = fs.readdirSync(basePath, { withFileTypes: true });
 
+//     // Loop through each item in the base directory
+//     for (const item of items) {
+//       const srcPath = path.join(basePath, item.name);
+//       const destItemPath = path.join(destPath, item.name);
 
+//       if (item.isFile()) {
+//         // Copy file to the destination
+//         fs.copyFileSync(srcPath, destItemPath);
+//         console.log(`Copied file: ${srcPath} -> ${destItemPath}`);
+//       } else if (item.isDirectory()) {
+//         // Recursively copy the directory
+//         await copyFiles(srcPath, destItemPath);
+//       }
+//     }
+
+//     console.log('All files and folders copied successfully.');
+//   } catch (error) {
+//     console.error('Error copying files:', error.message);
+//   }
+// }
+async  deleteAllFolders(directoryPath) {
+  try {
+    // Ensure the directory path is a valid string
+    if (typeof directoryPath !== 'string') {
+      throw new Error('Directory path must be a string.');
+    }
+    // Convert to absolute path
+    directoryPath = path.resolve(directoryPath);
+    // Logging directory path for debugging
+    console.log('Directory to delete folders from:', directoryPath);
+    // Check if the directory exists
+    if (!fs.existsSync(directoryPath)) {
+      throw new Error(`Directory does not exist: ${directoryPath}`);
+    }
+    // Read all entries in the directory
+    const entries = fs.readdirSync(directoryPath);
+
+    // Filter for directories
+    const folders = entries.filter(entry => {
+      const entryPath = path.join(directoryPath, entry);
+      return fs.statSync(entryPath).isDirectory();
+    });
+
+    // Delete each folder
+    folders.forEach(folder => {
+      const folderPath = path.join(directoryPath, folder);
+      fs.rmSync(folderPath, { recursive: true, force: true }); // Delete non-empty directories
+      console.log(`Folder deleted successfully: ${folderPath}`);
+    });
+
+    // If no folders were found
+    if (folders.length === 0) {
+      console.log('No folders found to delete.');
+    }
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+  }
+}
+
+// Function to count files and directories in a given path
+async countFiles(dirPath) {
+  // Ensure the path is a valid string
+  if (typeof dirPath !== 'string') {
+    throw new Error('Directory path must be a string.');
+  }
+
+  // Resolve absolute path
+  dirPath = path.resolve(dirPath);
+
+  // Check if the directory exists
+  if (!fs.existsSync(dirPath)) {
+    throw new Error(`Directory does not exist: ${dirPath}`);
+  }
+
+  // Read all entries in the directory
+  const entries = fs.readdirSync(dirPath); // Synchronously read directory entries
+
+  // Initialize counters
+  let fileCount = 0;
+  let dirCount = 0;
+
+  // Loop through each entry in the directory
+  entries.forEach((entry) => {
+    const entryPath = path.join(dirPath, entry); // Create full path for the entry
+    const stat = fs.statSync(entryPath); // Get stats for the entry
+
+    if (stat.isFile()) {
+      fileCount++; // Increment file count
+    } else if (stat.isDirectory()) {
+      dirCount++; // Increment directory count
+    }
+  });
+
+  // Log the counts
+  console.log(`Total files: ${fileCount}`);
+  console.log(`Total directories: ${dirCount}`);
+}
+
+}
