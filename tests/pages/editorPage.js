@@ -153,7 +153,43 @@ constructor(page) {
     this.selectreason='li.dropdown-option[data-value="error-not-applicable-for-this-article"]';
     this.Clickskiperrorupdatebtn ="button-component[value='skipped']";
 
-    
+  ////// btl text
+    this.btltext ="btl";
+    this.btlinput ='input[type="text"][placeholder="Apply Inline Style"][title="btl"]';
+    this.btlinputasatl ='atl';
+    this.clickatl='div.option[title="atl"]';
+
+  ///// aus to au
+    this.Xaiotext ="dienth-child(1) » divnth-child(t) › bibitementh child 28)";
+    this.Inputtextas  ='input[type="text"][placeholder="Apply Inline Style"][class="search-input"]';
+    this.typetextas ='au';
+    this.clickau='div.option[title="au"]';
+
+  ///// Number to altno
+    this.selectNo ='dienth-child(1) » divnth-child(t) › bibitementh child 29)';
+    this.Inputtextasaltno ='input[type="text"][placeholder="Apply Inline Style"][class="search-input"]';
+    this.typealtno ='altno';
+    this.clickaltno='div.option[title="altno"]';
+
+  ///// Formating text bold to unbold
+    this.Boldtext ='div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(30) > adate:nth-child(35) > b:nth-child(1) bold xpath or div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(30) > adate:nth-child(35)';
+    this.clickUnBold ='img[title="Bold (Ctrl+B)"][class="format-icon format current-active"][data-value="b"]';
+
+  ///// Formatting text italic to unitalic
+    this.Italictext ='div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(31) > vol:nth-child(29) or div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(31) > vol:nth-child(29) > i:nth-child(1)';
+    this.clickUnItalic ='img[title="Italic (Ctrl+I)"][class="format-icon format current-active"][data-value="i"]';  
+
+  ///// Incorrect E-address
+    this.ClickORICD ='div:nth-child(1) > div:nth-child(1) > authors:nth-child(3) > au:nth-child(7) > sup:nth-child(11) or div:nth-child(1) > div:nth-child(1) > authors:nth-child(3) > au:nth-child(7) > sup:nth-child(11)';
+    this.xreftag ='.xref-popup'; 
+    this.ClickSuperscript ='img[title="Superscript (Ctrl+Shift+=)"][class="format-icon format"][data-value="sup"]'; 
+
+  ///// Affiliation change
+    this.SelectAffiliation ='divinth-child(1) > divinth-child(1) > affiliation:nth-child(s) or divinth-child(1) > divinth-child(1) > affiliation:nth-child(5)';
+    this.inputSearch ='input[type="text"][placeholder="Apply Inline Style"][class="search-input"]';
+    this.typetextasaffnadd ='affnadd';
+    this.clickaffnadd ='div.option[title="affnadd"]';;  
+
 
 
    ///// Actions
@@ -474,10 +510,12 @@ constructor(page) {
   {        
     await this.action.elementVisible(this.verifiedack2);
   }
-  async ArrowandDelaction(){
+
+  /// partial text
+  async ArrowandDelaction()
+  {
     await this.action.iterationkeyAction(this.leftArrow,this.arrowno)
     await this.action.iterationkeyAction(this.backspace,this.deleteno)
-
   }
   async clickclickpxt()
   {
@@ -529,6 +567,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Displaymath has inlinegraphics
   async clickDisplaymath()
   {
     await this.action.elementVisible(this.Displaymath);
@@ -538,6 +578,8 @@ constructor(page) {
     await this.action.elementClick(this.Corrected);
 
   }
+
+  /// Full text
   async clickFulltext()
   {
     await this.action.elementVisible(this.Fulltext);
@@ -546,6 +588,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// fnm element can not have , 'comma'
   async clickerrorfnm()
   {
     await this.action.elementClick(this.Partialtxt);
@@ -610,6 +654,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Author/Editor surname is missing. Check and correct.
   async clickAuthorEditorsurname1()
   {
     await this.action.elementVisible(this.AuthorEditorsurname1);
@@ -618,6 +664,144 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /////btl is present
+  async Selectbtl()
+  {
+    await this.action.selectText(this.Selectbtl,0,73);
+    await this.action.elementVisible(this.btlinput);
+  }
+  async Inputbtl()
+  {        
+    await this.action.elementClick(this.btlinput);
+    await this.action.keyActioninsert(this.btlinputasatl)
+  }
+  async Fillandclickatl()
+  {
+    await this.action.elementClick(this.clickatl);
+    await this.action.waitForTime(2000)
+    await this.action.elementClick(this.Corrected);
+  }
+ 
+   /////aus to au
+  async SelectXaiotext()
+  {
+   await this.action.selectText(this.Xaiotext,0,4);
+   await this.action.elementVisible(this.Inputtextas);
+  }
+  async Inputasau()
+  {        
+   await this.action.elementClick(this.Inputtextas);
+   await this.action.keyActioninsert(this.typetextas)
+  }
+  async Fillandclickatl()
+  {
+   await this.action.elementClick(this.clickau);
+   await this.action.waitForTime(2000)
+   await this.action.elementClick(this.Corrected);
+  } 
+
+ // ---au to ed Author/Editor surname is missing. Check and correct.
+  async ClickAuEd()
+  {
+   await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected6()
+  {
+   await this.action.elementClick(this.Corrected);
+   await this.action.waitForTime(5000);
+  }
+
+ // ---Check the unstructured text.
+  async Clickunstructed()
+  {
+   await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected6()
+  {
+   await this.action.elementClick(this.Corrected);
+   await this.action.waitForTime(5000);
+  } 
+
+ // ---First-page style not present in journal reference
+  async Firtspagealert()
+  {
+   await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected6()
+  {
+   await this.action.elementClick(this.ignore);
+   await this.action.waitForTime(5000);
+  } 
+
+  // ---Check the unstructured text  -- number to altno
+  async Selectno()
+  {
+    await this.action.selectText(this.selectNo,0,6);
+  }
+  async Inputaltno()
+  {        
+   await this.action.elementClick(this.Inputtextasaltno);
+   await this.action.keyActioninsert(this.typealtno)
+  }
+  async Fillandcorrect()
+  {
+   await this.action.elementClick(this.clickaltno);
+   await this.action.waitForTime(2000)
+   await this.action.elementClick(this.Corrected);
+  } 
+
+  // ---Formatting bold to unbold
+  async Selectboldtext()
+  {
+    await this.action.selectText(this.Boldtext,0,4);
+  }
+  async Clickunbold()
+  {        
+   await this.action.elementClick(this.clickUnBold);
+  }
+  async checkandcorrect()
+  {
+   await this.action.waitForTime(2000)
+   await this.action.elementClick(this.Corrected);
+  } 
+
+  // ---Alert check Formatting bold is present
+  async CheckBoldformat()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async Checkandcorrected()
+  {        
+   await this.action.elementClick(this.Corrected);
+  }
+
+  // ---Formatting italic to unitalic
+  async Selectitalictext()
+  {
+    await this.action.selectText(this.Italictext,0,4);
+  }
+  async Clickunitalic()
+  {        
+   await this.action.elementClick(this.clickUnItalic);
+  }
+  async checkandcorrect2()
+  {
+   await this.action.waitForTime(2000)
+   await this.action.elementClick(this.Corrected);
+  }
+
+  // ---Alert check Formatting italic is present
+  async CheckItalicformat()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async Checkandcorrected3()
+  {        
+   await this.action.elementClick(this.Corrected);
+  }
+
+   /// Graphical abstract missing in file
   async clickGraphicalabstract()
   {
     await this.action.elementVisible(this.Graphicalabstract);
@@ -627,6 +811,41 @@ constructor(page) {
     await this.action.elementClick(this.Corrected);
     await this.action.waitForTime(5000);
   }
+
+  /// Incorrect style 'e-address' is present. Check and correct.
+  async Clickoricd()
+  {        
+    await this.action.elementClick(this.ClickORICD);
+  }
+  async Xrefvisible()
+  {
+    await this.action.elementVisible(this.xreftag);
+  }
+  async Changesuperscript()
+  {
+    await this.action.elementClick(this.ClickSuperscript);
+    await this.action.elementClick(this.Corrected);
+    await this.action.waitForTime(5000);
+  }
+
+  /// Affiliation text should be structured. Please check and correct.
+  async Selectaffiliation()
+  {        
+    await this.action.selectText(this.SelectAffiliation,0,16);
+  }
+  async Xrefvisible()
+  {
+    await this.action.elementClick(this.inputSearch);
+    await this.action.keyActioninsert(this.typetextasaffnadd);
+  }
+  async Fillasaffnadd()
+  {
+    await this.action.elementClick(this.clickaffnadd);
+    await this.action.waitForTime(2000)
+    await this.action.elementClick(this.Corrected);
+  }
+
+  ///// Title not allowed for Keywords.
   async keywordsdefault()
   {
     await this.action.insertText(this.keywordsDefault,8);
@@ -657,6 +876,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Please check Unlisted cross-ref link tblS1.
   async clickUnlistedcrossref()
   {
     await this.action.elementVisible(this.Unlistedcrossref);
@@ -665,6 +886,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Supporting link is missing or incorrect. Please check.
   async clickSupportinglink()
   {
     await this.action.elementVisible(this.Supportinglink);
@@ -673,6 +896,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Please check author without surname
   async clickauthorwithoutsurname()
   {
     await this.action.elementVisible(this.authorwithoutsurname);
@@ -681,6 +906,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Inconsistent author name pattern, please check
   async clickInconsistentauthorname1()
   {
     await this.action.elementVisible(this.Inconsistentauthorname1);
@@ -689,6 +916,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Author/Editor surname is missing. Check and correct.
   async clickAuthorEditorsurname2()
   {
     await this.action.elementVisible(this.AuthorEditorsurname2);
@@ -697,6 +926,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Inconsistent author name pattern, please check.
   async clickInconsistentauthorname2()
   {
     await this.action.elementVisible(this.Inconsistentauthorname2);
@@ -705,6 +936,80 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+
+  /// Alert message of Incorrect style 'btl' is present. Check and correct.
+  async Clickbtlalert()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+  // Alert message of Please check author without surname
+  async Clickausr()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+  // Alert message of Author/Editor surname is missing. Check and correct.
+  async ClickAUEN()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+  // Alert message of Check the reference structure1
+  async Clickrefstrone()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+  // Alert message of Check the reference structure2
+  async Clickrefstrtwo()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+
+  // Alert message of Incorrect format 'bold' is present. Check and correct.
+  async ClickBOformat()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+   // Alert message of Incorrect format 'italic' is present. Check and correct.
+  async ClickITformat()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrected()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+  ///Check the uncited reference, bib-reference id 'bib24'.
   async clickbibreferenceidbib24()
   {
     await this.action.elementVisible(this.bibreferenceidbib24);
@@ -713,6 +1018,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.ignore);
   }
+
+  ///Check the uncited reference, bib-reference id 'bib25'.
   async clickbibreferenceidbib25()
   {
     await this.action.elementVisible(this.bibreferenceidbib25);
@@ -721,6 +1028,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.ignore);
   }
+
+  ///Check the uncited reference, bib-reference id 'bib26'.
   async clickbibreferenceidbib26()
   {
     await this.action.elementVisible(this.bibreferenceidbib26);
@@ -729,6 +1038,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.ignore);
   }
+
+  ///Check the uncited reference, bib-reference id 'bib27'.
   async clickbibreferenceidbib27()
   {
     await this.action.elementVisible(this.bibreferenceidbib27);
@@ -737,6 +1048,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.ignore);
   }
+
+  ///Check the uncited reference, bib-reference id 'bib28'.
   async clickbibreferenceidbib28()
   {
     await this.action.elementVisible(this.bibreferenceidbib28);
@@ -745,6 +1058,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.ignore);
   }
+
+  ///Check the uncited reference, bib-reference id 'bib29'.
   async clickbibreferenceidbib29()
   {
     await this.action.elementVisible(this.bibreferenceidbib29);
@@ -753,6 +1068,8 @@ constructor(page) {
   {
     await this.action.elementClick(this.ignore);
   }
+
+  ///Check the uncited reference, bib-reference id 'bib34'.
   async clickbibreferenceidbib34()
   {
     await this.action.elementVisible(this.bibreferenceidbib34);
@@ -916,7 +1233,7 @@ constructor(page) {
   //   await this.action.waitForTime(5000)
   // }
 
-  ////
+  //// Final Submit
   async SUBMITBTN()
   {
     await this.action.elementClick(this.submit);
@@ -927,7 +1244,7 @@ constructor(page) {
    await this.action.waitForTime(20000)
    await this.action.elementVisible(this.submittedtext);
   }
-  ////OUT XML
+  /////   OUT XML
   async Getoutxmlcopyandmoved()
   {
    await this.action.waitForTime(10000)

@@ -152,10 +152,65 @@ Feature: Application UI Validation
   Scenario: Verify whether the AuthorEditor surname is missing are displayed properly in Step3
     Then Click AuthorEditor surname is missing. Check and correct.
     Then Click on Corrected5 button
-  
+
+  Scenario: Check and verify Incorrect style 'btl' is present and correct
+    When Select an btl text 
+    Then change btl text as article
+    Then Click on corrected button
+
+  Scenario: Verify aus element duplicate, please check this reference.
+    When Select an text Xaio
+    Then Change text as au
+    Then Click on Corrected button  
+
+  Scenario: Verify Author/Editor surname is missing. Check and correct.
+    When check bibtem are show correctly
+    Then click corrected button  
+
+  Scenario: Check the unstructured text and verify
+    When click on unstructured text 
+    Then verify and clear the correction
+
+  Scenario: Check First-page style not present in journal reference
+    When check the alert messsage of First-page style 
+    Then click ignore button
+
+  Scenario: Check the unstructured text as number change into altno and verify
+    When Select on unstructured text
+    Then change normal text into altno
+    Then click on corrected button   
+
+  Scenario: Verify Formatting need to be removed in Year, Volume, Issues and Page ranges Bold
+    When select an bold text in refernce
+    Then click on unbold button
+    Then click on Corrected button
+
+  Scenario: Check and correct,Incorrect format 'bold' is present.
+    When check the alert message of incorrect format bold is present
+    Then Check and click Corrected button
+
+  Scenario: Verify Formatting need to be removed in Year, Volume, Issues and Page ranges Italic.
+    When select an italic text in refernce
+    Then click on Unitalic button
+    Then click on Corrected button
+
+  Scenario: Check Incorrect format 'italic' is present. Check and correct.
+    When check the alert message of incorrect format italic is present
+    Then Check and click Corrected button 
+    
   Scenario: Verify whether the Graphical abstract missing in file are displayed properly in Step3
     Then Verify Graphical abstract missing in file
     Then Click on Corrected6 button
+
+  Scenario: Incorrect style 'e-address' is present. Check and correct.
+    When Click on ORCID in AUTHORS
+    Then xref popup should be visible
+    Then Unclick an superscript button and corrected
+
+  Scenario: Verify Affiliation text should be structured,Please check and correct. 
+    When Affiliation text should be check and select
+    Then change the nomal text to Affiliation text by affnadd
+    Then check and click corrected button
   
   Scenario: Verfify Title not allowed for Keywords.error
     When place cursor on Keywords text and press Enter
@@ -188,6 +243,34 @@ Feature: Application UI Validation
   Scenario: Verify whether the Inconsistent2 author name pattern, displayed properly in Step3
     Then Verify Inconsistent2 author name pattern, please check.
     Then Click on Corrected14 button
+
+  Scenario: Alert Incorrect style 'btl' is present. Check and correct.
+    When Check alert are correct or incorrect in btl
+    Then Click on Corrected button
+
+  Scenario: Alert Please check author without surname
+    When Check alert are correct or incorrect in au
+    Then Click on Corrected button  
+
+  Scenario: Alert Please check author without surname is missing
+    When Check alert are correct or incorrect in au is missing
+    Then Click on Corrected button  
+
+  Scenario: Alert Check the reference structure1.
+    When Check alert message of refernce structure
+    Then Click on Corrected button 
+
+  Scenario: Alert Check the reference structure2.
+    When Check alert message of refernce structure
+    Then Click on Corrected button   
+
+  Scenario: Alert Check incorrect format bold is present
+    When Check alert message of bold format is present 
+    Then Click on Corrected button  
+
+  Scenario: Alert Check incorrect format Italic is present
+    When Check alert message of italic format is present
+    Then Click on Corrected button  
   
   Scenario: Verify whether the Check the uncited reference, bibreference id bib24. displayed properly in Step3
     Then Verify Check the uncited reference, bibreference id bib24.
