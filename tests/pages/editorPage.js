@@ -13,7 +13,7 @@ constructor(page) {
     this.AID ="#aid"
     this.typeaid ="4C01650"    
     this.UploadTUDxml ='#xml';
-    this.Tudpath ='D:/Files/JZ_4C01650_tud.xml';
+    this.Tudpath ='D:/Files_ExtraErrors/JZ_4C01650_tud.xml';
     this.ClickSubmitButton = ".primary"
     this.Respond ="#response_container";
     this.LinK ='a[href^="http://10.0.8.123:3000"]';
@@ -22,7 +22,7 @@ constructor(page) {
     this.switchTab1 ='1';
     this.Nocontinue ='img[title="Bold (Ctrl+B)"]';
     this.Uploadjson = '#as';
-    this.jsonpath ='D:/Files/JZ_4C01650_tud_as.json'
+    this.jsonpath ='D:/Files_ExtraErrors/JZ_4C01650_tud_as.json'
     this.URL2 ="D:\XML-Reg2\XML_BDD_UI\env\.env.qa\URL2"
 
     ///// Step 1 -------
@@ -30,34 +30,49 @@ constructor(page) {
     this.nocon ="button-component[value='math-pre-requisite-step-no']";
     this.review ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
     this.reviewclk ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
+
     this.clickstep3ack1 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1)"
     this.verifyarticletitle ='input[title="articletitle"]';
+
     this.timewait="200000";
     this.verify ="button-component[value='verified']";
+
     this.reviewclk2 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
     this.verifyAuthours ='input[title="authors"]';
+
     this.reviewclk3 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
     this.verifycorrespondingauthor ='input[title="correspondingauthor"]';
+
     this.reviewclk4 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
-    this.verifyemail ='.smart-qc-error[data-xml-qc-msg*="e-mail"]';
+    this.verifyemail ='input[title="dummy"]';
+
     this.reviewclk5 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
-    this.verifydummy1 ='input[title="dummy"]';
+    this.verifydummy1 ='input[title="abstract"]';
+
     this.reviewclk6 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
-    this.verifyabstract ='input[title="abstract"]';
+    this.verifyabstract ='input[title="dummy"]';
+
     this.reviewclk7 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
-    this.verifydummy2 ='input[title="dummy"]';
+    this.verifydummy2 ='input[title="paragraph"]';
+
     this.reviewclk8 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
-    this.verifyparagraph1 ='input[title="paragraph"]';
+    this.verifyparagraph1 ='input[title="fnconflict"]';
+
     this.reviewclk9 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
-    this.verifyparagraph2 ='input[title="fnconflict"]';
+    this.verifyparagraph2 ='input[title="dummy"]';
+
     this.reviewclk10 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
-    this.verifydummy3 ='input[title="dummy"]';
-    this.verifysectiona ='input[title="sectiona"]';
+    this.verifydummy3 ='input[title="sectiona"]';
+
+    this.verifysectiona ='input[title="paragraph"]';
     this.reviewclk11 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
+
     this.reviewclk12 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";
-    this.verifyparagraph3 ='input[title="paragraph"]';
+    this.verifyparagraph3 ='input[title="dummy"]';
+
     this.reviewclk13 ="div:nth-child(1) > div:nth-child(2) > unacknowledged-errors:nth-child(1) > div:nth-child(1) > div:nth-child(2) > error-container:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)";                  
     this.verifydummy4 ='input[title="dummy"]';
+
     this.Next = "button-component[value='next']";
 
 
@@ -128,6 +143,8 @@ constructor(page) {
     this.despath ="//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files";
     this.ServerINpath ="//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files";
     this.ServerINFileName ='jz4c01650_IN.xml';
+ // this.ServerINFileName ='JZ_4C01650_Test.xml';
+ // this.ServerINFileName ='jz4c01650_OUT_IN';
     this.ServerOUTpath ="//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files";
     this.ServerOUTFileName ='jz4c01650.xml';
     this.ServerActualpath='//tnqfs07/TESTING_SERVICES/Projects/AutomationTesting/XML_CENTRAL/XML_Compare_Files/jz4c01650_IN.xml';
@@ -145,13 +162,21 @@ constructor(page) {
     this.Addhref ="opsHead";
     this.Placeholder='input.search-input[placeholder="Apply Inline Style"][value="kwd"][title="kwd"]'
     this.InputasSt="kwd";
-    this.clickst='div.option[title="kwd"]';
+    this.clicksst='div.option[title="kwd"]';
     this.SelectTextto ='div:nth-child(1) > div:nth-child(1) > keywordsdefault:nth-child(13) > kwd:nth-child(3)';
     this.Skiperroricon ='.additional-menu-icon';
     this.clicskiperror ='.menu-option-container';
     this.clickDropdownerror ='.dropdown-icon';
     this.selectreason='li.dropdown-option[data-value="error-not-applicable-for-this-article"]';
     this.Clickskiperrorupdatebtn ="button-component[value='skipped']";
+
+
+  ///// View style changed
+  this.clickview ="menu-component[name='View']";
+  this.Clickparastylelabel = "div[value='para-label']";
+  this.Inlinecolour ="div[value='inline-color']";
+  this.Nonprintingchar ="div[value='non-printing-chars']";
+  this.coversheet = "div[value='cover-sheet']";  
 
   ////// btl text
     this.btltext ="btl";
@@ -160,10 +185,10 @@ constructor(page) {
     this.clickatl='div.option[title="atl"]';
 
   ///// aus to au
-    this.Xaiotext ="dienth-child(1) » divnth-child(t) › bibitementh child 28)";
+    this.Xaiotext ="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(28) > x:nth-child(6)";
     this.Inputtextas  ='input[type="text"][placeholder="Apply Inline Style"][class="search-input"]';
     this.typetextas ='au';
-    this.clickau='div.option[title="au"]';
+    this.clickau='div.option[title="atl"][value="atl"]';
 
   ///// Number to altno
     this.selectNo ='dienth-child(1) » divnth-child(t) › bibitementh child 29)';
@@ -172,26 +197,43 @@ constructor(page) {
     this.clickaltno='div.option[title="altno"]';
 
   ///// Formating text bold to unbold
-    this.Boldtext ='div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(30) > adate:nth-child(35) > b:nth-child(1) bold xpath or div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(30) > adate:nth-child(35)';
+    this.Boldtext ='div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(30) > adate:nth-child(35) > b:nth-child(1)';
     this.clickUnBold ='img[title="Bold (Ctrl+B)"][class="format-icon format current-active"][data-value="b"]';
 
   ///// Formatting text italic to unitalic
-    this.Italictext ='div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(31) > vol:nth-child(29) or div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(31) > vol:nth-child(29) > i:nth-child(1)';
+    this.Italictext ='div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(31) > vol:nth-child(29) > i:nth-child(1)';
     this.clickUnItalic ='img[title="Italic (Ctrl+I)"][class="format-icon format current-active"][data-value="i"]';  
 
   ///// Incorrect E-address
-    this.ClickORICD ='div:nth-child(1) > div:nth-child(1) > authors:nth-child(3) > au:nth-child(7) > sup:nth-child(11) or div:nth-child(1) > div:nth-child(1) > authors:nth-child(3) > au:nth-child(7) > sup:nth-child(11)';
+    this.ClickORICD ="div:nth-child(1) > div:nth-child(1) > authors:nth-child(3) > au:nth-child(7) > sup:nth-child(11)";
+    // e-address[data-tud-type='url'][data-tud-tooltip='http://orcid.org/0000-0003-0770-795X']
     this.xreftag ='.xref-popup'; 
     this.ClickSuperscript ='img[title="Superscript (Ctrl+Shift+=)"][class="format-icon format"][data-value="sup"]'; 
 
   ///// Affiliation change
-    this.SelectAffiliation ='divinth-child(1) > divinth-child(1) > affiliation:nth-child(s) or divinth-child(1) > divinth-child(1) > affiliation:nth-child(5)';
+    this.SelectAffiliation ='div:nth-child(1) > div:nth-child(1) > affiliation:nth-child(5) > affncountry:nth-child(7)';
     this.inputSearch ='input[type="text"][placeholder="Apply Inline Style"][class="search-input"]';
     this.typetextasaffnadd ='affnadd';
-    this.clickaffnadd ='div.option[title="affnadd"]';;  
+    this.clickaffnadd ='div.option[title="affnadd"]';  
 
+  ///// Underline
+    this.Underlinetext ="u";
+    this.UnUnderlinebutton ='img[title="Underline (Ctrl+U)"][class="format-icon format current-active"][data-value="u"]';
+    
+  ///// Superscript 
+    this.Superscripttext ="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(33) > sup:nth-child(37) > pubmedcheck:nth-child(1)";
+    this.unSuperscriptbutton ='img[title="Superscript (Ctrl+Shift+=)"][class="format-icon format current-active"][data-value="sup"]';
 
-
+  ///// Subscript
+    this.Subscripttext ="div:nth-child(1) > div:nth-child(1) > bibitem:nth-child(34) > sub:nth-child(31) > pubmedcheck:nth-child(1)";
+    this.UnSubscriptbutton ='img[title="Subscript (Ctrl+=)"][class="format-icon format current-active"][data-value="sub"]';
+    
+  ///// Stl text is present
+    this.SelectStlText ='div:nth-child(1) > div:nth-child(1) > fnconflict:nth-child(10) > stl:nth-child(1)';
+    this.inputSearchst ='input.search-input[placeholder="Apply Inline Style"][value="stl"][title="stl"]';
+    this.typetextasSt ='st';
+    this.clickst ='div.option[title="st"]';
+  
    ///// Actions
     this.clickptxt ="img[src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAwCAYAAABkOeaOAAAACXBIWXMAABCcAAAQnAEmzTo0AAAABGJhU0UAAAAY00gKyAAAA2pJREFUeF7tmUvITVEUx5c3kbwKIeUxkGciJSaIxAADRaEYiIkBBh55FaUMZCAG9IWSR1HKIykTZIYkJYlSpCiP5BXr3zr3s791zz137332uX2D9at/X2edc++3zj7rrr3+9xKlYRRrgA4a5RnG+sPaq08Y5dnAesj6a6pTaa6wduugUZ7erK+safqEUZ7FrNc6aKTheCajAlC1qF4jMeiz6Lfou6mYwXpA8r5PWIs6nu40VJ4nJgRMCqkYyLrEmsmaxbrF+sYa7l7UCWhJnphtMeOmYjWJIakxhGRWXOrEqmIl6wjrGsmCFVF5nnjz39nfVPRUx11YP1iTVbwqTpHcU399QlF5njVXViVTWXd1sAmoujE66Mlt1j0d9CAmz0Ja4cpOssbpYBMesfbpoAd9WN9Ze/QJD2LybEgrXBk+GXN00IPYxV1I0jeb9VtNbJ4NCXVlg1nHWCdY21kbWR9YE9yLHFaw5jvH3Uj6mg+xi4vN7COrB0n1vs2OD7sXKcrk2ZAQVzae9Yw67qToa0g+j+WsLSQfM2gSyVeZSNyH2MXFrHqRdZA1j2QCOEdSzTjWlM2zIb6uDAm+Z21V8VesNhUDC0h2Xf21HZLOo1+OsEiHcuJFRgcTD/7PHeq44+MeEd/sxEBonu3gCRQR4sraSCrUvRa/ViCRNU4sBiyYvrki3ZSX5YJccA2q1mVdFl+i4lEsY/1izdYnHHxdGR4CEtuh4qhixPGzUBm6kmwkWi9Yp3PiE+VluZxl/aR6h3WB9Yn8CqkQLCws3GfWfXXOxdeV7SdZRHcn7UvSJl46sdSE9lxsQO9Y51V8CsmCr1XxKHaSLDAqDb+H5bmUEFeGasDiYlKogfd+StIuUHljnXOpCF1cGADkucmJ9SLp3ZedWBJw03hiedNAiCvDpoKk15M8KLST6SQbwQHWLtag9qvTEbq420jynJsdowWcYR2lepubhKsk7UET4sqGkoxcX1g3SGba7qw3WXzE/0uTErq4mA6uk7gszLcoKp9JKJrRJE9zlRNrhStLARZrpA52Np5nqhHqyowCULWoXlQxCHFlhgfou+i/wNeVGZ6gUjE5YJf3dWWGJxihMPM+Jj9XZgQCt4be6+PKjEDwPYOvKzMigDU2KgKW2DAMwzAMwzAMwzAMwzAMw4N/5bAIVkLPX68AAABvdEVYdE1hdGhNTAA8bWF0aD48bXNxcnQ+PG1zdXA+PG1pPmE8L21pPjxtbj4yPC9tbj48L21zdXA+PG1vPis8L21vPjxtc3VwPjxtaT5iPC9taT48bW4+MjwvbW4+PC9tc3VwPjwvbXNxcnQ+PC9tYXRoPiCa1nEAAAAASUVORK5CYII=']";
     this.EqneditIcon ='button-component[value="close"][type="senary"][text="Edit"]'
@@ -665,10 +707,35 @@ constructor(page) {
     await this.action.elementClick(this.Corrected);
   }
 
+ /// Change UI View
+  async Clickviewbutton()
+  {
+    await this.action.elementClick(this.clickview);
+  }
+  async Unclickparastyle()
+  {
+    await this.action.elementClick(this.Clickparastylelabel);
+  }
+  async UnclickInlinecolour()
+  {
+    await this.action.elementClick(this.clickview);
+    await this.action.elementClick(this.Inlinecolour);
+  }
+  async UnclickNonprintingchar()
+  {
+    await this.action.elementClick(this.clickview);
+    await this.action.elementClick(this.Nonprintingchar);
+  }
+  async Unclickcoversheet()
+  {
+    await this.action.elementClick(this.clickview);
+    await this.action.elementClick(this.coversheet);
+  }
+
   /////btl is present
   async Selectbtl()
   {
-    await this.action.selectText(this.Selectbtl,0,73);
+    await this.action.selectText(this.btltext,0,73);
     await this.action.elementVisible(this.btlinput);
   }
   async Inputbtl()
@@ -683,73 +750,6 @@ constructor(page) {
     await this.action.elementClick(this.Corrected);
   }
  
-   /////aus to au
-  async SelectXaiotext()
-  {
-   await this.action.selectText(this.Xaiotext,0,4);
-   await this.action.elementVisible(this.Inputtextas);
-  }
-  async Inputasau()
-  {        
-   await this.action.elementClick(this.Inputtextas);
-   await this.action.keyActioninsert(this.typetextas)
-  }
-  async Fillandclickatl()
-  {
-   await this.action.elementClick(this.clickau);
-   await this.action.waitForTime(2000)
-   await this.action.elementClick(this.Corrected);
-  } 
-
- // ---au to ed Author/Editor surname is missing. Check and correct.
-  async ClickAuEd()
-  {
-   await this.action.elementVisible(this.bibreferenceidbib24);
-  }
-  async clickCorrected6()
-  {
-   await this.action.elementClick(this.Corrected);
-   await this.action.waitForTime(5000);
-  }
-
- // ---Check the unstructured text.
-  async Clickunstructed()
-  {
-   await this.action.elementVisible(this.bibreferenceidbib24);
-  }
-  async clickCorrected6()
-  {
-   await this.action.elementClick(this.Corrected);
-   await this.action.waitForTime(5000);
-  } 
-
- // ---First-page style not present in journal reference
-  async Firtspagealert()
-  {
-   await this.action.elementVisible(this.bibreferenceidbib24);
-  }
-  async clickCorrected6()
-  {
-   await this.action.elementClick(this.ignore);
-   await this.action.waitForTime(5000);
-  } 
-
-  // ---Check the unstructured text  -- number to altno
-  async Selectno()
-  {
-    await this.action.selectText(this.selectNo,0,6);
-  }
-  async Inputaltno()
-  {        
-   await this.action.elementClick(this.Inputtextasaltno);
-   await this.action.keyActioninsert(this.typealtno)
-  }
-  async Fillandcorrect()
-  {
-   await this.action.elementClick(this.clickaltno);
-   await this.action.waitForTime(2000)
-   await this.action.elementClick(this.Corrected);
-  } 
 
   // ---Formatting bold to unbold
   async Selectboldtext()
@@ -779,7 +779,7 @@ constructor(page) {
   // ---Formatting italic to unitalic
   async Selectitalictext()
   {
-    await this.action.selectText(this.Italictext,0,4);
+    await this.action.selectText(this.Italictext,0,3);
   }
   async Clickunitalic()
   {        
@@ -800,6 +800,77 @@ constructor(page) {
   {        
    await this.action.elementClick(this.Corrected);
   }
+
+  // --Incorrect format 'underline' is present
+  async SelectUnderlinetext()
+  {
+    await this.action.selectText(this.Underlinetext,0,2);
+  }
+  async ClickUnunderline()
+  {        
+   await this.action.elementClick(this.UnUnderlinebutton);
+  }
+  async checkandcorrectA()
+  {
+   await this.action.waitForTime(2000)
+   await this.action.elementClick(this.Corrected);
+  }
+
+  // --Incorrect format 'superscript' is present.
+  async Selectsuperscripttext()
+  {
+    await this.action.selectText(this.Superscripttext,0,16);
+  }
+  async ClickUnsuperscript()
+  {        
+   await this.action.elementClick(this.unSuperscriptbutton);
+  }
+  async checkandcorrectB()
+  {
+   await this.action.waitForTime(2000)
+   await this.action.elementClick(this.Corrected);
+  }
+
+
+  // ---Alert message Incorrect style 'pubmedcheck1' is present
+  async clickpubmedcheck1()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrectedC()
+  {
+    await this.action.elementClick(this.Corrected);
+    await this.action.waitForTime(5000);
+  }
+
+
+  // --Incorrect format 'Subscript' is present.
+  async SelectSubscripttext()
+  {
+    await this.action.selectText(this.Subscripttext,0,16);
+  }
+  async ClickUnSubscript()
+  {        
+   await this.action.elementClick(this.UnSubscriptbutton);
+  }
+  async checkandcorrectD()
+  {
+   await this.action.waitForTime(2000)
+   await this.action.elementClick(this.Corrected);
+  }
+
+  
+  // ---Alert message Incorrect style 'pubmedcheck2' is present.
+  async clickpubmedcheck2()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrectedE()
+  {
+    await this.action.elementClick(this.Corrected);
+    await this.action.waitForTime(5000);
+  }
+
 
    /// Graphical abstract missing in file
   async clickGraphicalabstract()
@@ -831,9 +902,9 @@ constructor(page) {
   /// Affiliation text should be structured. Please check and correct.
   async Selectaffiliation()
   {        
-    await this.action.selectText(this.SelectAffiliation,0,16);
+    await this.action.selectText(this.SelectAffiliation,0,15);
   }
-  async Xrefvisible()
+  async Inputchangeaffnadd()
   {
     await this.action.elementClick(this.inputSearch);
     await this.action.keyActioninsert(this.typetextasaffnadd);
@@ -844,6 +915,24 @@ constructor(page) {
     await this.action.waitForTime(2000)
     await this.action.elementClick(this.Corrected);
   }
+
+  /// Check and verify Incorrect style 'stl' is present. Check and correct.
+  async SelectstlText()
+  {        
+    await this.action.selectText(this.SelectStlText,0,33);
+  }
+  async Inputchangest()
+  {
+    await this.action.elementClick(this.inputSearchst);
+    await this.action.keyActioninsert(this.typetextasSt);
+  }
+  async Fillascorrected()
+  {
+    await this.action.elementClick(this.clickst);
+    await this.action.waitForTime(2000)
+    await this.action.elementClick(this.Corrected);
+  }
+
 
   ///// Title not allowed for Keywords.
   async keywordsdefault()
@@ -876,6 +965,33 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+
+  /// Change UI View
+  async Clickviewbutton1()
+  {
+    await this.action.elementClick(this.clickview);
+  }
+  async Unclickparastyle1()
+  {
+    await this.action.elementClick(this.Clickparastylelabel);
+  }
+  async UnclickInlinecolour1()
+  {
+    await this.action.elementClick(this.clickview);
+    await this.action.elementClick(this.Inlinecolour);
+  }
+  async UnclickNonprintingchar1()
+  {
+    await this.action.elementClick(this.clickview);
+    await this.action.elementClick(this.Nonprintingchar);
+  }
+  async Unclickcoversheet1()
+  {
+    await this.action.elementClick(this.clickview);
+    await this.action.elementClick(this.coversheet);
+  }
+
 
   /// Please check Unlisted cross-ref link tblS1.
   async clickUnlistedcrossref()
@@ -948,46 +1064,6 @@ constructor(page) {
     await this.action.elementClick(this.Corrected);
   }
 
-  // Alert message of Please check author without surname
-  async Clickausr()
-  {
-    await this.action.elementVisible(this.bibreferenceidbib24);
-  }
-  async clickCorrected()
-  {
-    await this.action.elementClick(this.Corrected);
-  }
-
-  // Alert message of Author/Editor surname is missing. Check and correct.
-  async ClickAUEN()
-  {
-    await this.action.elementVisible(this.bibreferenceidbib24);
-  }
-  async clickCorrected()
-  {
-    await this.action.elementClick(this.Corrected);
-  }
-
-  // Alert message of Check the reference structure1
-  async Clickrefstrone()
-  {
-    await this.action.elementVisible(this.bibreferenceidbib24);
-  }
-  async clickCorrected()
-  {
-    await this.action.elementClick(this.Corrected);
-  }
-
-  // Alert message of Check the reference structure2
-  async Clickrefstrtwo()
-  {
-    await this.action.elementVisible(this.bibreferenceidbib24);
-  }
-  async clickCorrected()
-  {
-    await this.action.elementClick(this.Corrected);
-  }
-
 
   // Alert message of Incorrect format 'bold' is present. Check and correct.
   async ClickBOformat()
@@ -1008,6 +1084,61 @@ constructor(page) {
   {
     await this.action.elementClick(this.Corrected);
   }
+
+  // Alert and verify Incorrect format 'underline' is present. Check and correct.
+  async Clickunderlineformat()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrectedF()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+
+  // Alert and verify Incorrect format 'superscript' is present. Check and correct.
+  async ClickSuperscriptformat()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrectedG()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+
+  // Alert and verify Incorrect format 'pubmedcheck3' is present. Check and correct.
+  async Clickpubmedformat()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrectedH()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+
+  // Alert and verify Incorrect format 'subscript' is present. Check and correct.
+  async Clicksubscriptformat()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrectedI()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
+
+  // Alert and verify Incorrect format 'pubmedcheck4' is present. Check and correct.
+  async Clickpubmedcheck4format()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+  }
+  async clickCorrectedJ()
+  {
+    await this.action.elementClick(this.Corrected);
+  }
+
 
   ///Check the uncited reference, bib-reference id 'bib24'.
   async clickbibreferenceidbib24()
@@ -1092,7 +1223,7 @@ constructor(page) {
     await this.action.waitForTime(5000);
     await this.action.elementClick(this.Placeholder)
     await this.action.keyActioninsert(this.InputasSt)
-    await this.action.elementClick(this.clickst);
+    await this.action.elementClick(this.clicksst);
     await this.action.waitForTime(5000);
   }
   async clickvalidate()

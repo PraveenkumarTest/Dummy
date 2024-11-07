@@ -74,6 +74,8 @@ Then('verify whether the parastyle Artice is present', async ({ editorsPage }) =
 Then('Click on verified1 button', async ({ editorsPage }) => {
     await pageObject.clickverify();
 });
+
+
 Then('Click on Review the parastyle authors option', async ({ editorsPage }) => {
     await pageObject.clickreviewclk2();
 });
@@ -83,6 +85,8 @@ Then('verify whether the parastyle Author is present', async ({ editorsPage }) =
 Then('Click on verified2 button', async ({ editorsPage }) => {
     await pageObject.clickverify2(); 
 });
+
+
 Then('Click on Review the parastyle correspondingauthor option', async ({ editorsPage }) => {
     await pageObject.clickreviewclk3();
 });
@@ -92,11 +96,13 @@ Then('verify whether the parastyle correspondingauthor is present', async ({ edi
 Then('Click on verified3 button', async ({ editorsPage }) => {
     await pageObject.clickverify3();  
 });
+
+
 Then('Click on Review the parastyle e-mail option', async ({ editorsPage }) => {
     await pageObject.clickreviewclk4();
 });
 Then('verify whether the parastyle e-mail is present', async ({ editorsPage }) => {
-    await pageObject.verifycorrespondingauthorsIsVisible();
+    await pageObject.verifyemailsIsVisible();
 });
 Then('Click on verified4 button', async ({ editorsPage }) => {
     await pageObject.clickverify4(); 
@@ -331,6 +337,24 @@ Then('Click on Corrected5 button', async ({ editorsPage }) => {
     await pageObject.clickCorrected5();
 });
 
+/// Change the UI View
+Then('click on view button', async ({ editorsPage }) => {
+    await pageObject.Clickviewbutton();
+});
+Then('unclick an parastylelabel', async ({ editorsPage }) => {
+    await pageObject.Unclickparastyle();
+});
+Then('unclick an Inlinecolour', async ({ editorsPage }) => {
+    await pageObject.UnclickInlinecolour();
+});
+Then('unclick an Nonprintingchar', async ({ editorsPage }) => {
+    await pageObject.UnclickNonprintingchar();
+});
+Then('unclick an coversheet', async ({ editorsPage }) => {
+    await pageObject.Unclickcoversheet();
+});
+
+
 //---btl 
 When('Select an btl text', async ({ editorsPage }) => {
     await pageObject.Selectbtl();
@@ -338,54 +362,8 @@ When('Select an btl text', async ({ editorsPage }) => {
 Then('change btl text as article', async ({ editorsPage }) => {
     await pageObject.Inputbtl();
 });
-Then('Click on corrected button', async ({ editorsPage }) => {
+Then('Click on corrected button are below', async ({ editorsPage }) => {
     await pageObject.Fillandclickatl();
-});
-
-//----aus to au
-When('Select an text Xaio', async ({ editorsPage }) => {
-    await pageObject.SelectXaiotext();
-});
-Then('Change text as au', async ({ editorsPage }) => {
-    await pageObject.Inputasau();
-});
-Then('Click on Corrected button', async ({ editorsPage }) => {
-    await pageObject.Fillandclickatl();
-});
-
-// ---au to ed Author/Editor surname is missing. Check and correct.
-When('check bibtem are show correctly', async ({ editorsPage }) => {
-    await pageObject.ClickAuEd();
-});
-Then('click corrected button', async ({ editorsPage }) => {
-    await pageObject.clickCorrected6();
-});
-
-// ---Check the unstructured text.
-When('click on unstructured text', async ({ editorsPage }) => {
-    await pageObject.Clickunstructed();
-});
-Then('verify and clear the correction', async ({ editorsPage }) => {
-    await pageObject.clickCorrected6();
-});
-
-// ---First-page style not present in journal reference
-When('check the alert messsage of First-page style', async ({ editorsPage }) => {
-    await pageObject.Firtspagealert();
-});
-Then('click ignore button', async ({ editorsPage }) => {
-    await pageObject.clickCorrected6();
-});
-
-// ---Check the unstructured text  -- number to altno
-When('Select on unstructured text', async ({ editorsPage }) => {
-    await pageObject.Selectno();
-});
-Then('change normal text into altno', async ({ editorsPage }) => {
-    await pageObject.Inputaltno();
-});
-Then('click on corrected button', async ({ editorsPage }) => {
-    await pageObject.Fillandcorrect();
 });
 
 // ---Formatting bold to unbold
@@ -395,16 +373,17 @@ When('select an bold text in refernce', async ({ editorsPage }) => {
 Then('click on unbold button', async ({ editorsPage }) => {
     await pageObject.Clickunbold();
 });
-Then('click on Corrected button', async ({ editorsPage }) => {
+Then('click Corrected button', async ({ editorsPage }) => {
     await pageObject.checkandcorrect();
 });
+
 
 
 // ---Alert check Formatting bold is present
 When('check the alert message of incorrect format bold is present', async ({ editorsPage }) => {
     await pageObject.CheckBoldformat();
 });
-Then('Check and click Corrected button', async ({ editorsPage }) => {
+Then('Check and click Corrected button below', async ({ editorsPage }) => {
     await pageObject.Checkandcorrected();
 });
 
@@ -415,7 +394,7 @@ When('select an italic text in refernce', async ({ editorsPage }) => {
 Then('click on Unitalic button', async ({ editorsPage }) => {
     await pageObject.Clickunitalic();
 });
-Then('click on Corrected button', async ({ editorsPage }) => {
+Then('click the Corrected button', async ({ editorsPage }) => {
     await pageObject.checkandcorrect2();
 });
 
@@ -423,9 +402,64 @@ Then('click on Corrected button', async ({ editorsPage }) => {
 When('check the alert message of incorrect format italic is present', async ({ editorsPage }) => {
     await pageObject.CheckItalicformat();
 });
-Then('Check and click Corrected button', async ({ editorsPage }) => {
+Then('Check and click Corrected button are below', async ({ editorsPage }) => {
     await pageObject.Checkandcorrected3();
 });
+
+
+// ---Incorrect format 'underline' is present
+When('check whether underline are present in refernce', async ({ editorsPage }) => {
+    await pageObject.SelectUnderlinetext();
+});
+Then('change the underline into normal style', async ({ editorsPage }) => {
+    await pageObject.ClickUnunderline();
+});
+Then('click lastly corrected button', async ({ editorsPage }) => {
+    await pageObject.checkandcorrectA();
+});
+
+
+// ---Incorrect format 'superscript' is present.
+When('verify wether superscript is present or not', async ({ editorsPage }) => {
+    await pageObject.Selectsuperscripttext();
+});
+Then('chnge the superscript into normal style', async ({ editorsPage }) => {
+    await pageObject.ClickUnsuperscript();
+});
+Then('click an lastly corrected button', async ({ editorsPage }) => {
+    await pageObject.checkandcorrectB();
+});
+
+
+// ---Alert message Incorrect style 'pubmedcheck1' is present.
+When('check and verify again pubmedcheck1 are present', async ({ editorsPage }) => {
+    await pageObject.clickpubmedcheck1();
+});
+Then('check and verify correct button', async ({ editorsPage }) => {
+    await pageObject.clickCorrectedC();
+});
+
+
+// ---Incorrect format 'subscript' is present.
+When('verify wether Subscript is present or not', async ({ editorsPage }) => {
+    await pageObject.SelectSubscripttext();
+});
+Then('chnge the Subscript into normal style', async ({ editorsPage }) => {
+    await pageObject.ClickUnSubscript();
+});
+Then('click an last corrected button', async ({ editorsPage }) => {
+    await pageObject.checkandcorrectD();
+});
+
+
+// ---Alert message Incorrect style 'pubmedcheck2' is present.
+When('check and verify again pubmedcheck2 are present', async ({ editorsPage }) => {
+    await pageObject.clickpubmedcheck2();
+});
+Then('check and verify corrected button', async ({ editorsPage }) => {
+    await pageObject.clickCorrectedE();
+});
+
 
 /// Graphical abstract missing in file
 Then('Verify Graphical abstract missing in file', async ({ editorsPage }) => {
@@ -438,13 +472,13 @@ Then('Click on Corrected6 button', async ({ editorsPage }) => {
 
 /// Incorrect style 'e-address' is present. Check and correct.
 When('Click on ORCID in AUTHORS', async ({ editorsPage }) => {
-    await pageObject.ClickORICD();
+    await pageObject.Clickoricd();
 });
 Then('xref popup should be visible', async ({ editorsPage }) => {
-    await pageObject.xreftag();
+    await pageObject.Xrefvisible();
 });
 Then('Unclick an superscript button and corrected', async ({ editorsPage }) => {
-    await pageObject.ClickSuperscript();
+    await pageObject.Changesuperscript();
 });
 
 
@@ -453,10 +487,22 @@ When('Affiliation text should be check and select', async ({ editorsPage }) => {
     await pageObject.Selectaffiliation();
 });
 Then('change the nomal text to Affiliation text by affnadd', async ({ editorsPage }) => {
-    await pageObject.Xrefvisible();
+    await pageObject.Inputchangeaffnadd();
 });
 Then('check and click corrected button', async ({ editorsPage }) => {
     await pageObject.Fillasaffnadd();
+});
+
+
+/// Check and verify Incorrect style 'stl' is present. Check and correct.
+When('Select incoorect style stl text', async ({ editorsPage }) => {
+    await pageObject.SelectstlText();
+});
+Then('Change into st style', async ({ editorsPage }) => {
+    await pageObject.Inputchangest();
+});
+Then('Click the text corrected button', async ({ editorsPage }) => {
+    await pageObject.Fillascorrected();
 });
 
 
@@ -479,6 +525,25 @@ Then('Insert Xpara', async ({ editorsPage }) => {
 Then('click and Mark as corrected', async ({ editorsPage }) => {
     await pageObject.Markascorrected();
 });
+
+
+/// Change the UI View
+Then('click on view button back', async ({ editorsPage }) => {
+    await pageObject.Clickviewbutton1();
+});
+Then('click an parastylelabel back', async ({ editorsPage }) => {
+    await pageObject.Unclickparastyle1();
+});
+Then('click an Inlinecolour back', async ({ editorsPage }) => {
+    await pageObject.UnclickInlinecolour1();
+});
+Then('click an Nonprintingchar back', async ({ editorsPage }) => {
+    await pageObject.UnclickNonprintingchar1();
+});
+Then('click an coversheet back', async ({ editorsPage }) => {
+    await pageObject.Unclickcoversheet1();
+});
+
 
 /// Please check Unlisted cross-ref link tblS1.
 Then('Verify Please check Unlisted cross-ref link tblS1.', async ({ editorsPage }) => {
@@ -532,49 +597,17 @@ Then('Click on Corrected14 button', async ({ editorsPage }) => {
 When('Check alert are correct or incorrect in btl', async ({ editorsPage }) => {
     await pageObject.Clickbtlalert();
 });
-Then('Click on Corrected button', async ({ editorsPage }) => {
+Then('Click on Corrected button21', async ({ editorsPage }) => {
     await pageObject.clickCorrected();
 });
 
-// Alert message of Please check author without surname
-When('Check alert are correct or incorrect in au', async ({ editorsPage }) => {
-    await pageObject.Clickausr();
-});
-Then('Click on Corrected button', async ({ editorsPage }) => {
-    await pageObject.clickCorrected();
-});
-
-// Alert message of Author/Editor surname is missing. Check and correct.
-When('Check alert are correct or incorrect in au is missing', async ({ editorsPage }) => {
-    await pageObject.ClickAUEN();
-});
-Then('Click on Corrected button', async ({ editorsPage }) => {
-    await pageObject.clickCorrected();
-});
-
-
-// Alert message of Check the reference structure1
-When('Check alert message of refernce structure', async ({ editorsPage }) => {
-    await pageObject.Clickrefstrone();
-});
-Then('Click on Corrected button', async ({ editorsPage }) => {
-    await pageObject.clickCorrected();
-});
-
-// Alert message of Check the reference structure2
-When('Check alert message of refernce structure', async ({ editorsPage }) => {
-    await pageObject.Clickrefstrtwo();
-});
-Then('Click on Corrected button', async ({ editorsPage }) => {
-    await pageObject.clickCorrected();  
-});
 
 
 // Alert message of Incorrect format 'bold' is present. Check and correct.
 When('Check alert message of bold format is present', async ({ editorsPage }) => {
     await pageObject.ClickBOformat();
 });
-Then('Click on Corrected button', async ({ editorsPage }) => {
+Then('Click on Corrected button26', async ({ editorsPage }) => {
     await pageObject.clickCorrected();  
 });
 
@@ -583,9 +616,55 @@ Then('Click on Corrected button', async ({ editorsPage }) => {
 When('Check alert message of italic format is present', async ({ editorsPage }) => {
     await pageObject.ClickITformat();
 });
-Then('Click on Corrected button', async ({ editorsPage }) => {
+Then('Click on Corrected button27', async ({ editorsPage }) => {
     await pageObject.clickCorrected();  
 });
+
+
+// Alert and verify Incorrect format 'underline' is present. Check and correct.
+When('Check and verify the alert of incorrect underline present', async ({ editorsPage }) => {
+    await pageObject.Clickunderlineformat();
+});
+Then('verified and click correctedF button', async ({ editorsPage }) => {
+    await pageObject.clickCorrectedF();  
+});
+
+
+// Alert and verify Incorrect format 'superscript' is present. Check and correct.
+When('Check and verify the alert of incorrect superscript present', async ({ editorsPage }) => {
+    await pageObject.ClickSuperscriptformat();
+});
+Then('verified and click correctedG button', async ({ editorsPage }) => {
+    await pageObject.clickCorrectedG();  
+});
+
+
+// Alert and verify Incorrect style 'pubmedcheck3' is present. Check and correct.
+When('Check and verify the alert of incorrect pubmedcheck3 present', async ({ editorsPage }) => {
+    await pageObject.Clickpubmedformat();
+});
+Then('verified and click correctedH button', async ({ editorsPage }) => {
+    await pageObject.clickCorrectedH();  
+});
+
+
+// Alert and verify Incorrect format 'subscript' is present. Check and correct.
+When('Check and verify the alert of incorrect subscript present', async ({ editorsPage }) => {
+    await pageObject.Clicksubscriptformat();
+});
+Then('verified and click correctedI button', async ({ editorsPage }) => {
+    await pageObject.clickCorrectedI();  
+});
+
+
+// Alert and verify Incorrect style 'pubmedcheck4' is present. Check and correct.
+When('Check and verify the alert of incorrect pubmedcheck4 present', async ({ editorsPage }) => {
+    await pageObject.Clickpubmedcheck4format();
+});
+Then('verified and click correctedJ button', async ({ editorsPage }) => {
+    await pageObject.clickCorrectedJ();  
+});
+
 
 ///Check the uncited reference, bib-reference id 'bib24'.
 Then('Verify Check the uncited reference, bibreference id bib24.', async ({ editorsPage }) => {
@@ -653,9 +732,6 @@ Then('Made an some correction in UI', async ({ editorsPage }) => {
  Then('Click the validate button', async ({ editorsPage }) => {
     await pageObject.clickvalidate();
 });
-
-
-/////// 
 Then('Users able to visible skip error option is visible', async ({ editorsPage }) => {
     await pageObject.Skiperrorisvisible();
 });
