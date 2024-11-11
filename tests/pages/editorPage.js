@@ -106,7 +106,7 @@ constructor(page) {
     this.Inconsistentauthorname1 ='input[title="bibitem"]';
     this.AuthorEditorsurname2 = ".right-icon";
     this.Inconsistentauthorname2 = 'input[title="bibitem"]';
-
+    this.Matherror = 'input[title="paragraph"]';
     this.bibreferenceidbib24 ='input[title="bibitem"]';
     this.ignore = "button-component[value='ignore']";
     this.bibreferenceidbib25 ='input[title="bibitem"]';
@@ -1143,7 +1143,7 @@ constructor(page) {
   ///Check the uncited reference, bib-reference id 'bib24'.
   async clickbibreferenceidbib24()
   {
-    await this.action.elementVisible(this.bibreferenceidbib24);
+    await this.action.elementVisible(this.bibreferenceidbib25);
   }
   async clickCorrected15()
   {
@@ -1348,21 +1348,71 @@ constructor(page) {
   {
     await this.action.waitForTime(5000)
     await this.action.elementVisible(this.validate);
+    await this.action.elementClick(this.validate);
+    await this.action.waitForTime(20000);
   }
+  
   ///To apply math ------------------
-  // async SelectPara()
-  // {        
-  //   await this.action.selectText(this.Para,0,3);
-  // }
-  // async ClickFormat()
-  // {        
-  //   await this.action.elementClick(this.format);
-  // }
-  // async Clickconverttomath()
-  // {        
-  //   await this.action.elementClick(this.Mathconvert);
-  //   await this.action.waitForTime(5000)
-  // }
+  async SelectPara()
+  {        
+    await this.action.selectText(this.Para,0,3);
+  }
+  async ClickFormat()
+  {        
+    await this.action.elementClick(this.format);
+    await this.action.waitForTime(5000);
+  }
+  async Clickconverttomath()
+  {        
+    await this.action.elementClick(this.Mathconvert);
+    await this.action.waitForTime(5000);
+    await this.action.elementClick(this.validate);
+    await this.action.waitForTime(20000);
+  }
+
+  ////Final Error clear
+  async clickfinalerr1()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib24);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerr2()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib25);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerr3()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib26);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerr4()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib27);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerr5()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib28);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerr6()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib29);
+    await this.action.elementClick(this.ignore);
+  }
+  async clickfinalerr7()
+  {
+    await this.action.elementVisible(this.bibreferenceidbib34);
+    await this.action.elementClick(this.ignore);
+  }
+  async CLICKvalidatee()
+  {
+   await this.action.ElementPresentOrNot(this.validate);
+   await this.action.elementClick(this.validate);
+   await this.action.waitForTime(20000);
+  }
+
 
   //// Final Submit
   async SUBMITBTN()

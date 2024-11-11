@@ -539,8 +539,8 @@ const bddFileMeta = {
   "Verify whether the after submitted": {"pickleLocation":"359:3"},
   "Verify After submitted UI user can able to Enable editing": {"pickleLocation":"363:3"},
   "Check after enabled editing are user able to edit in UI": {"pickleLocation":"368:3"},
-  "Check After the Enableediting mode user can able to move submitted": {"pickleLocation":"376:3"},
-  "Move OUTxml are xmlcentral UAT path to testing path": {"pickleLocation":"380:3"},
-  "Verify after submitted outxml are present": {"pickleLocation":"383:3"},
-  "Verify after submitted outxml compare": {"pickleLocation":"387:3"},
+  "Check After the Enableediting mode user can able to move submitted": {"pickleLocation":"386:3"},
+  "Move OUTxml are xmlcentral UAT path to testing path": {"pickleLocation":"390:3"},
+  "Verify after submitted outxml are present": {"pickleLocation":"393:3"},
+  "Verify after submitted outxml compare": {"pickleLocation":"397:3"},
 };

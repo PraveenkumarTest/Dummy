@@ -666,6 +666,7 @@ Then('verified and click correctedJ button', async ({ editorsPage }) => {
 });
 
 
+
 ///Check the uncited reference, bib-reference id 'bib24'.
 Then('Verify Check the uncited reference, bibreference id bib24.', async ({ editorsPage }) => {
     await pageObject.clickbibreferenceidbib24();
@@ -751,25 +752,25 @@ Then('Click Validate btn', async ({ editorsPage }) => {
 
 /// Again clear final error
 When('Verify and Click final stage of 1st error', async ({ editorsPage }) => {
-    await pageObject.clickfinalerrorone();
-});
-Then('Verify and Click final stage of 2nd error', async ({ editorsPage }) => {
     await pageObject.clickfinalerrortwo();
 });
-Then('Verify and Click final stage of 3rd error', async ({ editorsPage }) => {
+Then('Verify and Click final stage of 2nd error', async ({ editorsPage }) => {
     await pageObject.clickfinalerrorthree();
 });
-Then('Verify and Click final stage of 4th error', async ({ editorsPage }) => {
+Then('Verify and Click final stage of 3rd error', async ({ editorsPage }) => {
     await pageObject.clickfinalerrorofour();
 });
-Then('Verify and Click final stage of 5th error', async ({ editorsPage }) => {
+Then('Verify and Click final stage of 4th error', async ({ editorsPage }) => {
     await pageObject.clickfinalerrorfive();
 });
-Then('Verify and Click final stage of 6th error', async ({ editorsPage }) => {
+Then('Verify and Click final stage of 5th error', async ({ editorsPage }) => {
     await pageObject.clickfinalerrorsix();
 });
-Then('Verify and Click final stage of 7th error', async ({ editorsPage }) => {
+Then('Verify and Click final stage of 6th error', async ({ editorsPage }) => {
     await pageObject.clickfinalerrorseven();
+});
+Then('Verify and Click final stage of 7th error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerrortwo();
 });
 Then('click VALIDATE Button', async ({ editorsPage }) => {
     await pageObject.CLICKVALIDATE();
@@ -805,15 +806,48 @@ Then('Click on Proceed button to Enable', async ({ editorsPage }) => {
 When('check user can able to edit after revert the submit', async ({ editorsPage }) => {
     await pageObject.elementpresentarenot();
 });
-// When('Select any text in UI', async ({ editorsPage }) => {    
-//     await pageObject.SelectPara();
-// });
-// Then('click an format button', async ({ editorsPage }) => { 
-//     await pageObject.ClickFormat();
-// });
-// Then('Check user can able to convert text as math', async ({ editorsPage }) => { 
-//     await pageObject.Clickconverttomath();
-// });
+
+
+// Check and verify user can able to convert Normal text into Math QA server
+When('Select any text in UI', async ({ editorsPage }) => {    
+    await pageObject.SelectPara();
+});
+Then('click an format button', async ({ editorsPage }) => { 
+    await pageObject.ClickFormat();
+});
+Then('Check user can able to convert text as math', async ({ editorsPage }) => { 
+    await pageObject.Clickconverttomath();
+});
+
+
+/// Again clear final error Last
+When('Verify and Click final stage of 1 error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerr1();
+});
+Then('Verify and Click final stage of 2 error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerr2();
+});
+Then('Verify and Click final stage of 3 error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerr3();
+});
+Then('Verify and Click final stage of 4 error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerr4();
+});
+Then('Verify and Click final stage of 5 error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerr5();
+});
+Then('Verify and Click final stage of 6 error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerr6();
+});
+Then('Verify and Click final stage of 7 error', async ({ editorsPage }) => {
+    await pageObject.clickfinalerr7();
+});
+Then('click VALIDATe Button', async ({ editorsPage }) => {
+    await pageObject.CLICKvalidatee();
+});
+
+
+/// Submits
 When('click an submit button', async ({ editorsPage }) => {
     await pageObject.SUBMITBTN();
 });

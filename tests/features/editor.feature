@@ -366,12 +366,22 @@ Feature: Application UI Validation
     Then Click on Proceed button to Enable
 
   Scenario: Check after enabled editing are user able to edit in UI
-    When check user can able to edit after revert the submit
+    When check user can able to edit after revert the submit   
 
-  #  Scenario: Check and verify user can able to convert Normal text into Math QA server
+  # Scenario: Check and verify user can able to convert Normal text into Math QA server
   #   When Select any text in UI
   #   Then click an format button
-  #   Then Check user can able to convert text as math    
+  #   Then Check user can able to convert text as math   
+
+  # Scenario: Again clear some errors in Last stage
+  #   When Verify and Click final stage of 1 error
+  #   Then Verify and Click final stage of 2 error
+  #   Then Verify and Click final stage of 3 error
+  #   Then Verify and Click final stage of 4 error
+  #   Then Verify and Click final stage of 5 error
+  #   Then Verify and Click final stage of 6 error
+  #   Then Verify and Click final stage of 7 error
+  #   Then click VALIDATe Button 
 
   Scenario: Check After the Enableediting mode user can able to move submitted
     When click an submit button
